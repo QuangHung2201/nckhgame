@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Hoạt động nào thu hút đông người nhất tại Văn Miếu vào dịp Tết Nguyên Đán?",
+      "answertrue": "Hội thơ Xuân và xin chữ đầu năm",
+      "answerfalse1": "Triển lãm ảnh lịch sử",
+      "answerfalse2": "Lễ hội ẩm thực truyền thống",
+      "answerfalse3": "Trình diễn múa rối nước"
+    },
+    {
+      "question": "Khu vực “Nhà Thái Học” trong Văn Miếu hiện nay được dùng cho mục đích gì?",
+      "answertrue": "Tổ chức triển lãm, hội thảo và hoạt động giáo dục",
+      "answerfalse1": "Nơi thờ cúng tổ tiên",
+      "answerfalse2": "Văn phòng quản lý di tích",
+      "answerfalse3": "Thư viện quốc gia"
+    },
+    {
+      "question": "Hoạt động nào giúp du khách hiện nay tìm hiểu Văn Miếu một cách sinh động và hiện đại hơn?",
+      "answertrue": "Tham quan bằng công nghệ thực tế ảo (VR/AR)",
+      "answerfalse1": "Nghe kể chuyện dân gian",
+      "answerfalse2": "Viết thư pháp giấy dó",
+      "answerfalse3": "Nghe thuyết minh truyền thống"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Khi đến Lăng Chủ tịch Hồ Chí Minh, người dân thường gọi là:",
+      "answertrue": "Đi viếng Bác",
+      "answerfalse1": "Đi tham quan Lăng Bác",
+      "answerfalse2": "Đi xem Lăng Bác",
+      "answerfalse3": "Đi dạo quanh Quảng trường Ba Đình"
+    },
+    {
+      "question": "Trang phục nào không phù hợp khi vào viếng Lăng Chủ tịch Hồ Chí Minh?",
+      "answertrue": "Quần ngắn và áo ba lỗ",
+      "answerfalse1": "Áo dài truyền thống",
+      "answerfalse2": "Áo sơ mi và quần dài",
+      "answerfalse3": "Đồng phục học sinh"
+    },
+    {
+      "question": "Trong khu vực giữ thi hài Bác Hồ, hành động nào bị nghiêm cấm?",
+      "answertrue": "Quay phim, chụp ảnh",
+      "answerfalse1": "Đi nhẹ, nói khẽ",
+      "answerfalse2": "Giữ trật tự",
+      "answerfalse3": "Cúi đầu tưởng niệm"
+    }
+  ]
+}

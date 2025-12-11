@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Nghi lễ nào được tổ chức sau khi các sĩ tử thi đỗ Tiến sĩ?",
+      "answertrue": "Lễ xướng danh và vinh quy bái tổ",
+      "answerfalse1": "Lễ hội chọi trâu",
+      "answerfalse2": "Lễ khai bút",
+      "answerfalse3": "Lễ nhập học"
+    },
+    {
+      "question": "Lễ khai bút đầu xuân ở Văn Miếu mang ý nghĩa gì?",
+      "answertrue": "Khởi đầu cho sự học và trí tuệ trong năm mới",
+      "answerfalse1": "Cầu tài lộc và danh tiếng",
+      "answerfalse2": "Cầu an và sức khỏe",
+      "answerfalse3": "Tưởng nhớ các vị vua Lý"
+    },
+    {
+      "question": "Những tấm bia tiến sĩ tại Văn Miếu được đặt trên lưng con vật nào?",
+      "answertrue": "Rùa",
+      "answerfalse1": "Rồng",
+      "answerfalse2": "Phượng hoàng",
+      "answerfalse3": "Sư tử"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Lăng Chủ tịch Hồ Chí Minh được khởi công xây dựng vào năm nào?",
+      "answertrue": "1973",
+      "answerfalse1": "1975",
+      "answerfalse2": "1970",
+      "answerfalse3": "1969"
+    },
+    {
+      "question": "Ai là Tổng Tư lệnh Quân đội Nhân dân Việt Nam từng nhiều lần tham dự lễ viếng Chủ tịch Hồ Chí Minh?",
+      "answertrue": "Võ Nguyên Giáp",
+      "answerfalse1": "Trường Chinh",
+      "answerfalse2": "Lê Duẩn",
+      "answerfalse3": "Nguyễn Chí Thanh"
+    },
+    {
+      "question": "Ai là người đọc Điếu văn trong lễ tang Chủ tịch Hồ Chí Minh năm 1969?",
+      "answertrue": "Lê Duẩn",
+      "answerfalse1": "Phạm Văn Đồng",
+      "answerfalse2": "Trường Chinh",
+      "answerfalse3": "Võ Nguyên Giáp"
+    }
+  ]
+}

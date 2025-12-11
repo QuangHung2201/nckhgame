@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Hồ Gươm xưa còn gọi là gì theo truyền thuyết?",
+      "answertrue": "Hồ Hoàn Kiếm",
+      "answerfalse1": "Hồ Tây",
+      "answerfalse2": "Hồ Trúc Bạch",
+      "answerfalse3": "Hồ Lục Thuỷ"
+    },
+    {
+      "question": "Truyền thuyết Rùa thần gắn với triều đại nào?",
+      "answertrue": "Triều Lê",
+      "answerfalse1": "Triều Lý",
+      "answerfalse2": "Triều Trần",
+      "answerfalse3": "Triều Nguyễn"
+    },
+    {
+      "question": "Truyền thuyết Tháp Rùa – Hồ Gươm phản ánh giá trị gì?",
+      "answertrue": "Lòng yêu nước, chiến thắng giặc ngoại xâm",
+      "answerfalse1": "Sự thịnh vượng thương mại",
+      "answerfalse2": "Văn hóa ẩm thực",
+      "answerfalse3": "Kiến trúc Pháp cổ"
+    }
+  ]
+}

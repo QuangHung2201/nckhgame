@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Chùa nổi tiếng ở phố Hàng Buồm là gì?",
+      "answertrue": "Chùa Lý Quốc Sư",
+      "answerfalse1": "Chùa Trấn Quốc",
+      "answerfalse2": "Chùa Bà Mía",
+      "answerfalse3": "Chùa Một Cột"
+    },
+    {
+      "question": "Nhà cổ nổi tiếng ở phố Hàng Trống là gì?",
+      "answertrue": "Nhà cổ Hàng Trống",
+      "answerfalse1": "Nhà Thờ Lớn",
+      "answerfalse2": "Bảo tàng Dân tộc học",
+      "answerfalse3": "Nhà hát Lớn"
+    },
+    {
+      "question": "Cầu Thê Húc nối phố nào với đền Ngọc Sơn?",
+      "answertrue": "Đinh Tiên Hoàng",
+      "answerfalse1": "Lê Thái Tổ",
+      "answerfalse2": "Hàng Khay",
+      "answerfalse3": "Hàng Trống"
+    }
+  ]
+}

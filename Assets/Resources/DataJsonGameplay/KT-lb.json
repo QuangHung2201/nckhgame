@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Lăng Chủ tịch Hồ Chí Minh được khánh thành vào năm nào?",
+      "answertrue": "1975",
+      "answerfalse1": "1976",
+      "answerfalse2": "1980",
+      "answerfalse3": "1974"
+    },
+    {
+      "question": "Lăng Chủ tịch Hồ Chí Minh được xây dựng theo phong cách kiến trúc nào?",
+      "answertrue": "Kết hợp giữa hiện đại và truyền thống Á Đông",
+      "answerfalse1": "Hiện đại phương Tây",
+      "answerfalse2": "Cổ điển châu Âu",
+      "answerfalse3": "Kiến trúc Pháp cổ"
+    },
+    {
+      "question": "Chất liệu chính được dùng để xây dựng Lăng Chủ tịch Hồ Chí Minh là gì?",
+      "answertrue": "Đá granite và đá cẩm thạch",
+      "answerfalse1": "Xi măng trắng",
+      "answerfalse2": "Gỗ lim",
+      "answerfalse3": "Gạch nung"
+    }
+  ]
+}

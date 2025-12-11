@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Hoạt động nào thường được tổ chức cho học sinh, sinh viên khi đến Lăng Bác?",
+      "answertrue": "Lễ dâng hoa, kể chuyện về Bác, viết cảm nghĩ",
+      "answerfalse1": "Cắm trại ban đêm",
+      "answerfalse2": "Chơi trò chơi dân gian",
+      "answerfalse3": "Biểu diễn nghệ thuật"
+    },
+    {
+      "question": "Hoạt động nào diễn ra thường xuyên mỗi ngày tại Quảng trường Ba Đình?",
+      "answertrue": "Lễ thượng cờ và hạ cờ",
+      "answerfalse1": "Biểu diễn nghệ thuật",
+      "answerfalse2": "Diễu hành xe đạp",
+      "answerfalse3": "Trò chơi dân gian"
+    },
+    {
+      "question": "Hoạt động nào được tổ chức vào các dịp lễ lớn như 19/5 và 2/9 tại khu vực Lăng Bác?",
+      "answertrue": "Diễu binh và lễ dâng hoa tưởng niệm",
+      "answerfalse1": "Lễ hội hoa đăng",
+      "answerfalse2": "Chợ đêm Hà Nội",
+      "answerfalse3": "Hội chọi trâu"
+    }
+  ]
+}

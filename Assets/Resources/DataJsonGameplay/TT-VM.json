@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Người dân tin rằng việc chạm tay vào đầu rùa bia Tiến sĩ sẽ mang lại điều gì?",
+      "answertrue": "May mắn trong thi cử và học tập",
+      "answerfalse1": "Tài lộc",
+      "answerfalse2": "Sức khỏe dồi dào",
+      "answerfalse3": "Đường công danh rộng mở"
+    },
+    {
+      "question": "Theo dân gian, Khuê Văn Các được xây để tượng trưng cho ngôi sao nào trên trời?",
+      "answertrue": "Sao Khuê",
+      "answerfalse1": "Sao Bắc Đẩu",
+      "answerfalse2": "Sao Thần Nông",
+      "answerfalse3": "Sao Thái Dương"
+    },
+    {
+      "question": "Theo truyền thuyết, khi sĩ tử đến Văn Miếu cầu học, điều gì được coi là điềm tốt trước kỳ thi?",
+      "answertrue": "Thấy rùa nổi lên trong hồ",
+      "answerfalse1": "Thấy mưa nhẹ rơi trước cổng Văn Miếu",
+      "answerfalse2": "Thấy chim sẻ bay qua Khuê Văn Các",
+      "answerfalse3": "Nghe tiếng chuông vang trong gió"
+    }
+  ]
+}

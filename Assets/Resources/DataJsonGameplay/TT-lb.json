@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Vì sao người dân thường gọi Chủ tịch Hồ Chí Minh là “Bác Hồ”?",
+      "answertrue": "Vì Bác là người thân thương, gần gũi như người bác trong gia đình",
+      "answerfalse1": "Vì là tên chính thức trong giấy tờ",
+      "answerfalse2": "Vì đó là danh hiệu Nhà nước phong tặng",
+      "answerfalse3": "Vì Bác là người cao tuổi nhất trong Chính phủ"
+    },
+    {
+      "question": "Theo lời kể dân gian, khi Lăng Bác được khởi công, hiện tượng tự nhiên nào được cho là điềm lành",
+      "answertrue": "Đàn chim bay vòng quanh Quảng trường Ba Đình",
+      "answerfalse1": "Trời mưa lớn",
+      "answerfalse2": "Cầu vồng xuất hiện",
+      "answerfalse3": "Ánh sáng chiếu rọi xuống Lăng"
+    },
+    {
+      "question": "Theo truyền thuyết dân gian, sau khi Bác mất, người dân thấy điều gì đặc biệt ở ao cá Bác Hồ?",
+      "answertrue": "Một bông sen nở đúng ngày giỗ Bác",
+      "answerfalse1": "Ao nước đổi màu vàng",
+      "answerfalse2": "Cá nổi lên rất nhiều",
+      "answerfalse3": "Có chim đậu quanh chòi viết của Bác"
+    }
+  ]
+}

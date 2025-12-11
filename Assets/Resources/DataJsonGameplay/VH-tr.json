@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Tháp Rùa thường xuất hiện trong dịp lễ hội nào ở Hà Nội?",
+      "answertrue": "Tết Nguyên Đán",
+      "answerfalse1": "Giỗ Tổ Hùng Vương",
+      "answerfalse2": "Lễ Vu Lan",
+      "answerfalse3": "Trung Thu"
+    },
+    {
+      "question": "Người dân thường làm gì quanh Tháp Rùa vào dịp đầu năm?",
+      "answertrue": "Dâng hương, cầu may mắn",
+      "answerfalse1": "Tổ chức đua thuyền",
+      "answerfalse2": "Chơi múa lân",
+      "answerfalse3": "Làm lễ cúng rằm"
+    },
+    {
+      "question": "Biểu tượng gắn liền với Tháp Rùa trong văn hóa dân gian là gì?",
+      "answertrue": "Rùa thần",
+      "answerfalse1": "Rồng vàng",
+      "answerfalse2": "Cá chép",
+      "answerfalse3": "Thần núi"
+    }
+  ]
+}

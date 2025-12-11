@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Ai được coi là người lập ra Hà Nội xưa?",
+      "answertrue": "Lý Thái Tổ",
+      "answerfalse1": "Trần Hưng Đạo",
+      "answerfalse2": "Lê Lợi",
+      "answerfalse3": "Nguyễn Huệ"
+    },
+    {
+      "question": "Hồ Gươm gắn với truyền thuyết gì?",
+      "answertrue": "Rùa vàng trao gươm",
+      "answerfalse1": "Rùa trắng báo mộng",
+      "answerfalse2": "Rồng bay lên trời",
+      "answerfalse3": "Cá chép hóa rồng"
+    },
+    {
+      "question": "Truyền thuyết về đền Ngọc Sơn liên quan đến ai?",
+      "answertrue": "Thần Rùa",
+      "answerfalse1": "Thánh Gióng",
+      "answerfalse2": "Trần Hưng Đạo",
+      "answerfalse3": "Nguyễn Trãi"
+    }
+  ]
+}

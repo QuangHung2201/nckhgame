@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Du khách thường đến Tháp Rùa để làm gì vào cuối tuần?",
+      "answertrue": "Dạo phố, chụp ảnh",
+      "answerfalse1": "Tham quan nhà thờ",
+      "answerfalse2": "Mua vàng mã",
+      "answerfalse3": "Xem múa rối nước"
+    },
+    {
+      "question": "Sự kiện văn hóa hiện đại thường diễn ra quanh Tháp Rùa là gì?",
+      "answertrue": "Hội sách, triển lãm, lễ hội đường phố",
+      "answerfalse1": "Hội gốm sứ truyền thống",
+      "answerfalse2": "Hội thi nấu ăn truyền thống",
+      "answerfalse3": "Lễ cúng rằm tháng Bảy"
+    },
+    {
+      "question": "Các quán café rooftop gần Tháp Rùa phục vụ trải nghiệm gì?",
+      "answertrue": "Thưởng cảnh hồ, chụp ảnh",
+      "answerfalse1": "Tham gia học làm gốm",
+      "answerfalse2": "Xem biểu diễn nhạc cụ dân tộc",
+      "answerfalse3": "Tập múa lân"
+    }
+  ]
+}

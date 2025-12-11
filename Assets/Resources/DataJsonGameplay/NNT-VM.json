@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Ai được mệnh danh là “Vạn thế sư biểu” của Việt Nam?",
+      "answertrue": "Chu Văn An",
+      "answerfalse1": "Nguyễn Trãi",
+      "answerfalse2": "Lê Quý Đôn",
+      "answerfalse3": "Phan Huy Ích"
+    },
+    {
+      "question": "Ai là vị vua cho dựng 82 bia tiến sĩ tại Văn Miếu để tôn vinh hiền tài?",
+      "answertrue": "Lê Thánh Tông",
+      "answerfalse1": "Nguyễn Huệ",
+      "answerfalse2": "Lý Nhân Tông",
+      "answerfalse3": "Trần Nhân Tông"
+    },
+    {
+      "question": "Ai là người cho xây dựng Văn Miếu – Quốc Tử Giám?",
+      "answertrue": "Lý Thánh Tông",
+      "answerfalse1": "Trần Thái Tông",
+      "answerfalse2": "Lê Thánh Tông",
+      "answerfalse3": "Lý Nhân Tông"
+    }
+  ]
+}

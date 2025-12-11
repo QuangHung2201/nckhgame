@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Ai là vị vua lập ra Thăng Long, nơi sau này có Hồ Gươm và Tháp Rùa?",
+      "answertrue": "Lý Thái Tổ",
+      "answerfalse1": "Lê Lợi",
+      "answerfalse2": "Trần Hưng Đạo",
+      "answerfalse3": "Nguyễn Huệ"
+    },
+    {
+      "question": "Tháp Rùa được xây dựng trên hồ Gươm để tưởng nhớ ai?",
+      "answertrue": "Các vị vua triều Lê",
+      "answerfalse1": "Nguyễn Du",
+      "answerfalse2": "Nguyễn Trãi",
+      "answerfalse3": "Lê Lợi"
+    },
+    {
+      "question": "Ai là nhân vật truyền thuyết trả lại gươm cho Lê Lợi tại hồ Gươm?",
+      "answertrue": "Rùa thần",
+      "answerfalse1": "Rồng vàng",
+      "answerfalse2": "Cá chép",
+      "answerfalse3": "Thần núi"
+    }
+  ]
+}

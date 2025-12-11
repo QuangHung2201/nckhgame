@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Ai là người từng sinh sống ở phố Hàng Gai nổi tiếng với nghề thêu?",
+      "answertrue": "Hồ Xuân Hương",
+      "answerfalse1": "Nguyễn Du",
+      "answerfalse2": "Trần Nhân Tông",
+      "answerfalse3": "Lê Quý Đôn"
+    },
+    {
+      "question": "Nhà văn nào từng gắn bó với khu phố Hàng Đào?",
+      "answertrue": "Vũ Trọng Phụng",
+      "answerfalse1": "Ngô Tất Tố",
+      "answerfalse2": "Nam Cao",
+      "answerfalse3": "Tô Hoài"
+    },
+    {
+      "question": "Nhân vật lịch sử nào thường lui tới khu vực Hàng Bông để mua vải vóc?",
+      "answertrue": "Các quan triều Lê",
+      "answerfalse1": "Trần Hưng Đạo",
+      "answerfalse2": "Lê Lợi",
+      "answerfalse3": "Nguyễn Du"
+    }
+  ]
+}

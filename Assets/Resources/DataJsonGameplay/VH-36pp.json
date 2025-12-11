@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Phố Hàng Mã nổi tiếng với hoạt động gì trước mỗi dịp Tết?",
+      "answertrue": "Buôn bán đồ giấy cúng lễ",
+      "answerfalse1": "Làm bánh chưng",
+      "answerfalse2": "Thêu thùa",
+      "answerfalse3": "Làm nón lá"
+    },
+    {
+      "question": "Phố nào tổ chức lễ hội chọi gà truyền thống trong lịch sử?",
+      "answertrue": "Không thuộc 36 phố, lễ hội diễn ra ở ngoại thành",
+      "answerfalse1": "Hàng Bông",
+      "answerfalse2": "Hàng Bè",
+      "answerfalse3": "Hàng Đường"
+    },
+    {
+      "question": "Phố Hàng Gai nổi tiếng với nghề gì?",
+      "answertrue": "Thêu",
+      "answerfalse1": "Làm giấy",
+      "answerfalse2": "Buôn vải",
+      "answerfalse3": "Làm nón"
+    }
+  ]
+}

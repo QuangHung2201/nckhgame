@@ -1,0 +1,25 @@
+{
+  "questions": [
+    {
+      "question": "Phố đi bộ Hồ Gươm hoạt động chủ yếu vào ngày nào?",
+      "answertrue": "Cuối tuần",
+      "answerfalse1": "Thứ Hai – Thứ Sáu",
+      "answerfalse2": "Ngày lễ Tết",
+      "answerfalse3": "Mọi ngày"
+    },
+    {
+      "question": "Phố Tạ Hiện nổi tiếng về gì hiện nay?",
+      "answertrue": "Khu ẩm thực, bia hơi",
+      "answerfalse1": "Bán vải vóc",
+      "answerfalse2": "Bán gốm sứ",
+      "answerfalse3": "Cửa hàng sách"
+    },
+    {
+      "question": "Phố Hàng Ngang – Hàng Đào hiện nay thu hút khách chủ yếu vì?",
+      "answertrue": "Bán đồ lưu niệm, quà tặng",
+      "answerfalse1": "Làm vàng mã",
+      "answerfalse2": "Bán đồ điện tử",
+      "answerfalse3": "Nhà hát"
+    }
+  ]
+}
