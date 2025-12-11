@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{41C36FDC-2780-6AD4-986C-5826115CB0AB}</ProjectGuid>
+    <ProjectGuid>{493AE983-2911-192E-7B4D-32F1255203FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.PixelPerfect.Editor</AssemblyName>
@@ -985,31 +985,31 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{D2A2138C-0E95-9134-F40D-2311FB593F43}</Project>
+      <Project>{2E312458-9019-22E6-BA43-B7DD34281A1E}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{33007219-FFA7-0DE5-2569-7B7535735FEC}</Project>
+      <Project>{A4CF7DFA-BAC2-3722-463F-C446A83972C4}</Project>
       <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{0D1F5EF1-BFF5-D904-869E-AA4667E17C23}</Project>
+      <Project>{F0CC5665-101D-7182-EE3F-B56EAD7F3BE6}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{3822EA5D-2831-C142-B971-31C070B9E492}</Project>
+      <Project>{9C13C9D8-D81C-7B3D-18B6-9308D1ACA968}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{F748D02A-C710-AB01-5CC4-C6B22DF9F54E}</Project>
+      <Project>{C5D3F1A9-D8E4-93F0-42CA-1DC353AA54EE}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{52943BA1-4C01-B142-FDCC-6AD7DB9819A8}</Project>
+      <Project>{F5E6B5EC-2F3A-3FF1-5BE8-D63CB2A98BC1}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9C0BE448-2BA9-36AB-F4EF-E49314CA711E}</Project>
+      <Project>{F77A8F01-2DA5-4CFC-6026-419C14679B43}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

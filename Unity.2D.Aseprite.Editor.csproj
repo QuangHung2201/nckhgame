@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{934A78A7-E699-ADA5-A86D-6CCD3C7E5899}</ProjectGuid>
+    <ProjectGuid>{1361B817-0590-8435-290E-846A821AD2DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Aseprite.Editor</AssemblyName>
@@ -1031,39 +1031,39 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{ABCBE4B5-4066-0473-3CBB-B1E2764ED85E}</Project>
+      <Project>{3D937D55-B96B-37B6-3EF0-4D49B67CDAED}</Project>
       <Name>Unity.InternalAPIEditorBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{4C1183DF-B1EE-3AEB-C265-299033C2457E}</Project>
+      <Project>{DD2B99FB-9CB0-2A08-C99F-16DE8F6B6576}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Aseprite.Common.csproj">
-      <Project>{C88D7289-122B-1520-9580-7A3DE5F14196}</Project>
+      <Project>{BF441F79-02BE-36B2-B30F-0DC33E9CA637}</Project>
       <Name>Unity.2D.Aseprite.Common</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{93436386-7BA5-BB57-9065-1E5B32BD97C0}</Project>
+      <Project>{E85CAE6A-F19A-26FF-D58E-9AB3F78620E5}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{0D1F5EF1-BFF5-D904-869E-AA4667E17C23}</Project>
+      <Project>{F0CC5665-101D-7182-EE3F-B56EAD7F3BE6}</Project>
       <Name>Unity.RenderPipelines.Universal.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{3822EA5D-2831-C142-B971-31C070B9E492}</Project>
+      <Project>{9C13C9D8-D81C-7B3D-18B6-9308D1ACA968}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{F748D02A-C710-AB01-5CC4-C6B22DF9F54E}</Project>
+      <Project>{C5D3F1A9-D8E4-93F0-42CA-1DC353AA54EE}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{52943BA1-4C01-B142-FDCC-6AD7DB9819A8}</Project>
+      <Project>{F5E6B5EC-2F3A-3FF1-5BE8-D63CB2A98BC1}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{9C0BE448-2BA9-36AB-F4EF-E49314CA711E}</Project>
+      <Project>{F77A8F01-2DA5-4CFC-6026-419C14679B43}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
