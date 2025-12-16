@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D;
+using UnityEngine.UI;
 
 public class DataScreenMap : MonoBehaviour
 {
     public static DataScreenMap Instance;
     public TextMeshProUGUI nameScreen;
     private screens screenlist ; // lấy data json từ manager
+    public Image sprite_gr;
+    public SpriteAtlas sprite_atlas;
     void Start()
     {
         Instance = this;
@@ -29,6 +33,7 @@ public class DataScreenMap : MonoBehaviour
         if (indexScreen != -1)
         {
            nameScreen.text = screenlist.playscreens[indexScreen].name;     
+           sprite_gr.sprite = sprite_atlas.GetSprite(idscreen);
         }
         else
         {
