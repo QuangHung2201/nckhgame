@@ -23,8 +23,15 @@ public class Itemplace : MonoBehaviour
         if(checkstatictoppic() == true)
         {
             stickerComplet.SetActive(true);
+            StartCoroutine(delay1fr());
         }    
     }
+    IEnumerator delay1fr()
+    {
+        yield return null;
+        PrefabGameplay.instance.progressLocation(indexlocation() + 1);
+    }    
+
     private void OnDestroy()
     {
         buttonPlay.onClick.RemoveAllListeners();

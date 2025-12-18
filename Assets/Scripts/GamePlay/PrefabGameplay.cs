@@ -11,6 +11,7 @@ public class PrefabGameplay : MonoBehaviour
     public Transform content;
     public screens screenslist;
     public List<GameObject> itemList;
+    public Image progress_img;
     void Start()
     {
         instance = this;
@@ -56,6 +57,7 @@ public class PrefabGameplay : MonoBehaviour
     IEnumerator checkStaticItem()
     {
         yield return null;
+        progress_img.fillAmount = 0f;
         for(int i = 0; i< (itemList.Count -1); i++)
         {
             bool check = itemList[i].GetComponent<Itemplace>().checkstatictoppic();
@@ -70,6 +72,12 @@ public class PrefabGameplay : MonoBehaviour
         }
     }    
   
+    public void progressLocation(int prog)
+    {
+        float sumItem = itemList.Count;
+        progress_img.fillAmount = prog / sumItem;
+    }    
+
     public int indexMap()
     {
         for (int i = 0; i < screenslist.playscreens.Count; i++)

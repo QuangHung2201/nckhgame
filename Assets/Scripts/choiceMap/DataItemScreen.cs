@@ -28,7 +28,7 @@ public class DataItemScreen : MonoBehaviour
     }
     public void Setdata(string name)
     {
-        text_NameScreen.text = "Screen: " + name;
+        text_NameScreen.text = "" + name;
     }    
     public void set_myid(string id)
     {

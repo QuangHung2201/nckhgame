@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
     <Compile Include="Assets\Scripts\main_gameger\MainEvent.cs" />
     <Compile Include="Assets\Scripts\GamePlay\PrefabGameplay.cs" />
+    <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\choiceMap\SetDataScreenItem.cs" />
     <Compile Include="Assets\Scripts\main_gameger\SetDatamanager.cs" />
     <Compile Include="Assets\Scripts\UserProfile\RenameProfi.cs" />
