@@ -13,7 +13,7 @@ using UnityEngine.UI;
 public class ManagerSceneGame : MonoBehaviour
 {
     public static ManagerSceneGame Instance;
-    private string LocationID; // lưu id topic cache
+    private string idToppic; // lưu id topic cache
     private questionss datalocation;
     private int idexquestion;
     private List<GameObject> listbuttonclone;
@@ -36,8 +36,8 @@ public class ManagerSceneGame : MonoBehaviour
     void Start()
     {
         Instance = this;
-        LocationID = PrefManager.PrefSaveUserMap.GetUserLocationchoose(); // lây id địa danh
-        datalocation = ConfigManager.instance.Dic_location[LocationID];  // tìm data theo key id
+        idToppic = PrefManager.PrefSaveUserMap.GetUserLocationchoose(); // lây id địa danh
+        datalocation = ConfigManager.instance.Dic_location[idToppic];  // tìm data theo key id
         listbuttonclone = new List<GameObject>();  // mỗi lần vào khởi tạo 1 list mới
         screenList = ConfigManager.instance.creenslist; // lấy data screen json   
         seq_countdown = DOTween.Sequence();
@@ -56,8 +56,9 @@ public class ManagerSceneGame : MonoBehaviour
     }
     public void SetdataGameplay()
     {
-        idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(LocationID); // lấy id câu hỏi hiện tại theo địa danh
+        idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
         string question = datalocation.questions[idexquestion].question; // lấy câu hỏi của địa danh theo id câu hỏi đã lưu
+        PrefManager.PrefSaveUserMap.SetSizeToppic(idToppic, datalocation.questions.Count);// lưu số lượng câu hỏi theo địa danh
 
         fillprogress.fillAmount =  (float)(idexquestion )  / (datalocation.questions.Count);  // bị thiếu pregress khi chưa đầy
         Gbject_Question.GetComponent<Question>().setQuestion(question);
@@ -110,10 +111,10 @@ public class ManagerSceneGame : MonoBehaviour
         {
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
-            PrefManager.PrefSaveUserMap.SetUserQuestionLocationID( LocationID,idexquestion);  // nếu đúng sẽ tăng id câu hỏi của địa danh đó
+            PrefManager.PrefSaveUserMap.SetUserQuestionLocationID( idToppic,idexquestion);  // nếu đúng sẽ tăng id câu hỏi của địa danh đó
 
 
-            idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(LocationID); // lấy id câu hỏi hiện tại theo địa danh
+            idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
             if (idexquestion >= datalocation.questions.Count) // nếu đã trả lời hết thì set lại id câu hỏi của địa danh về 0
             {
                   if(checkToppicLast(idmapcache,idtoppiccache) == 1)    // check nếu là item cuối
@@ -124,7 +125,7 @@ public class ManagerSceneGame : MonoBehaviour
                 fillprogress.fillAmount = 1f; // nếu trả lời hết sẽ đặt đầy
                 PrefManager.PrefSaveUserMap.SetStaticToppic(idtoppiccache, idmapcache,1); // nếu đã hoàn thành thì lưu trạng thái đã hoàn thành
                 Debug.Log(PrefManager.PrefSaveUserMap.GetstaticToppic(idtoppiccache,idmapcache));
-                PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(LocationID, 0);
+                PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(idToppic, 0);
                 panelWin.SetActive(true);
                 killCountDown();
             }

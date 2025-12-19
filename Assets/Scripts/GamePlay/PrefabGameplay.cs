@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class PrefabGameplay : MonoBehaviour
     public screens screenslist;
     public List<GameObject> itemList;
     public Image progress_img;
+    public TextMeshProUGUI progresLoc_text;
     void Start()
     {
         instance = this;
@@ -57,12 +59,14 @@ public class PrefabGameplay : MonoBehaviour
     IEnumerator checkStaticItem()
     {
         yield return null;
-        progress_img.fillAmount = 0f;
+        int complet_tmp = -1; // biến lưu toppic cuổi cùng hoàn thành
+
         for(int i = 0; i< (itemList.Count -1); i++)
         {
             bool check = itemList[i].GetComponent<Itemplace>().checkstatictoppic();
             if(check == true )
             {
+                complet_tmp++;
                 itemList[i + 1].GetComponent<Itemplace>().openlock();
             }  
             else
@@ -70,12 +74,25 @@ public class PrefabGameplay : MonoBehaviour
                 Debug.Log("not found item");
             }    
         }
+        progressLocation(complet_tmp + 1);
     }    
   
-    public void progressLocation(int prog)
+    public void progressLocation(int idex) // hàm set tiến trình toppic hiện tại và ở main
     {
-        float sumItem = itemList.Count;
-        progress_img.fillAmount = prog / sumItem;
+        progresLoc_text.text = "" + (idex + 1);
+        if(indexMap() != -1)
+        {
+        string idtoppic = screenslist.playscreens[indexMap()].location[idex].id;
+        int prog = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idtoppic);
+        int sizes = PrefManager.PrefSaveUserMap.GetSizeToppic(idtoppic);
+        progress_img.fillAmount = (float)prog / sizes;
+        }   
+        else
+        {
+            Debug.Log("lỗi ở prefabGamePlay");
+        }   
+        
+        
     }    
 
     public int indexMap()
