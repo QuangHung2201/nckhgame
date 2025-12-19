@@ -632,8 +632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 261.92, y: 203}
-  m_SizeDelta: {x: 600.91, y: 58.98}
+  m_AnchoredPosition: {x: 229, y: 595}
+  m_SizeDelta: {x: 849.4, y: 958.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507550032
 MonoBehaviour:
@@ -655,15 +655,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300046, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 7d5c323173a451142882f5ddaaa0185d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &507550033
 CanvasRenderer:
@@ -801,8 +801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 532, y: -173}
-  m_SizeDelta: {x: 653.05, y: 202.74}
+  m_AnchoredPosition: {x: 489, y: -96.1}
+  m_SizeDelta: {x: 607.9, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622592289
 MonoBehaviour:
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 83.46597}
+  m_margin: {x: 0, y: 0, z: 0, w: 0.20002742}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1248,8 +1248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262.78, y: 204.2}
-  m_SizeDelta: {x: 613.08, y: 67.23}
+  m_AnchoredPosition: {x: 223.71997, y: 177.2}
+  m_SizeDelta: {x: 421.22, y: 59.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439117763
 MonoBehaviour:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300038, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300024, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
