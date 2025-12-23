@@ -14,6 +14,7 @@ public class PrefabGameplay : MonoBehaviour
     public List<GameObject> itemList;
     public Image progress_img;
     public TextMeshProUGUI progresLoc_text;
+    public GameObject sticker_complet;
     void Start()
     {
         instance = this;
@@ -76,6 +77,7 @@ public class PrefabGameplay : MonoBehaviour
         }
         progressLocation(complet_tmp + 1);
     }    
+       
   
     public void progressLocation(int idex) // hàm set tiến trình toppic hiện tại và ở main
     {
@@ -90,10 +92,24 @@ public class PrefabGameplay : MonoBehaviour
         else
         {
             Debug.Log("lỗi ở prefabGamePlay");
-        }   
-        
-        
+        }  
+        checkstaticLocation();
     }    
+
+    public void checkstaticLocation()
+    {
+        int staticLoc = PrefManager.PrefSaveUserMap.GetstaticLocation(idMap);
+        if(staticLoc == 1 )
+        {
+            progress_img.fillAmount = 1f;
+            sticker_complet.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("location chưa hoàn thành");
+            sticker_complet.SetActive(false);
+        }
+    } 
 
     public int indexMap()
     {
