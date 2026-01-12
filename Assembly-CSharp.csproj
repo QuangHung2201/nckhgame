@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
