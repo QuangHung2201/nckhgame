@@ -15,21 +15,50 @@ public class Itemplace : MonoBehaviour
     public GameObject locks;
     int indexlocations ;
     public GameObject stickerComplet;
+    public GameObject ani_chest;
+    public Button button_openchest;
+
+
+    Animator animator;
     void Start()
     {
+        animator = ani_chest.GetComponent<Animator>();
+        animator.SetBool("open", false);
+
         Debug.Log("apoin" + indexlocations);
         openlockFirst();
 
         if(checkstatictoppic() == true)
         {
             stickerComplet.SetActive(true);
+            button_openchest.onClick.AddListener(open_chests);
         }    
-    }   
-
+        else
+        {
+            // button gọi show quà
+            Debug.Log("chưa hoàn thành"); 
+        }
+        checkstatic_openChest();
+    }
+   
     private void OnDestroy()
     {
         buttonPlay.onClick.RemoveAllListeners();
-    }
+        button_openchest.onClick.RemoveAllListeners();
+    }    
+    public void checkstatic_openChest()
+    {
+        int stt = PrefManager.PrefSaveUserMap.GetStaticGiftToppic(idlocation);
+        if(stt == 1)
+        {
+            open_chests();
+        }    
+    }    
+    public void open_chests()
+    {
+        animator.SetBool("open", true);
+        PrefManager.PrefSaveUserMap.SetStaticGiftToppic(idlocation, 1); // khi đã mở thì sửa trạng thái quà của toppic sang đã mở
+    }    
     public void getindex(int indexmaps, string idlocations, string idmaps)  // hàm lấy địa chỉ
     {
         indexmap = indexmaps;

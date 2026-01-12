@@ -11,6 +11,7 @@ public class PrefSaveUserMap
     //Toppic{toppic}{UserMapId} : key lưu trạng thái chủ đề theo địa danh
     //Location{userMapId}  : key lưu trạng thái theo địa danh
     //SizeToppic{Userlocation}  : key lưu kích cỡ số lượng câu hỏi theo địa danh
+    //$"StaticGift{UserToppic}" : key lưu trạng thái nhận quà theo toppic
     public string GetUserMapchoose()
     {
         return PlayerPrefs.GetString(KEY_USERMAPID, "");
@@ -35,7 +36,10 @@ public class PrefSaveUserMap
     {
         return PlayerPrefs.GetInt($"SizeToppic{UserToppic}", 0);
     }
-
+    public int GetStaticGiftToppic(string UserToppic) // lấy trạng thái quà theo toppic
+    {
+        return PlayerPrefs.GetInt($"StaticGift{UserToppic}", 0); 
+    }
 
     public void SetUserMapID(string userMap) // hàm lưu map đã chọn
     {
@@ -65,6 +69,11 @@ public class PrefSaveUserMap
     public void SetSizeToppic(string UserToppic, int SizeToppic)
     {
         PlayerPrefs.SetInt($"SizeToppic{UserToppic}", SizeToppic);
+        PlayerPrefs.Save();
+    }
+    public void SetStaticGiftToppic(string UserToppic, int staticGift) // hàm sửa trạng thái quà theo toppic
+    {
+        PlayerPrefs.SetInt($"StaticGift{UserToppic}",staticGift);
         PlayerPrefs.Save();
     }
 }
