@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,8 +19,9 @@ public class Itemplace : MonoBehaviour
     public GameObject ani_chest;
     public Button button_openchest;
 
-
     Animator animator;
+    Sequence seqUpDown;
+
     void Start()
     {
         animator = ani_chest.GetComponent<Animator>();
@@ -32,13 +34,19 @@ public class Itemplace : MonoBehaviour
         {
             stickerComplet.SetActive(true);
             button_openchest.onClick.AddListener(open_chests);
+            aniUpDown();
         }    
         else
         {
             // button gọi show quà
             Debug.Log("chưa hoàn thành"); 
         }
-        checkstatic_openChest();
+
+        if(checkstatic_openChest() == 1)
+        {
+            open_chests();
+        }
+    
     }
    
     private void OnDestroy()
@@ -46,17 +54,37 @@ public class Itemplace : MonoBehaviour
         buttonPlay.onClick.RemoveAllListeners();
         button_openchest.onClick.RemoveAllListeners();
     }    
-    public void checkstatic_openChest()
+    public int checkstatic_openChest()
     {
         int stt = PrefManager.PrefSaveUserMap.GetStaticGiftToppic(idlocation);
         if(stt == 1)
         {
-            open_chests();
+            return 1;
+        }
+        else
+        {
+            return 0;
         }    
+    }
+    public void aniUpDown()
+    {
+        if(checkstatic_openChest() == 0)
+        {
+        seqUpDown = DOTween.Sequence();
+        seqUpDown.Append(button_openchest.transform.DOScale(1.2f, 0.25f))
+        .Append(button_openchest.transform.DOScale(1f, 0.25f))
+        .AppendInterval(3f)
+        .SetLoops(-1);
+        }
+    }
+    public void seqKill()
+    {
+        seqUpDown.Kill();
     }    
     public void open_chests()
     {
         animator.SetBool("open", true);
+        seqKill();
         PrefManager.PrefSaveUserMap.SetStaticGiftToppic(idlocation, 1); // khi đã mở thì sửa trạng thái quà của toppic sang đã mở
     }    
     public void getindex(int indexmaps, string idlocations, string idmaps)  // hàm lấy địa chỉ
