@@ -1,6 +1,4 @@
-Library
-.vs
-*.log
+# Các thư mục rác hệ thống (đã có)
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -9,3 +7,25 @@ Library
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 
+# Visual Studio / MonoDevelop generated files (CẦN THÊM CÁI NÀY)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svn
+*.git
+*.ds_store
+
+# File Build (CẦN THÊM CÁI NÀY)
+*.apk
+*.aab
+*.unitypackage
+
+# Visual Studio Config
+.vsconfig
+.vs/
