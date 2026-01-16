@@ -22,7 +22,7 @@ public class OpenCloseAni : MonoBehaviour
     {
         Vector3 startScale = rect.localScale;
         rect.localScale = Vector3.zero;
-        rect.DOScale(startScale, 0.35f).SetEase(Ease.OutBack);
+        rect.DOScale(startScale, 0.35f).SetEase(Ease.OutQuart);
     }    
     public void aniClose()
     {
