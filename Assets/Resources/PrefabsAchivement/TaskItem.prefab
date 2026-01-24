@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7468105557553558744}
   - component: {fileID: 6946561997897015314}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Receive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 2583081641601072612}
   - component: {fileID: 8458086013050974895}
   - component: {fileID: 1963083685677306216}
+  - component: {fileID: -4188699809637149568}
   m_Layer: 5
   m_Name: TaskItem
   m_TagString: Untagged
@@ -333,6 +334,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-4188699809637149568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508476797449913804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91efcce684883c94cbd417b4cf2156fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnReceive: {fileID: 6946561997897015314}
+  rewardCoin: 20
 --- !u!1 &7012564024482358869
 GameObject:
   m_ObjectHideFlags: 0

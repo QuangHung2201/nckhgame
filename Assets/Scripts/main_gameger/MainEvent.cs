@@ -9,14 +9,17 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_choosemap;
     [SerializeField] private Button button_Profile;
     [SerializeField] private Button button_chooseLocation;
+    [SerializeField] private Button button_Achivement;
 
     public GameObject PanelUnClick;
+    public GameObject TaskAchivement;
 
     public  Transform Rood;
 
     private void Start()
     {
         instance = this;
+        button_Achivement.onClick.AddListener(OpenAchivement);
     }
     // Start is called before the first frame update
     private void Awake() // nối button với hàm sự kiện
@@ -44,6 +47,12 @@ public class MainEvent : MonoBehaviour
         rect.anchorMin = Vector3.zero;  
         rect.anchorMax = Vector3.one;
     }    
+
+    private void OpenAchivement()
+    {
+        TaskAchivement.SetActive(true);
+    }
+
     private void OpenProfileUser()
     {
         OpenPanel();
