@@ -7,6 +7,7 @@ public class TaskItem : MonoBehaviour
 {
     [SerializeField] private Button btnReceive;
     [SerializeField] private int rewardCoin;// vàng thưởng
+    [SerializeField] private CanvasGroup canvasGroup;
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +25,12 @@ public class TaskItem : MonoBehaviour
     {
         PrefManager.PrefMoney.AddNumberCoin(rewardCoin);
         Debug.Log("Nhận thưởng: " + rewardCoin);
+
+        canvasGroup.alpha = 0.5f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        btnReceive.interactable = false;
+
     }
 }
