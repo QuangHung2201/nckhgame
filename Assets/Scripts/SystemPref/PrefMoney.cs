@@ -16,10 +16,4 @@ public class PrefMoney // không mono, không static => chỉ cần khai báo ne
         PlayerPrefs.Save();
     }
     
-    public void AddNumberCoin(int number) // hàm cộng thêm coin
-    {
-        int currentCoin = getNumberCoin();
-        currentCoin += number;
-        SetNumberCoin(currentCoin);
-    }
 }
