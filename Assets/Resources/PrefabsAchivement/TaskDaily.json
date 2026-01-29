@@ -1,0 +1,24 @@
+{
+"TaskDaily":[
+  {
+    "id": 1,
+    "name": "Đăng nhập hàng ngày"
+  },
+  {
+    "id": 2,
+    "name": "Chơi 1 địa danh bất kỳ"
+  },
+  {
+    "id": 3,
+    "name": "Trả lời đúng 3 câu hỏi"
+  },
+  {
+    "id": 4,
+    "name": "Trả lời đúng liên tiếp 3 câu hỏi"
+  },
+  {
+    "id": 5,
+    "name": "Chơi 2 địa danh khác nhau"
+  }
+]
+}
