@@ -41,8 +41,7 @@ public class TaskItem : MonoBehaviour
 
     }
 
-
-    public void SetData( string text)
+    public void SetData(string text)
     {
         txtContentTask.text = text;
     }

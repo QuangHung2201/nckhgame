@@ -17,8 +17,8 @@ class rewards
 public class TaskManager : MonoBehaviour
 {
     public GameObject taskAchievement;
-    public GameObject scrollViewDaily;
-    public GameObject scrollViewMonthly;
+    public GameObject taskDaily;
+    public GameObject taskMonthly;
 
     public Button buttonDaily;
     public Button buttonMonthly;
@@ -29,9 +29,8 @@ public class TaskManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        scrollViewDaily.SetActive(true);
-        scrollViewMonthly.SetActive(false);
+        taskDaily.SetActive(true);
+        taskMonthly.SetActive(false);
         setdata();
     }
     private void OnEnable()
@@ -52,32 +51,31 @@ public class TaskManager : MonoBehaviour
         Debug.Log("số lượng item reward: " + rewardlist.reward.Count);
     }
 
-
     public void setdata()
     {
         GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchivement/TaskItem");
-        if(itemPrefab == null)
+        if (itemPrefab == null)
         {
             Debug.Log("không load được prefab");
         }
-        for (int i= 0; i< rewardlist.reward.Count; i++)
+        for (int i = 0; i < rewardlist.reward.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
-            itemClone.transform.SetParent(parrent,false);
+            itemClone.transform.SetParent(parrent, false);
             itemClone.GetComponent<TaskItem>().SetData(rewardlist.reward[i].name);
         }
 
     }
     public void ShowDailyTasks()
     {
-        scrollViewDaily.SetActive(true);
-        scrollViewMonthly.SetActive(false);
+        taskDaily.SetActive(true);
+        taskMonthly.SetActive(false);
     }
 
     public void ShowMonthlyTasks()
     {
-        scrollViewDaily.SetActive(false);
-        scrollViewMonthly.SetActive(true);
+        taskDaily.SetActive(false);
+        taskMonthly.SetActive(true);
     }
 
     public void CloseTaskAchievement()

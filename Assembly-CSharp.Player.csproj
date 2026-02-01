@@ -80,8 +80,10 @@
     <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\choiceMap\SetDataScreenItem.cs" />
     <Compile Include="Assets\Scripts\main_gameger\SetDatamanager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\ConfigMonthly.cs" />
     <Compile Include="Assets\Scripts\UserProfile\RenameProfi.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthlyManager.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
@@ -93,8 +95,8 @@
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\ConfigDaily.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskManagerMonthly.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />

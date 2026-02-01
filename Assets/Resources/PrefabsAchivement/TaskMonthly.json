@@ -1,0 +1,29 @@
+{
+"TaskMonthly":[
+  {
+    "id": 1,
+    "name": "Trả lời đúng 150 câu hỏi",
+	"reward": "20"
+  },
+  {
+    "id": 2,
+    "name": "Hoàn thành 10 địa danh trong cùng 1 tỉnh",
+	"reward": "20"
+  },
+  {
+    "id": 3,
+    "name": "Mở khóa 2 tỉnh mới",
+	"reward": "20"
+  },
+  {
+    "id": 4,
+    "name": "Nhận 15 rương nhiệm vụ ngày",
+	"reward": "20"
+  },
+  {
+    "id": 5,
+    "name": "Hoàn thành 100% địa danh của 1 tỉnh",
+	"reward": "20"
+  }
+]
+}

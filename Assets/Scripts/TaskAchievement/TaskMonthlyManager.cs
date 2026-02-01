@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskDailyManager : MonoBehaviour
+public class TaskMonthlyManager : MonoBehaviour
 {
-    private RewardDaily rewardDailyList;
+    private RewardMonthly rewardMonthlyList;
     public Transform parentTransform;
 
     private void OnEnable()
@@ -19,8 +19,8 @@ public class TaskDailyManager : MonoBehaviour
 
     private void loadData()
     {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskDaily");
-        rewardDailyList = JsonUtility.FromJson<RewardDaily>(textJSon.text);
+        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskMonthly");
+        rewardMonthlyList = JsonUtility.FromJson<RewardMonthly>(textJSon.text);
     }
 
     private void setData()
@@ -31,12 +31,12 @@ public class TaskDailyManager : MonoBehaviour
             Debug.Log("không load được prefab");
         }
 
-        for (int i = 0; i < rewardDailyList.rewardDailys.Count; i++)
+        for (int i = 0; i < rewardMonthlyList.rewardMonthlys.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
             itemClone.transform.SetParent(parentTransform, false);
             itemClone.GetComponent<TaskItem>().SetData(
-                rewardDailyList.rewardDailys[i].name
+                rewardMonthlyList.rewardMonthlys[i].name
             );
         }
     }
