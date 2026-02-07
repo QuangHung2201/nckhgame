@@ -72,20 +72,19 @@
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskDailyManager.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
     <Compile Include="Assets\Scripts\main_gameger\MainEvent.cs" />
     <Compile Include="Assets\Scripts\GamePlay\PrefabGameplay.cs" />
     <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\choiceMap\SetDataScreenItem.cs" />
     <Compile Include="Assets\Scripts\main_gameger\SetDatamanager.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\ConfigMonthly.cs" />
     <Compile Include="Assets\Scripts\UserProfile\RenameProfi.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthlyManager.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinBasket.cs" />
@@ -95,11 +94,11 @@
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\ConfigDaily.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\ConfigAchivement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

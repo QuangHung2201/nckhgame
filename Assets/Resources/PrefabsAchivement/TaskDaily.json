@@ -2,23 +2,28 @@
 "TaskDaily":[
   {
     "id": 1,
-    "name": "Đăng nhập hàng ngày"
+    "name": "Đăng nhập hàng ngày",
+	"reward": 20
   },
   {
     "id": 2,
-    "name": "Chơi 1 địa danh bất kỳ"
+    "name": "Chơi 1 địa danh bất kỳ",
+	"reward": 30
   },
   {
     "id": 3,
-    "name": "Trả lời đúng 3 câu hỏi"
+    "name": "Trả lời đúng 3 câu hỏi",
+	"reward": 30
   },
   {
     "id": 4,
-    "name": "Trả lời đúng liên tiếp 3 câu hỏi"
+    "name": "Trả lời đúng liên tiếp 3 câu",
+	"reward": 30
   },
   {
     "id": 5,
-    "name": "Chơi 2 địa danh khác nhau"
+    "name": "Hoàn thành quiz không bỏ câu",
+	"reward": 30
   }
 ]
 }

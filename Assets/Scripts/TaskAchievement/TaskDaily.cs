@@ -2,42 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskDailyManager : MonoBehaviour
+public class TaskDaily : MonoBehaviour
 {
-    private RewardDaily rewardDailyList;
-    public Transform parentTransform;
+    public TaskDailys dailyList;
+    public Transform parent;
 
     private void OnEnable()
     {
-        loadData();
+        loaddata();
     }
 
     private void Start()
     {
-        setData();
+        setdata();
     }
 
-    private void loadData()
+    private void loaddata()
     {
         TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskDaily");
-        rewardDailyList = JsonUtility.FromJson<RewardDaily>(textJSon.text);
+        dailyList = JsonUtility.FromJson<TaskDailys>(textJSon.text);
     }
 
-    private void setData()
+    private void setdata()
     {
         GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchivement/TaskItem");
         if (itemPrefab == null)
         {
             Debug.Log("không load được prefab");
         }
-
-        for (int i = 0; i < rewardDailyList.rewardDailys.Count; i++)
+        for (int i = 0; i < dailyList.TaskDaily.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
-            itemClone.transform.SetParent(parentTransform, false);
+            
+            itemClone.transform.SetParent(parent, false);
             itemClone.GetComponent<TaskItem>().SetData(
-                rewardDailyList.rewardDailys[i].name
+                dailyList.TaskDaily[i].name,
+                dailyList.TaskDaily[i].reward
             );
+            itemClone.GetComponent<TaskItem>().rewardCoin = dailyList.TaskDaily[i].reward;
         }
     }
 }

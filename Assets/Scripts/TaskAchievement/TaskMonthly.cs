@@ -2,42 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TaskMonthlyManager : MonoBehaviour
+public class TaskMonthly : MonoBehaviour
 {
-    private RewardMonthly rewardMonthlyList;
-    public Transform parentTransform;
+    public TaskMonthlys monthlyList;
+    public Transform parent;
 
     private void OnEnable()
     {
-        loadData();
+        loaddata();
     }
 
     private void Start()
     {
-        setData();
+        setdata();
     }
 
-    private void loadData()
+    private void loaddata()
     {
         TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskMonthly");
-        rewardMonthlyList = JsonUtility.FromJson<RewardMonthly>(textJSon.text);
+        monthlyList = JsonUtility.FromJson<TaskMonthlys>(textJSon.text);;
     }
 
-    private void setData()
+    private void setdata()
     {
         GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchivement/TaskItem");
         if (itemPrefab == null)
         {
             Debug.Log("không load được prefab");
         }
-
-        for (int i = 0; i < rewardMonthlyList.rewardMonthlys.Count; i++)
+        for (int i = 0; i < monthlyList.TaskMonthly.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
-            itemClone.transform.SetParent(parentTransform, false);
+
+            itemClone.transform.SetParent(parent, false);
             itemClone.GetComponent<TaskItem>().SetData(
-                rewardMonthlyList.rewardMonthlys[i].name
+                monthlyList.TaskMonthly[i].name,
+                monthlyList.TaskMonthly[i].reward
             );
+            itemClone.GetComponent<TaskItem>().rewardCoin = monthlyList.TaskMonthly[i].reward;
         }
     }
 }
