@@ -33,7 +33,7 @@ public class Itemplace : MonoBehaviour
         if(checkstatictoppic() == true)
         {
             stickerComplet.SetActive(true);
-            button_openchest.onClick.AddListener(open_chests);
+            button_openchest.onClick.AddListener(eVenOpenReW);
             aniUpDown();
         }    
         else
@@ -44,7 +44,8 @@ public class Itemplace : MonoBehaviour
 
         if(checkstatic_openChest() == 1)
         {
-            open_chests();
+            open_chestsStart();
+            button_openchest.onClick.RemoveAllListeners();
         }
     
     }
@@ -53,6 +54,17 @@ public class Itemplace : MonoBehaviour
     {
         buttonPlay.onClick.RemoveAllListeners();
         button_openchest.onClick.RemoveAllListeners();
+    }    
+    public void eVenOpenReW()
+    {
+        open_chestsStart();
+        StartCoroutine(delayRewardOpen());
+    }    
+    IEnumerator delayRewardOpen()
+    {
+        yield return new WaitForSeconds(1f);
+        PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
+        PrefabGameplay.instance.panel_reward.SetActive(true);
     }    
     public int checkstatic_openChest()
     {
@@ -81,7 +93,7 @@ public class Itemplace : MonoBehaviour
     {
         seqUpDown.Kill();
     }    
-    public void open_chests()
+    public void open_chestsStart()
     {
         animator.SetBool("open", true);
         seqKill();

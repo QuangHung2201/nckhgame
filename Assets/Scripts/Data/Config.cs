@@ -1,14 +1,21 @@
-﻿using JetBrains.Annotations;
-using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 
 // khu lưu trữ class json
 [System.Serializable]
+public class rewardmember
+{
+    public string idSprite;
+    public string name;
+    public int number;
+}
+[System.Serializable]
 public class location
 {
    public string id;
    public string name;
+   public List<rewardmember> reward;
 }
 [System.Serializable]
 public class creen

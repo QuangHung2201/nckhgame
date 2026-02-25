@@ -6,23 +6,83 @@
       "location": [
         {
           "id": "NNT-36pp",
-          "name": "Người nổi tiếng và nhân vật lịch sử"
+          "name": "Người nổi tiếng và nhân vật lịch sử",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerHangMastreet",
+              "name": "Phố Hàng Mã",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "VH-36pp",
-          "name": "Văn hoá và phong tục"
+          "name": "Văn hoá và phong tục",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerHangTrongstreet",
+              "name": "Phố Hàng Trống",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "KT-36pp",
-          "name": "Kiến trúc và địa danh nổi bật"
+          "name": "Kiến trúc và địa danh nổi bật",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerHangDaostreet",
+              "name": "Phố Hàng Đào",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "TT-36pp",
-          "name": "Truyền thuyết và câu chuyện dân dan."
+          "name": "Truyền thuyết và câu chuyện dân dan.",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerHangNonstreet",
+              "name": "Phố Hàng Nón",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "HD-36pp",
-          "name": "Hoạt động và trải nghiệm hiện đại"
+          "name": "Hoạt động và trải nghiệm hiện đại",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerHangQuatstreet",
+              "name": "Phố Hàng Quạt",
+              "number": "1"
+            }
+          ]
         }
       ]
     },
@@ -32,23 +92,83 @@
       "location": [
         {
           "id": "NNT-tr",
-          "name": "Nhân vật lịch sử"
+          "name": "Nhân vật lịch sử",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerGuomThan",
+              "name": "Gươm Thần",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "VH-tr",
-          "name": "Văn hoá và phong tục"
+          "name": "Văn hoá và phong tục",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerNhahatlon",
+              "name": "Nhà hát lớn",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "KT-tr",
-          "name": "Kiến trúc nổi bật"
+          "name": "Kiến trúc nổi bật",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerThaprua",
+              "name": "Tháp rùa",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "TT-tr",
-          "name": "Truyền thuyết và câu chuyện dân dan."
+          "name": "Truyền thuyết và câu chuyện dân dan.",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerCauthehuc",
+              "name": "Cầu Thê Húc",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "HD-tr",
-          "name": "Hoạt động và trải nghiệm hiện đại"
+          "name": "Hoạt động và trải nghiệm hiện đại",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerCaphe",
+              "name": "Cà phê đen",
+              "number": "1"
+            }
+          ]
         }
       ]
     },
@@ -58,23 +178,83 @@
       "location": [
         {
           "id": "NNT-VM",
-          "name": "Nhân vật lịch sử"
+          "name": "Nhân vật lịch sử",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerLophoc",
+              "name": "Lớp học Văn Miếu",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "VH-VM",
-          "name": "Văn hoá và phong tục"
+          "name": "Văn hoá và phong tục",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerButlong",
+              "name": "Bút lông",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "KT-VM",
-          "name": "Kiến trúc nổi bật"
+          "name": "Kiến trúc nổi bật",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerBiatiensi",
+              "name": "Bia tiến sĩ",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "TT-VM",
-          "name": "Truyền thuyết và câu chuyện dân dan."
+          "name": "Truyền thuyết và câu chuyện dân dan.",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerKhuevancac",
+              "name": "Khuê Văn Các",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "HD-VM",
-          "name": "Hoạt động và trải nghiệm hiện đại"
+          "name": "Hoạt động và trải nghiệm hiện đại",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerTourdem",
+              "name": "Tour đêm Văn Miếu",
+              "number": "1"
+            }
+          ]
         }
       ]
     },
@@ -84,23 +264,83 @@
       "location": [
         {
           "id": "NNT-lb",
-          "name": "Sự kiện lịch sử"
+          "name": "Sự kiện lịch sử",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerLangBac",
+              "name": "Lăng Bác",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "VH-lb",
-          "name": "Văn hoá và phong tục"
+          "name": "Văn hoá và phong tục",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerThuongCo",
+              "name": "Thượng Cờ",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "KT-lb",
-          "name": "Kiến trúc nổi bật"
+          "name": "Kiến trúc nổi bật",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerNhasanBacHo",
+              "name": "Nhà sàn Bác Hồ",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "TT-lb",
-          "name": "Truyền thuyết và câu chuyện dân dan."
+          "name": "Truyền thuyết và câu chuyện dân dan.",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerDocLap",
+              "name": "Độc lập",
+              "number": "1"
+            }
+          ]
         },
         {
           "id": "HD-lb",
-          "name": "Hoạt động và trải nghiệm hiện đại"
+          "name": "Hoạt động và trải nghiệm hiện đại",
+          "reward": [
+            {
+              "idSprite": "coin",
+              "name": "coin",
+              "number": "5"
+            },
+            {
+              "idSprite": "StickerChuamotcot",
+              "name": "Chùa Một Cột",
+              "number": "1"
+            }
+          ]
         }
       ]
     }

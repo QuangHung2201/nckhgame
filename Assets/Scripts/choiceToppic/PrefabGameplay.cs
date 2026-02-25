@@ -15,6 +15,7 @@ public class PrefabGameplay : MonoBehaviour
     public Image progress_img;
     public TextMeshProUGUI progresLoc_text;
     public GameObject sticker_complet;
+    public GameObject panel_reward;
     void Start()
     {
         instance = this;
@@ -49,6 +50,10 @@ public class PrefabGameplay : MonoBehaviour
         for(int i = 0; i < screenslist.playscreens[indexmap].location.Count; i++)
         {
            GameObject prefab_item = Resources.Load<GameObject>("GamePlay_Manager/itemplace");
+           if(prefab_item == null)
+            {
+                Debug.Log("không tìm thấy prefab ReWard Item");
+            }
            GameObject itemclone = Instantiate(prefab_item);
            itemclone.transform.SetParent(content, false);
            itemclone.GetComponent<Itemplace>().getindex(indexmap, screenslist.playscreens[indexmap].location[i].id,idMap ); // lấy id tỉnh và id địa danh
@@ -122,4 +127,9 @@ public class PrefabGameplay : MonoBehaviour
         }
         return -1;
     }    
+
+    public void activePanelReW()
+    {
+        panel_reward.SetActive(true);
+    }
 }

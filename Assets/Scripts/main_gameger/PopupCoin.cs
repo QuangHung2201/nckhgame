@@ -6,13 +6,21 @@ using UnityEngine.UI;
 
 public class PopupCoin : MonoBehaviour
 {
+    public static PopupCoin instance;
     public TextMeshProUGUI textcoin;
+    public Transform poppubcoinTranf;
+    public GameObject poppubPar;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         setTextCoin();
     }
 
+    private void OnDisable()
+    {
+        instance = null;
+    }
     public void setTextCoin()
     {
         int numbercoin = PrefManager.PrefMoney.getNumberCoin();
