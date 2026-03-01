@@ -15,6 +15,7 @@ public class TaskDaily : MonoBehaviour
     private void Start()
     {
         setdata();
+        TaskManager.Instance.UpdateTaskDaily();
     }
 
     private void loaddata()

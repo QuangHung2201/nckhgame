@@ -15,6 +15,7 @@ public class TaskMonthly : MonoBehaviour
     private void Start()
     {
         setdata();
+        TaskManager.Instance.UpdateTaskMonthly();
     }
 
     private void loaddata()

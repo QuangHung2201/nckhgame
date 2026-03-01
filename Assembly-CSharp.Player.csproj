@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskData.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
