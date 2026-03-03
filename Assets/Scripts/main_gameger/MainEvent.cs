@@ -9,6 +9,7 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_choosemap;
     [SerializeField] private Button button_Profile;
     [SerializeField] private Button button_chooseLocation;
+    [SerializeField] private Button button_StickerWareHouse;
 
     public GameObject PanelUnClick;
 
@@ -24,12 +25,14 @@ public class MainEvent : MonoBehaviour
         button_choosemap.onClick.AddListener(StartGame);
         button_Profile.onClick.AddListener(OpenProfileUser);
         button_chooseLocation.onClick.AddListener(OpenChooseLocation);
+        button_StickerWareHouse.onClick.AddListener(OpenStickerWareHouse);
     }
     private void OnDisable() // chuyển qua scene khác sẽ ngắt lắng nghe
     {
         button_choosemap.onClick.RemoveListener(StartGame);
         button_Profile.onClick.RemoveAllListeners();
         button_chooseLocation.onClick.RemoveAllListeners();
+        button_StickerWareHouse.onClick.RemoveAllListeners();
         instance = null;
     }
 
@@ -62,6 +65,15 @@ public class MainEvent : MonoBehaviour
         GameObject chooseLocationclone = Instantiate(prefab_chooseLocation);
         chooseLocationclone.transform.SetParent(Rood, false);
         RectTransform rect = chooseLocationclone.GetComponent<RectTransform>();
+        rect.anchorMin = Vector3.zero;
+        rect.anchorMax = Vector3.one;
+    }    
+    private void OpenStickerWareHouse()
+    {
+        GameObject prefab_stickerWH = Resources.Load<GameObject>("GamePlay_Manager/stickerWareHouse");
+        GameObject clone_stickerWH = Instantiate(prefab_stickerWH);
+        clone_stickerWH.transform.SetParent(Rood, false);
+        RectTransform rect = clone_stickerWH.GetComponent<RectTransform>();
         rect.anchorMin = Vector3.zero;
         rect.anchorMax = Vector3.one;
     }    

@@ -6,12 +6,14 @@ public class PrefSaveUserMap
 {
     private const string KEY_USERMAPID = "usermapID"; // key lưu map đã chọn của player
     private const string KEY_USERLOCATIONID = "cachelocationID"; // lưu id topic vừa nhấn ( để tìm json )
-    //Question{UserLocation}    : key động lưu id câu hỏi hiện tại theo chủ đề
+    private const string KEY_LISTSTICKER = "cacheStickerReceived"; // lưu danh sách sticker đã nhận
 
+    //Question{UserLocation}    : key động lưu id câu hỏi hiện tại theo chủ đề
     //Toppic{toppic}{UserMapId} : key lưu trạng thái chủ đề theo địa danh
     //Location{userMapId}  : key lưu trạng thái theo địa danh
     //SizeToppic{Userlocation}  : key lưu kích cỡ số lượng câu hỏi theo địa danh
     //$"StaticGift{UserToppic}" : key lưu trạng thái nhận quà theo toppic
+
     public string GetUserMapchoose()
     {
         return PlayerPrefs.GetString(KEY_USERMAPID, "");
@@ -40,7 +42,23 @@ public class PrefSaveUserMap
     {
         return PlayerPrefs.GetInt($"StaticGift{UserToppic}", 0); 
     }
+    public List<string> GetListStickerReceived() // hàm lấy list sticker đã nhận
+    {
+        string data = PlayerPrefs.GetString(KEY_LISTSTICKER,"");
+        List<string> list = new List<string>();
+        if(data != "") 
+        {
+            return list;
+        }
+        string[] ardata = data.Split(',');
+        foreach(string s in ardata)
+        {
+            list.Add(s);
+        }    
+        return list;
+    }
 
+    //set
     public void SetUserMapID(string userMap) // hàm lưu map đã chọn
     {
         PlayerPrefs.SetString(KEY_USERMAPID, userMap);
@@ -74,6 +92,14 @@ public class PrefSaveUserMap
     public void SetStaticGiftToppic(string UserToppic, int staticGift) // hàm sửa trạng thái quà theo toppic
     {
         PlayerPrefs.SetInt($"StaticGift{UserToppic}",staticGift);
+        PlayerPrefs.Save();
+    }
+    public void SetListAddStickerReceived(string idSticker)
+    {
+        List<string> list = GetListStickerReceived();
+        list.Add(idSticker);
+        string liststring = string.Join(",", list);
+        PlayerPrefs.SetString(KEY_LISTSTICKER, liststring);
         PlayerPrefs.Save();
     }
 }

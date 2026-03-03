@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,7 +16,7 @@ public class RewardManager : MonoBehaviour
     private int indextoppic;
     private int numbCoinReW;
     private Dictionary<string, GameObject> dicRew;
-
+    [SerializeField] private CanvasGroup bg;
     void Start()
     {
 
@@ -70,7 +71,7 @@ public class RewardManager : MonoBehaviour
     }
     public void EvenButtonConT()
     {
-        //PrefabGameplay.instance.panel_reward.SetActive(false);
+
         var key = dicRew.Keys.ToList();
         var val = dicRew.Values.ToList();
         for(int i = 0; i < key.Count; i++)
@@ -87,6 +88,10 @@ public class RewardManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         int numberBef = PrefManager.PrefMoney.getNumberCoin();
         int numberAfTer = numberBef + numbCoinReW;
-        HelperCoinAni.AnimateCoinIncrease(numberBef, numberAfTer, 1f);
+        PrefManager.PrefMoney.SetNumberCoin(numberAfTer);
+        HelperCoinAni.AnimateCoinIncrease(numberBef, numberAfTer, 0.5f);
+        bg.DOFade(0f, 0.5f);
+        yield return new WaitForSeconds(0.5f);
+        PrefabGameplay.instance.panel_reward.SetActive(false);
     }    
 }
