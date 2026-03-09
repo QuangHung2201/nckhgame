@@ -6,22 +6,23 @@ using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
-    public static TaskManager Instance;
+    public static TaskManager Instance; // singleton để truy cập từ các script khác
 
-    public GameObject taskAchievement;
-    public GameObject taskDaily;
-    public GameObject taskMonthly;
+    public GameObject taskAchievement; // panel tổng nhiệm vụ
+    public GameObject taskDaily;       // panel nhiệm vụ daily
+    public GameObject taskMonthly;     // panel nhiệm vụ monthly
 
-    public Button buttonDaily;
-    public Button buttonMonthly;
-    public Button buttonClose;
+    public Button buttonDaily;   // nút chuyển sang daily
+    public Button buttonMonthly; // nút chuyển sang monthly
+    public Button buttonClose;   // nút đóng bảng nhiệm vụ
 
-    public TextMeshProUGUI PopupScore;
+    public TextMeshProUGUI PopupScore; // hiển thị coin sau khi nhận thưởng
 
-    public GameObject ContentDaily;
-    public GameObject ContentMonthly;
-    public List<TaskItem> TaskDailys = new List<TaskItem>();
-    public List<TaskItem> TaskMonthlys = new List<TaskItem>();
+    public GameObject ContentDaily;   // parent chứa item nhiệm vụ daily
+    public GameObject ContentMonthly; // parent chứa item nhiệm vụ monthly
+
+    public List<TaskItem> TaskDailys = new List<TaskItem>();     // danh sách item daily
+    public List<TaskItem> TaskMonthlys = new List<TaskItem>();   // danh sách item monthly
 
     void Awake()
     {
@@ -39,6 +40,7 @@ public class TaskManager : MonoBehaviour
         taskMonthly.SetActive(false);
     }
 
+    // cập nhật danh sách nhiệm vụ daily
     public void UpdateTaskDaily()
     {
         TaskDailys.Clear();
@@ -53,15 +55,18 @@ public class TaskManager : MonoBehaviour
             }
         }
 
+        // gán loại nhiệm vụ cho từng item
         for (int i = 0; i < TaskDailys.Count; i++)
         {
             TaskDailys[i].taskType = (TaskType)i;
         }
     }
 
+    // cập nhật danh sách nhiệm vụ monthly
     public void UpdateTaskMonthly()
     {
-        TaskMonthlys.Clear();
+        TaskMonthlys.Clear(); // xóa danh sách cũ
+
         foreach (Transform child in ContentMonthly.transform)
         {
             TaskItem taskItem = child.GetComponent<TaskItem>();
@@ -72,13 +77,14 @@ public class TaskManager : MonoBehaviour
             }
         }
 
+        // gán loại nhiệm vụ monthly
         for (int i = 0; i < TaskMonthlys.Count; i++)
         {
             TaskMonthlys[i].taskType = (TaskType)(i + 5);
         }
     }
 
-
+    // đăng ký sự kiện button khi panel được bật
     private void OnEnable()
     {
         buttonDaily.onClick.AddListener(ShowDailyTasks);
@@ -86,6 +92,7 @@ public class TaskManager : MonoBehaviour
         buttonClose.onClick.AddListener(CloseTaskAchievement);
     }
 
+    // hủy sự kiện button khi panel tắt
     private void OnDisable()
     {
         buttonDaily.onClick.RemoveListener(ShowDailyTasks);
@@ -93,18 +100,21 @@ public class TaskManager : MonoBehaviour
         buttonClose.onClick.RemoveListener(CloseTaskAchievement);
     }
 
+    // hiển thị nhiệm vụ daily
     public void ShowDailyTasks()
     {
         taskDaily.SetActive(true);
         taskMonthly.SetActive(false);
     }
 
+    // hiển thị nhiệm vụ monthly
     public void ShowMonthlyTasks()
     {
         taskDaily.SetActive(false);
         taskMonthly.SetActive(true);
     }
 
+    // đóng bảng nhiệm vụ
     public void CloseTaskAchievement()
     {
         taskAchievement.SetActive(false);

@@ -3825,6 +3825,11 @@ MonoBehaviour:
   buttonDaily: {fileID: 1095427765293453537}
   buttonMonthly: {fileID: 8777082546630958387}
   buttonClose: {fileID: 2570205157472667370}
+  PopupScore: {fileID: 0}
+  ContentDaily: {fileID: 7419350269437296961}
+  ContentMonthly: {fileID: 8047602640381636993}
+  TaskDailys: []
+  TaskMonthlys: []
 --- !u!114 &8499703938150666598
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+// các loại nhiệm vụ trong game
 public enum TaskType
 {
     Daily1, Daily2, Daily3, Daily4, Daily5,
@@ -12,8 +13,8 @@ public enum TaskType
 
 public class TaskData : MonoBehaviour
 {
-    public static TaskData Instance;
-    [SerializeField] private List<TextMeshProUGUI> btns;
+    public static TaskData Instance; // singleton để truy cập toàn game
+    [SerializeField] private List<TextMeshProUGUI> btns; // hiển thị debug tiến độ nhiệm vụ
 
     void Awake()
     {
@@ -25,24 +26,29 @@ public class TaskData : MonoBehaviour
         Instance = null;
     }
 
-    // Start is called before the first frame update
+    // chạy khi game bắt đầu
     void Start()
     {
         SetData();
+
+        // debug dữ liệu daily
         Debug.Log("DataDayily: " + GetInt("Daily1")
             + " " + GetInt("Daily2")
             + " " + GetInt("Daily3")
             + " " + GetInt("Daily4")
             + " " + GetInt("Daily5"));
+
+        // debug dữ liệu monthly
         Debug.Log("DataMonthly: " + GetInt("Monthly1")
             + " " + GetInt("Monthly2")
             + " " + GetInt("Monthly3")
             + " " + GetInt("Monthly4")
             + " " + GetInt("Monthly5"));
 
-        printData();
+        printData(); // hiển thị dữ liệu lên UI
     }
 
+    // khởi tạo dữ liệu nhiệm vụ trong PlayerPrefs
     void SetData()
     {
         SetInt("Daily1", 0);
@@ -56,59 +62,66 @@ public class TaskData : MonoBehaviour
         SetInt("Monthly3", 0);
         SetInt("Monthly4", 0);
         SetInt("Monthly5", 0);
-
     }
 
+    // tăng tiến độ nhiệm vụ daily
     public void AddDaily1() => AddData(TaskType.Daily1);
     public void AddDaily2() => AddData(TaskType.Daily2);
     public void AddDaily3() => AddData(TaskType.Daily3);
     public void AddDaily4() => AddData(TaskType.Daily4);
     public void AddDaily5() => AddData(TaskType.Daily5);
 
+    // tăng tiến độ nhiệm vụ monthly
     public void AddMonthly1() => AddData(TaskType.Monthly1);
     public void AddMonthly2() => AddData(TaskType.Monthly2);
     public void AddMonthly3() => AddData(TaskType.Monthly3);
     public void AddMonthly4() => AddData(TaskType.Monthly4);
     public void AddMonthly5() => AddData(TaskType.Monthly5);
 
+    // tăng dữ liệu nhiệm vụ
     public void AddData(TaskType taskType)
     {
         string KeyName = taskType.ToString();
 
         int currentValue = PlayerPrefs.GetInt(KeyName);
-        currentValue ++;
+        currentValue++;
         PlayerPrefs.SetInt(KeyName, currentValue);
-             
+
         printData();
 
         checkTaskItem(taskType, currentValue);
     }
 
+    // kiểm tra nhiệm vụ đã đạt mục tiêu chưa
     void checkTaskItem(TaskType taskType, int currentValue)
     {
+        // kiểm tra nhiệm vụ daily
         foreach (var taskItem in TaskManager.Instance.TaskDailys)
         {
             if (taskItem.taskType == taskType && currentValue >= 5)
             {
-                taskItem.EnableObject();
+                taskItem.EnableObject(); // cho phép nhận thưởng
             }
         }
 
+        // kiểm tra nhiệm vụ monthly
         foreach (var taskItem in TaskManager.Instance.TaskMonthlys)
         {
             if (taskItem.taskType == taskType && currentValue >= 5)
             {
-                taskItem.EnableObject();
+                taskItem.EnableObject(); // cho phép nhận thưởng
             }
         }
     }
 
+    // reset toàn bộ dữ liệu nhiệm vụ
     public void ResetData()
     {
         SetData();
         printData();
     }
 
+    // in dữ liệu nhiệm vụ lên UI debug
     public void printData()
     {
         foreach (var btn in btns)
@@ -119,11 +132,13 @@ public class TaskData : MonoBehaviour
         }
     }
 
+    // lưu dữ liệu vào PlayerPrefs
     public void SetInt(string KeyName, int Value)
     {
         PlayerPrefs.SetInt(KeyName, Value);
     }
 
+    // lấy dữ liệu từ PlayerPrefs
     public int GetInt(string KeyName)
     {
         return PlayerPrefs.GetInt(KeyName);

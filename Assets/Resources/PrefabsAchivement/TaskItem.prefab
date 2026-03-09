@@ -347,11 +347,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91efcce684883c94cbd417b4cf2156fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  taskType: 0
   imgIconTask: {fileID: 8976941222613923879}
   txtContentTask: {fileID: 4992638844295838841}
   txtReward: {fileID: 7227547997538405608}
-  btnReceive: {fileID: 6946561997897015314}
   rewardCoin: 20
+  btnReceive: {fileID: 6946561997897015314}
   canvasGroup: {fileID: 4154498914002263594}
 --- !u!225 &4154498914002263594
 CanvasGroup:
