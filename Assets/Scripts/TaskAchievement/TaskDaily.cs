@@ -37,6 +37,7 @@ public class TaskDaily : MonoBehaviour
             Debug.Log("không load được prefab");
         }
 
+        // tạo item nhiệm vụ từ dữ liệu JSON
         for (int i = 0; i < dailyList.TaskDaily.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
@@ -45,7 +46,8 @@ public class TaskDaily : MonoBehaviour
 
             itemClone.GetComponent<TaskItem>().SetData(
                 dailyList.TaskDaily[i].name,
-                dailyList.TaskDaily[i].reward
+                dailyList.TaskDaily[i].reward,
+                dailyList.TaskDaily[i].target
             );
 
             itemClone.GetComponent<TaskItem>().rewardCoin = dailyList.TaskDaily[i].reward;

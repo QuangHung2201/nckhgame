@@ -11,7 +11,9 @@ public class TaskItem : MonoBehaviour
     public Image imgIconTask;              // icon nhiệm vụ
     public TextMeshProUGUI txtContentTask; // nội dung nhiệm vụ
     public TextMeshProUGUI txtReward;      // hiển thị phần thưởng
+    public TextMeshProUGUI txtTarget;      // hiển thị tiến độ nhiệm vụ (ví dụ: 3/5)
     public int rewardCoin = 0;             // số coin nhận được
+    public int target = 0;                 // mục tiêu hoàn thành nhiệm vụ
 
     [SerializeField] private Button btnReceive;      // nút nhận thưởng
     [SerializeField] private CanvasGroup canvasGroup; // điều khiển trạng thái UI
@@ -38,6 +40,7 @@ public class TaskItem : MonoBehaviour
         // reset trạng thái nhiệm vụ
         PlayerPrefs.SetInt(taskType.ToString(), 0);
         TaskData.Instance.printData();
+        ResetProgress();
 
         DisableObject();
     }
@@ -59,9 +62,30 @@ public class TaskItem : MonoBehaviour
     }
 
     // gán dữ liệu cho UI nhiệm vụ
-    public void SetData(string text, int reward)
+    public void SetData(string text, int reward, int target)
     {
+        this.target = target;
+        rewardCoin = reward;
+
         txtContentTask.text = text;
         txtReward.text = reward.ToString();
+
+        //int currentValue = PlayerPrefs.GetInt(taskType.ToString());
+        //txtTarget.text = currentValue + "/" + target;
+
+        UpdateProgress();
+    }
+
+    // hiển thị tiến độ nhiệm vụ lên UI
+    public void UpdateProgress()
+    {
+        int currentValue = PlayerPrefs.GetInt(taskType.ToString());
+        txtTarget.text = currentValue + "/" + target;
+    }
+
+    public void ResetProgress()
+    {
+        PlayerPrefs.SetInt(taskType.ToString(), 0);
+        UpdateProgress();
     }
 }

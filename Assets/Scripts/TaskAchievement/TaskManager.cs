@@ -45,6 +45,7 @@ public class TaskManager : MonoBehaviour
     {
         TaskDailys.Clear();
 
+        // duyệt qua tất cả item con trong ContentDaily để lấy component TaskItem
         foreach (Transform child in ContentDaily.transform)
         {
             TaskItem taskItem = child.GetComponent<TaskItem>();
@@ -67,6 +68,7 @@ public class TaskManager : MonoBehaviour
     {
         TaskMonthlys.Clear(); // xóa danh sách cũ
 
+        // duyệt qua tất cả item con trong ContentMonthly để lấy component TaskItem
         foreach (Transform child in ContentMonthly.transform)
         {
             TaskItem taskItem = child.GetComponent<TaskItem>();

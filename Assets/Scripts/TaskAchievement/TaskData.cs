@@ -29,7 +29,7 @@ public class TaskData : MonoBehaviour
     // chạy khi game bắt đầu
     void Start()
     {
-        SetData();
+        SetDataStart();
 
         // debug dữ liệu daily
         Debug.Log("DataDayily: " + GetInt("Daily1")
@@ -49,7 +49,7 @@ public class TaskData : MonoBehaviour
     }
 
     // khởi tạo dữ liệu nhiệm vụ trong PlayerPrefs
-    void SetData()
+    void SetDataStart()
     {
         SetInt("Daily1", 0);
         SetInt("Daily2", 0);
@@ -89,7 +89,33 @@ public class TaskData : MonoBehaviour
 
         printData();
 
+        UpdateTaskProgress(taskType);
+
         checkTaskItem(taskType, currentValue);
+    }
+
+    // cập nhật tiến độ nhiệm vụ sau khi tăng dữ liệu
+    void UpdateTaskProgress(TaskType taskType)
+    {
+        // kiểm tra daily
+        foreach (var taskItem in TaskManager.Instance.TaskDailys)
+        {
+            if (taskItem.taskType == taskType)
+            {
+                taskItem.UpdateProgress();
+                return;
+            }
+        }
+
+        // kiểm tra monthly
+        foreach (var taskItem in TaskManager.Instance.TaskMonthlys)
+        {
+            if (taskItem.taskType == taskType)
+            {
+                taskItem.UpdateProgress();
+                return;
+            }
+        }
     }
 
     // kiểm tra nhiệm vụ đã đạt mục tiêu chưa
@@ -98,18 +124,26 @@ public class TaskData : MonoBehaviour
         // kiểm tra nhiệm vụ daily
         foreach (var taskItem in TaskManager.Instance.TaskDailys)
         {
-            if (taskItem.taskType == taskType && currentValue >= 5)
+            if (taskItem.taskType == taskType)
             {
-                taskItem.EnableObject(); // cho phép nhận thưởng
+                if (currentValue >= taskItem.target)
+                {
+                    taskItem.EnableObject(); // cho phép nhận thưởng
+                }
+                return;
             }
         }
 
         // kiểm tra nhiệm vụ monthly
         foreach (var taskItem in TaskManager.Instance.TaskMonthlys)
         {
-            if (taskItem.taskType == taskType && currentValue >= 5)
+            if (taskItem.taskType == taskType)
             {
-                taskItem.EnableObject(); // cho phép nhận thưởng
+                if (currentValue >= taskItem.target)
+                {
+                    taskItem.EnableObject(); // cho phép nhận thưởng
+                }
+                return;
             }
         }
     }
@@ -117,7 +151,7 @@ public class TaskData : MonoBehaviour
     // reset toàn bộ dữ liệu nhiệm vụ
     public void ResetData()
     {
-        SetData();
+        SetDataStart();
         printData();
     }
 

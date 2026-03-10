@@ -37,6 +37,7 @@ public class TaskMonthly : MonoBehaviour
             Debug.Log("không load được prefab");
         }
 
+        // tạo item nhiệm vụ từ dữ liệu JSON
         for (int i = 0; i < monthlyList.TaskMonthly.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
@@ -45,7 +46,8 @@ public class TaskMonthly : MonoBehaviour
 
             itemClone.GetComponent<TaskItem>().SetData(
                 monthlyList.TaskMonthly[i].name,
-                monthlyList.TaskMonthly[i].reward
+                monthlyList.TaskMonthly[i].reward,
+                monthlyList.TaskMonthly[i].target
             );
 
             itemClone.GetComponent<TaskItem>().rewardCoin = monthlyList.TaskMonthly[i].reward;
