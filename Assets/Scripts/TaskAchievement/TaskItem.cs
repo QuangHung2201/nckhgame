@@ -17,6 +17,7 @@ public class TaskItem : MonoBehaviour
 
     [SerializeField] private Button btnReceive;      // nút nhận thưởng
     [SerializeField] private CanvasGroup canvasGroup; // điều khiển trạng thái UI
+    [SerializeField] private Image progressFill;      // thanh tiến độ nhiệm vụ
 
     private void OnEnable()
     {
@@ -81,6 +82,10 @@ public class TaskItem : MonoBehaviour
     {
         int currentValue = PlayerPrefs.GetInt(taskType.ToString());
         txtTarget.text = currentValue + "/" + target;
+
+        float progress = (float)currentValue / target;
+
+        progressFill.fillAmount = progress;
     }
 
     public void ResetProgress()
