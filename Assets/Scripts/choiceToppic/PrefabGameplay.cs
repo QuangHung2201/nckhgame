@@ -37,74 +37,65 @@ public class PrefabGameplay : MonoBehaviour
     {
         MainEvent.instance.ClosePanel();
         gameObject.GetComponent<OpenCloseAni>().aniClose();
-    }    
-    
+    }
+
     public void spawnItem()
     {
-        int indexmap = 0;
-        if(indexMap() != -1)
+        int indexmap = indexMap();
+        for (int i = 0; i < screenslist.playscreens[indexmap].location.Count; i++)
         {
-         indexmap = indexMap(); 
-        }    
-
-        for(int i = 0; i < screenslist.playscreens[indexmap].location.Count; i++)
-        {
-           GameObject prefab_item = Resources.Load<GameObject>("GamePlay_Manager/itemplace");
-           if(prefab_item == null)
+            GameObject prefab_item = Resources.Load<GameObject>("GamePlay_Manager/itemplace");
+            if (prefab_item == null)
             {
                 Debug.Log("không tìm thấy prefab ReWard Item");
             }
-           GameObject itemclone = Instantiate(prefab_item);
-           itemclone.transform.SetParent(content, false);
-           itemclone.GetComponent<Itemplace>().getindex(indexmap, screenslist.playscreens[indexmap].location[i].id,idMap ); // lấy id tỉnh và id địa danh
-           itemclone.GetComponent<Itemplace>().setdata();
-           itemList.Add(itemclone);
+            GameObject itemclone = Instantiate(prefab_item);
+            itemclone.transform.SetParent(content, false);
+            itemclone.GetComponent<Itemplace>().getindex(indexmap, screenslist.playscreens[indexmap].location[i].id, idMap); // lấy id tỉnh và id địa danh
+            itemclone.GetComponent<Itemplace>().setdata();
+            itemList.Add(itemclone);
         }
         StartCoroutine(checkStaticItem());
-    }  
+    }
     IEnumerator checkStaticItem()
     {
         yield return null;
         int complet_tmp = -1; // biến lưu toppic cuổi cùng hoàn thành
 
-        for(int i = 0; i< (itemList.Count -1); i++)
+        for (int i = 0; i < (itemList.Count - 1); i++)
         {
             bool check = itemList[i].GetComponent<Itemplace>().checkstatictoppic();
-            if(check == true )
+            if (check == true)
             {
                 complet_tmp++;
                 itemList[i + 1].GetComponent<Itemplace>().openlock();
-            }  
+            }
             else
             {
                 Debug.Log("not found item");
-            }    
+            }
         }
         progressLocation(complet_tmp + 1);
-    }    
-       
-  
+    }
+
+
     public void progressLocation(int idex) // hàm set tiến trình toppic hiện tại và ở main
     {
         progresLoc_text.text = "" + (idex + 1);
-        if(indexMap() != -1)
+        if (indexMap() != -1)
         {
-        string idtoppic = screenslist.playscreens[indexMap()].location[idex].id;
-        int prog = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idtoppic);
-        int sizes = PrefManager.PrefSaveUserMap.GetSizeToppic(idtoppic);
-        progress_img.fillAmount = (float)prog / sizes;
-        }   
-        else
-        {
-            Debug.Log("lỗi ở prefabGamePlay");
-        }  
+            string idtoppic = screenslist.playscreens[indexMap()].location[idex].id;
+            int prog = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idtoppic);
+            int sizes = PrefManager.PrefSaveUserMap.GetSizeToppic(idtoppic);
+            progress_img.fillAmount = (float)prog / sizes;
+        }
         checkstaticLocation();
-    }    
+    }
 
     public void checkstaticLocation()
     {
         int staticLoc = PrefManager.PrefSaveUserMap.GetstaticLocation(idMap);
-        if(staticLoc == 1 )
+        if (staticLoc == 1)
         {
             progress_img.fillAmount = 1f;
             sticker_complet.SetActive(true);
@@ -114,22 +105,10 @@ public class PrefabGameplay : MonoBehaviour
             Debug.Log("location chưa hoàn thành");
             sticker_complet.SetActive(false);
         }
-    } 
+    }
 
     public int indexMap()
     {
-        for (int i = 0; i < screenslist.playscreens.Count; i++)
-        {
-            if (screenslist.playscreens[i].ID == idMap)
-            {
-                return i;
-            }    
-        }
-        return -1;
-    }    
-
-    public void activePanelReW()
-    {
-        panel_reward.SetActive(true);
+        return screenslist.playscreens.FindIndex(x => x.ID == idMap);
     }
 }

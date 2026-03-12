@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,57 +13,61 @@ public class RewardManager : MonoBehaviour
     public Transform parentTrF;
     public Button buttonConT;
 
-    private int indexmap;
+    private int indexmaps;
     private int indextoppic;
     private int numbCoinReW;
-    private Dictionary<string, GameObject> dicRew;
+    private Dictionary<string, GameObject> dicRew; // lưu list phần thưởng 
     [SerializeField] private CanvasGroup bg;
     void Start()
     {
 
-        data = PrefabGameplay.instance.screenslist;
-        indexmap = PrefabGameplay.instance.indexMap();
-        idToppicStr = PrefManager.PrefSaveUserMap.GetUserLocationchoose();
-        indextoppic = inDexToppic();
-        setdataReward();
     }
-
+    
     private void Awake()
     {
         dicRew = new Dictionary<string, GameObject>() ; 
     }
     private void OnEnable()
     {
+        dicRew=new Dictionary<string, GameObject>() ;
+        data = PrefabGameplay.instance.screenslist;
+        indexmaps = PrefabGameplay.instance.indexMap(); 
+        idToppicStr = PrefManager.PrefSaveUserMap.GetUserLocationchoose();
+        indextoppic = inDexToppic();
+        setdataReward();
+        Debug.Log("id quà được chọn:" + inDexToppic());
         buttonConT.onClick.AddListener(EvenButtonConT);      
     }
     private void OnDisable()
     {
+        dicRew.Clear();
+        bg.alpha = 1.0f;
         buttonConT.onClick.RemoveAllListeners();
     }
     public void setdataReward()
     {
         GameObject P_itemReW = Resources.Load<GameObject>("GamePlay_Manager/item_reward");
-        for(int i = 0; i < data.playscreens[indexmap].location[indextoppic].reward.Count; i++)
+        for(int i = 0; i < data.playscreens[indexmaps].location[indextoppic].reward.Count; i++)
         {
             GameObject itemReWClone = Instantiate(P_itemReW);
             itemReWClone.transform.SetParent(parentTrF, false);
-            string idsprite = data.playscreens[indexmap].location[indextoppic].reward[i].idSprite;
-            string name = data.playscreens[indexmap].location[indextoppic].reward[i].name;
-            int number = data.playscreens[indexmap].location[indextoppic].reward[i].number;
+            string idsprite = data.playscreens[indexmaps].location[indextoppic].reward[i].idSprite;
+            string name = data.playscreens[indexmaps].location[indextoppic].reward[i].name;
+            int number = data.playscreens[indexmaps].location[indextoppic].reward[i].number;
             itemReWClone.GetComponent<ItemReward>().setdata(idsprite, name, number);
             if(name == "coin")
             {
                 numbCoinReW = number;
             }
-            dicRew.Add(name, itemReWClone);
+            dicRew.Add(idsprite, itemReWClone);
         }    
     }
 
     public int inDexToppic() // hàm lấy idex topic
     {
-        for (int i = 0; i < data.playscreens[indexmap].location.Count; i++)
+        for (int i = 0; i < data.playscreens[indexmaps].location.Count; i++)
         {
-            if (idToppicStr == data.playscreens[indexmap].location[i].id)
+            if (idToppicStr == data.playscreens[indexmaps].location[i].id)
             {
                 return i;
             }
@@ -71,7 +76,6 @@ public class RewardManager : MonoBehaviour
     }
     public void EvenButtonConT()
     {
-
         var key = dicRew.Keys.ToList();
         var val = dicRew.Values.ToList();
         for(int i = 0; i < key.Count; i++)
@@ -80,9 +84,15 @@ public class RewardManager : MonoBehaviour
             {
                 HelperCoinAni.flyToPopupCoin(val[i]);
                 StartCoroutine(delay2());
+            }  
+            else
+            {
+                PrefManager.PrefSaveUserMap.SetListAddStickerReceived(key[i]); 
+                HelperCoinAni.flyToPopupStickerWH(val[i]);
             }    
         }
     }    
+
     IEnumerator delay2()
     {
         yield return new WaitForSeconds(1f);
@@ -92,6 +102,7 @@ public class RewardManager : MonoBehaviour
         HelperCoinAni.AnimateCoinIncrease(numberBef, numberAfTer, 0.5f);
         bg.DOFade(0f, 0.5f);
         yield return new WaitForSeconds(0.5f);
-        PrefabGameplay.instance.panel_reward.SetActive(false);
+        gameObject.SetActive(false);
+        PopupCoin.instance.poppubPar.transform.SetAsFirstSibling();
     }    
 }

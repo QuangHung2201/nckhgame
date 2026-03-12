@@ -34,11 +34,12 @@ public class Itemplace : MonoBehaviour
         {
             stickerComplet.SetActive(true);
             button_openchest.onClick.AddListener(eVenOpenReW);
-            aniUpDown();
+            aniUpDown(ani_chest.transform);
         }    
         else
         {
             // button gọi show quà
+            aniUpDown(buttonPlay.transform);
             Debug.Log("chưa hoàn thành"); 
         }
 
@@ -58,12 +59,12 @@ public class Itemplace : MonoBehaviour
     public void eVenOpenReW()
     {
         open_chestsStart();
+        PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
         StartCoroutine(delayRewardOpen());
     }    
     IEnumerator delayRewardOpen()
     {
         yield return new WaitForSeconds(1f);
-        PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
         PrefabGameplay.instance.panel_reward.SetActive(true);
     }    
     public int checkstatic_openChest()
@@ -78,17 +79,26 @@ public class Itemplace : MonoBehaviour
             return 0;
         }    
     }
-    public void aniUpDown()
+    public void aniUpDown(Transform transformAni)
     {
         if(checkstatic_openChest() == 0)
         {
         seqUpDown = DOTween.Sequence();
-        seqUpDown.Append(button_openchest.transform.DOScale(1.2f, 0.25f))
-        .Append(button_openchest.transform.DOScale(1f, 0.25f))
+        seqUpDown.Append(transformAni.DOScale(1.2f, 0.25f))
+        .Append(transformAni.DOScale(1f, 0.25f))
         .AppendInterval(3f)
         .SetLoops(-1);
         }
+        else
+        {
+         seqUpDown = DOTween.Sequence();
+         seqUpDown.Append(transformAni.DOScale(1.2f, 0.25f))
+         .Append(transformAni.DOScale(1f, 0.25f))
+         .AppendInterval(3f)
+         .SetLoops(-1);
+        }    
     }
+
     public void seqKill()
     {
         seqUpDown.Kill();

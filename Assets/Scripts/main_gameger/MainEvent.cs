@@ -70,7 +70,7 @@ public class MainEvent : MonoBehaviour
     }    
     private void OpenStickerWareHouse()
     {
-        GameObject prefab_stickerWH = Resources.Load<GameObject>("GamePlay_Manager/stickerWareHouse");
+        GameObject prefab_stickerWH = Resources.Load<GameObject>("GamePlay_Manager/prefabsSticker/stickerWareHouse");
         GameObject clone_stickerWH = Instantiate(prefab_stickerWH);
         clone_stickerWH.transform.SetParent(Rood, false);
         RectTransform rect = clone_stickerWH.GetComponent<RectTransform>();

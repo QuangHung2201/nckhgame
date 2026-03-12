@@ -46,9 +46,9 @@ public class PrefSaveUserMap
     {
         string data = PlayerPrefs.GetString(KEY_LISTSTICKER,"");
         List<string> list = new List<string>();
-        if(data != "") 
+        if(data == "") 
         {
-            return list;
+            return list; // trả về list rỗng
         }
         string[] ardata = data.Split(',');
         foreach(string s in ardata)
@@ -101,5 +101,6 @@ public class PrefSaveUserMap
         string liststring = string.Join(",", list);
         PlayerPrefs.SetString(KEY_LISTSTICKER, liststring);
         PlayerPrefs.Save();
+        Debug.Log("list sticker dạng chuỗi :" + PlayerPrefs.GetString(KEY_LISTSTICKER));
     }
 }

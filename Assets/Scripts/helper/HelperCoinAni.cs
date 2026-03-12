@@ -33,4 +33,19 @@ public class HelperCoinAni  // xử dụng hiệu ứng cho coin khi trong màn 
             seq.OnComplete(() => Object.Destroy(coin));
         }
     }
+
+    public static void flyToPopupStickerWH(GameObject sticker) // hiệu ứng bay coin lên popup
+    {
+        if (PopUpStickerWH.instance != null)
+        {
+            Vector2 up = new Vector2(sticker.transform.position.x, sticker.transform.position.y + 0.5f);
+            Sequence seq = DOTween.Sequence();
+            seq.Append(sticker.transform.DOMove(up, 0.4f));
+            seq.Append(sticker.transform
+                .DOMove(PopUpStickerWH.instance.TransformPopUp.position, 0.6f)
+                .SetEase(Ease.OutQuad));
+            seq.Join(sticker.transform.DOScale(0.3f, 0.6f));
+            seq.OnComplete(() => Object.Destroy(sticker));
+        }
+    }
 }
