@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 451028bfe52d68a4ea048313d501a41b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38ccbc880c0e7254391180539c914f72, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4716,7 +4716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f4a37a236fab8c429f872bd993dd1ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ccac2c184b656c48b4b44a55b16e5d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4794,8 +4794,8 @@ MonoBehaviour:
   m_text: "L\u0103ng Ch\u1EE7 t\u1ECBch H\u1ED3 Ch\xED Minh \u0111\u01B0\u1EE3c x\xE2y
     d\u1EF1ng theo phong c\xE1ch ki\u1EBFn tr\xFAc n\xE0o?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 77f0bec84fa7bbc48826548cfcec74e0, type: 2}
-  m_sharedMaterial: {fileID: 4924974078305632626, guid: 77f0bec84fa7bbc48826548cfcec74e0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
+  m_sharedMaterial: {fileID: -7311433130325934809, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
