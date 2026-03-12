@@ -14,5 +14,6 @@ public class PrefMoney // không mono, không static => chỉ cần khai báo ne
     {
         PlayerPrefs.SetInt(KEY_SAVECOIN, number);
         PlayerPrefs.Save();
-    }    
+    }
+    
 }
