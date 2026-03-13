@@ -23,14 +23,14 @@ public class TaskMonthly : MonoBehaviour
     // load file JSON nhiệm vụ tháng
     private void loaddata()
     {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskMonthly");
+        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/TaskMonthly");
         monthlyList = JsonUtility.FromJson<TaskMonthlys>(textJSon.text);
     }
 
     // tạo UI item nhiệm vụ tháng
     private void setdata()
     {
-        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchivement/TaskItem");
+        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/TaskItem");
 
         if (itemPrefab == null)
         {

@@ -36,7 +36,7 @@ public class TaskItem : MonoBehaviour
         int currentCoin = PrefManager.PrefMoney.getNumberCoin();
         PrefManager.PrefMoney.SetNumberCoin(currentCoin + rewardCoin);
 
-        TaskManager.Instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
+        //TaskManager.Instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
 
         // reset trạng thái nhiệm vụ
         PlayerPrefs.SetInt(taskType.ToString(), 0);

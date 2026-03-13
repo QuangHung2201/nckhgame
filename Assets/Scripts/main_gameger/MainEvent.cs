@@ -10,9 +10,10 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_Profile;
     [SerializeField] private Button button_chooseLocation;
     [SerializeField] private Button button_StickerWareHouse;
+    [SerializeField] private Button button_TaskAchivement;
 
     public GameObject PanelUnClick;
-    public GameObject TaskAchivement;
+    //public GameObject TaskAchivement;
 
     public  Transform Rood;
 
@@ -27,6 +28,7 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.AddListener(OpenProfileUser);
         button_chooseLocation.onClick.AddListener(OpenChooseLocation);
         button_StickerWareHouse.onClick.AddListener(OpenStickerWareHouse);
+        button_TaskAchivement.onClick.AddListener(OpenTaskAchivement);
     }
     private void OnDisable() // chuyển qua scene khác sẽ ngắt lắng nghe
     {
@@ -34,6 +36,7 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.RemoveAllListeners();
         button_chooseLocation.onClick.RemoveAllListeners();
         button_StickerWareHouse.onClick.RemoveAllListeners();
+        button_TaskAchivement.onClick.RemoveAllListeners();
         instance = null;
     }
 
@@ -79,7 +82,17 @@ public class MainEvent : MonoBehaviour
         RectTransform rect = clone_stickerWH.GetComponent<RectTransform>();
         rect.anchorMin = Vector3.zero;
         rect.anchorMax = Vector3.one;
-    }    
+    }
+
+    private void OpenTaskAchivement()
+    {
+        GameObject prefab_TaskAchivement = Resources.Load<GameObject>("PrefabsAchievement/Task_Achievement");
+        GameObject clone_TaskAchivement = Instantiate(prefab_TaskAchivement);
+        clone_TaskAchivement.transform.SetParent(Rood, false);
+        RectTransform rect = clone_TaskAchivement.GetComponent<RectTransform>();
+        rect.anchorMin = Vector3.zero;
+        rect.anchorMax = Vector3.one;
+    }
 
     public void OpenPanel()
     {
