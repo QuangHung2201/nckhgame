@@ -1,0 +1,34 @@
+{
+"TaskDaily":[
+  {
+    "id": "DN-HG",
+    "name": "Đăng nhập hàng ngày",
+	"target": 1,
+	"reward": 20
+  },
+  {
+    "id": "C1-DD",
+    "name": "Chơi 1 địa danh bất kỳ",
+	"target": 1,
+	"reward": 30
+  },
+  {
+    "id": "TL-D3",
+    "name": "Trả lời đúng 3 câu hỏi",
+	"target": 3,
+	"reward": 30
+  },
+  {
+    "id": "TL-LT3",
+    "name": "Trả lời đúng liên tiếp 3 câu",
+	"target": 3,
+	"reward": 30
+  },
+  {
+    "id": "HT-Q",
+    "name": "Hoàn thành quiz không bỏ câu",
+	"target": 1,
+	"reward": 30
+  }
+]
+}

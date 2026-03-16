@@ -1,0 +1,34 @@
+{
+"TaskMonthly":[
+  {
+    "id": "HT-30DD",
+    "name": "Hoàn thành 30 địa danh",
+	"target": 30,
+	"reward": 30
+  },
+  {
+    "id": "HT-50Q",
+    "name": "Hoàn thành 50 quiz",
+	"target": 50,
+	"reward": 30
+  },
+  {
+    "id": "TL-150C",
+    "name": "Trả lời đúng 150 câu hỏi",
+	"target": 150,
+	"reward": 50
+  },
+  {
+    "id": "CG-10N",
+    "name": "Chơi game trong 10 ngày khác nhau",
+	"target": 10,
+	"reward": 50
+  },
+  {
+    "id": "HT-1T",
+    "name": "Hoàn thành 100% địa danh của 1 tỉnh",
+	"target": 1,
+	"reward": 50
+  }
+]
+}

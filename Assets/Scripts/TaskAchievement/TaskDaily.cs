@@ -23,14 +23,14 @@ public class TaskDaily : MonoBehaviour
     // load file JSON nhiệm vụ daily
     private void loaddata()
     {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchivement/TaskDaily");
+        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/TaskDaily");
         dailyList = JsonUtility.FromJson<TaskDailys>(textJSon.text);
     }
 
     // tạo UI item nhiệm vụ
     private void setdata()
     {
-        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchivement/TaskItem");
+        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/TaskItem");
 
         if (itemPrefab == null)
         {

@@ -33,14 +33,15 @@ public class TaskItem : MonoBehaviour
     // nhận thưởng nhiệm vụ
     void receiveReward()
     {
+        //Debug.Log("Hello");
         int currentCoin = PrefManager.PrefMoney.getNumberCoin();
         PrefManager.PrefMoney.SetNumberCoin(currentCoin + rewardCoin);
 
-        TaskManager.Instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
+        MainEvent.instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
 
         // reset trạng thái nhiệm vụ
         PlayerPrefs.SetInt(taskType.ToString(), 0);
-        TaskData.Instance.printData();
+        //TaskData.Instance.printData();
         ResetProgress();
 
         DisableObject();
@@ -81,11 +82,20 @@ public class TaskItem : MonoBehaviour
     public void UpdateProgress()
     {
         int currentValue = PlayerPrefs.GetInt(taskType.ToString());
+        
         txtTarget.text = currentValue + "/" + target;
 
         float progress = (float)currentValue / target;
 
         progressFill.fillAmount = progress;
+
+        //Debug.Log("Current value for " + taskType.ToString() + ": " + currentValue);
+
+        // kiểm tra hoàn thành nhiệm vụ
+        if (currentValue >= target)
+        {
+            EnableObject();
+        }
     }
 
     public void ResetProgress()

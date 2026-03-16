@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -684,6 +683,8 @@ GameObject:
   - component: {fileID: 544981444}
   - component: {fileID: 544981446}
   - component: {fileID: 544981445}
+  - component: {fileID: 544981449}
+  - component: {fileID: 544981447}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -734,6 +735,30 @@ MonoBehaviour:
     playscreens: []
   questionslist:
     questions: []
+--- !u!114 &544981447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544981443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd31406b34327d047b73d5e91d0091b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &544981449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544981443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79016ba3bd6309544876d7438aa494d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556875932
 GameObject:
   m_ObjectHideFlags: 0
