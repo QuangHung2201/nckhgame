@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5627,8 +5626,8 @@ MonoBehaviour:
   button_StickerWareHouse: {fileID: 1358284247}
   button_TaskAchivement: {fileID: 1545199954}
   PanelUnClick: {fileID: 1742471378}
-  TaskAchivement: {fileID: 5075243979662343128, guid: 4aa973d22d1ea5d45a9e19dddbbf1ac6, type: 3}
   Rood: {fileID: 1765498295}
+  PopupScore: {fileID: 2121711037}
 --- !u!222 &639131390
 CanvasRenderer:
   m_ObjectHideFlags: 0

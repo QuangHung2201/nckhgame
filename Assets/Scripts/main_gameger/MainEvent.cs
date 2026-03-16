@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,8 @@ public class MainEvent : MonoBehaviour
     //public GameObject TaskAchivement;
 
     public  Transform Rood;
+
+    public TextMeshProUGUI PopupScore; // hiển thị coin sau khi nhận thưởng
 
     private void Start()
     {

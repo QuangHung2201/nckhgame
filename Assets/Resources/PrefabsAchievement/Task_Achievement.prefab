@@ -860,10 +860,10 @@ RectTransform:
   - {fileID: 4567708465899682882}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 815, y: -160}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5327676946348336932
 CanvasRenderer:
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddMonthly5
         m_Mode: 1
@@ -1068,10 +1068,10 @@ RectTransform:
   - {fileID: 779365589106808609}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 655, y: -50}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8039476855366453065
 CanvasRenderer:
@@ -1155,7 +1155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddDaily4
         m_Mode: 1
@@ -1804,10 +1804,10 @@ RectTransform:
   - {fileID: 7013407872286751590}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 335, y: -50}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7332326762101661280
 CanvasRenderer:
@@ -1891,7 +1891,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddDaily2
         m_Mode: 1
@@ -2985,7 +2985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8971196004441369508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3088,7 +3088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: ResetData
         m_Mode: 1
@@ -3402,10 +3402,10 @@ RectTransform:
   - {fileID: 7618239869974514617}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 815, y: -50}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7467853082080076939
 CanvasRenderer:
@@ -3489,7 +3489,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddDaily5
         m_Mode: 1
@@ -3535,10 +3535,10 @@ RectTransform:
   - {fileID: 7649470656542505710}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 495, y: -160}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &254213327262891790
 CanvasRenderer:
@@ -3622,7 +3622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddMonthly3
         m_Mode: 1
@@ -3668,10 +3668,10 @@ RectTransform:
   - {fileID: 5817117553486289334}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 335, y: -160}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6801854771704844426
 CanvasRenderer:
@@ -3755,7 +3755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddMonthly2
         m_Mode: 1
@@ -3779,7 +3779,7 @@ GameObject:
   - component: {fileID: 6519379151535272992}
   - component: {fileID: 8499703938150666598}
   - component: {fileID: 6411731242170326355}
-  - component: {fileID: 7597612642968592520}
+  - component: {fileID: 523350834407910591}
   m_Layer: 5
   m_Name: Task_Achievement
   m_TagString: Untagged
@@ -3860,7 +3860,7 @@ MonoBehaviour:
   monthlyList:
     TaskMonthly: []
   parent: {fileID: 5241365572191575116}
---- !u!114 &7597612642968592520
+--- !u!114 &523350834407910591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3872,17 +3872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13228674ea314a4fbaaca71e34ee48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btns:
-  - {fileID: 3737856734012060916}
-  - {fileID: 2411404213415778136}
-  - {fileID: 6420043462341075278}
-  - {fileID: 1621178429236260352}
-  - {fileID: 2727074446539097475}
-  - {fileID: 5744261202815109013}
-  - {fileID: 8449991742109671759}
-  - {fileID: 4029417823120422960}
-  - {fileID: 590835250056772812}
-  - {fileID: 6983055371055331119}
 --- !u!1 &5085399157435834029
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,10 +4886,10 @@ RectTransform:
   - {fileID: 8949608158230313251}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -160}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6465726974924439387
 CanvasRenderer:
@@ -4984,7 +4973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddMonthly1
         m_Mode: 1
@@ -5593,10 +5582,10 @@ RectTransform:
   - {fileID: 9080209242548366847}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -50}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8976153561368790604
 CanvasRenderer:
@@ -5680,7 +5669,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddDaily1
         m_Mode: 1
@@ -5860,10 +5849,10 @@ RectTransform:
   - {fileID: 307553303614940851}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 655, y: -160}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2025385608568750635
 CanvasRenderer:
@@ -5947,7 +5936,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddMonthly4
         m_Mode: 1
@@ -5993,10 +5982,10 @@ RectTransform:
   - {fileID: 8594586778882377569}
   m_Father: {fileID: 5784680775402040828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 495, y: -50}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1787623354389964004
 CanvasRenderer:
@@ -6080,7 +6069,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7597612642968592520}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TaskData, Assembly-CSharp
         m_MethodName: AddDaily3
         m_Mode: 1
@@ -6110,7 +6099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5784680775402040828
 RectTransform:
   m_ObjectHideFlags: 0
