@@ -4,8 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,7 +11,7 @@ using UnityEngine.UI;
 public class ManagerSceneGame : MonoBehaviour
 {
     public static ManagerSceneGame Instance;
-    private string idToppic; // lưu id topic cache
+    public string idToppic; // lưu id topic cache
     private questionss datalocation;
     private int idexquestion;
     private List<GameObject> listbuttonclone;
@@ -112,7 +110,7 @@ public class ManagerSceneGame : MonoBehaviour
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
             PrefManager.PrefSaveUserMap.SetUserQuestionLocationID( idToppic,idexquestion);  // nếu đúng sẽ tăng id câu hỏi của địa danh đó
-
+            BgManager.instance.setAlphaBG();
 
             idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
             if (idexquestion >= datalocation.questions.Count) // nếu đã trả lời hết thì set lại id câu hỏi của địa danh về 0
@@ -137,11 +135,12 @@ public class ManagerSceneGame : MonoBehaviour
         else
         {
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
-            if(timepresent < 0) 
+            if(timepresent < 0) //hết giờ
             { 
                 timepresent = 0;
                 killCountDown();
                 panel_fail.SetActive(true);
+                BgManager.instance.ResetAlpha();
                 CoinBasket.Instance.resetCoin();// hết giờ sẽ reset lại coin
             }
             else
