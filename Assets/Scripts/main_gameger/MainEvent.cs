@@ -10,6 +10,7 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_Profile;
     [SerializeField] private Button button_chooseLocation;
     [SerializeField] private Button button_StickerWareHouse;
+    [SerializeField] private Button button_reloadTMP;
 
     public GameObject PanelUnClick;
     public GameObject TaskAchivement;
@@ -27,6 +28,7 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.AddListener(OpenProfileUser);
         button_chooseLocation.onClick.AddListener(OpenChooseLocation);
         button_StickerWareHouse.onClick.AddListener(OpenStickerWareHouse);
+        button_reloadTMP.onClick.AddListener(reloadTMP);
     }
     private void OnDisable() // chuyển qua scene khác sẽ ngắt lắng nghe
     {
@@ -34,9 +36,14 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.RemoveAllListeners();
         button_chooseLocation.onClick.RemoveAllListeners();
         button_StickerWareHouse.onClick.RemoveAllListeners();
+        button_reloadTMP.onClick.RemoveAllListeners();
         instance = null;
     }
 
+    private void reloadTMP()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     private void StartGame()
     {
         OpenPanel();
