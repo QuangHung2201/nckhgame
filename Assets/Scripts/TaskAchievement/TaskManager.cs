@@ -16,8 +16,6 @@ public class TaskManager : MonoBehaviour
     public Button buttonMonthly; // nút chuyển sang monthly
     public Button buttonClose;   // nút đóng bảng nhiệm vụ
 
-    //public TextMeshProUGUI PopupScore; // hiển thị coin sau khi nhận thưởng
-
     public GameObject ContentDaily;   // parent chứa item nhiệm vụ daily
     public GameObject ContentMonthly; // parent chứa item nhiệm vụ monthly
 
@@ -39,7 +37,7 @@ public class TaskManager : MonoBehaviour
         taskDaily.SetActive(true);
         taskMonthly.SetActive(false);
 
-        TaskTrigger.Instance.OnLogin(); // kích hoạt nhiệm vụ đăng nhập hàng ngày
+        ResetAchievement.Instance.CheckDailyReset(); // kiểm tra reset nhiệm vụ daily
     }
 
     // cập nhật danh sách nhiệm vụ daily
@@ -121,7 +119,6 @@ public class TaskManager : MonoBehaviour
     // đóng bảng nhiệm vụ
     public void CloseTaskAchievement()
     {
-        //taskAchievement.SetActive(false);
         Destroy(gameObject);
     }
 }

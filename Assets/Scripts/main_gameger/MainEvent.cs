@@ -15,7 +15,6 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_TaskAchivement;
 
     public GameObject PanelUnClick;
-    //public GameObject TaskAchivement;
 
     public  Transform Rood;
 

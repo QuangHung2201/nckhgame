@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class ResetAchievement : MonoBehaviour
 {
-    void Start()
+    public static ResetAchievement Instance; // singleton để truy cập từ các script khác
+
+    void Awake()
     {
-        CheckDailyReset();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    void CheckDailyReset()
+    public void CheckDailyReset()
     {
         string today = System.DateTime.Now.ToString("yyyyMMdd");
         string lastReset = PlayerPrefs.GetString("LastDailyReset", "");
@@ -22,7 +31,7 @@ public class ResetAchievement : MonoBehaviour
 
             PlayerPrefs.SetString("LastDailyReset", today);
 
-            //TaskTrigger.Instance.OnLogin(); // kích hoạt lại nhiệm vụ đăng nhập hàng ngày
+            TaskTrigger.Instance.OnLogin(); // kích hoạt lại nhiệm vụ đăng nhập hàng ngày
 
             Debug.Log("Daily tasks reset");
         }
@@ -35,7 +44,5 @@ public class ResetAchievement : MonoBehaviour
         PlayerPrefs.SetInt("Daily3", 0);
         PlayerPrefs.SetInt("Daily4", 0);
         PlayerPrefs.SetInt("Daily5", 0);
-
-        //TaskData.Instance.printData();
     }
 }
