@@ -38,6 +38,7 @@ public class TaskManager : MonoBehaviour
         taskMonthly.SetActive(false);
 
         ResetAchievement.Instance.CheckDailyReset(); // kiểm tra reset nhiệm vụ daily
+        ResetAchievement.Instance.CheckMonthlyReset(); // kiểm tra reset nhiệm vụ monthly
     }
 
     // cập nhật danh sách nhiệm vụ daily
