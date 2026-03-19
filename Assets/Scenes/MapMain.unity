@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5308,7 +5309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  formLeft: 1
+  leftform: 1
 --- !u!1 &157275933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5841,7 +5842,6 @@ RectTransform:
   - {fileID: 157275934}
   - {fileID: 1550790605}
   - {fileID: 798095424}
-  - {fileID: 1545199953}
   - {fileID: 1742471379}
   - {fileID: 1765498295}
   m_Father: {fileID: 48869337}
@@ -5882,7 +5882,6 @@ MonoBehaviour:
   button_reloadTMP: {fileID: 84181667}
   button_TaskAchivement: {fileID: 1545199954}
   PanelUnClick: {fileID: 1742471378}
-  TaskAchivement: {fileID: 0}
   Rood: {fileID: 1765498295}
   PopupScore: {fileID: 2121711037}
 --- !u!222 &639131390
@@ -5939,6 +5938,7 @@ RectTransform:
   - {fileID: 86534048}
   - {fileID: 1885177026}
   - {fileID: 84181666}
+  - {fileID: 1545199953}
   m_Father: {fileID: 639131387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6667,6 +6667,7 @@ GameObject:
   - component: {fileID: 1545199956}
   - component: {fileID: 1545199955}
   - component: {fileID: 1545199954}
+  - component: {fileID: 1545199957}
   m_Layer: 5
   m_Name: Button_Achivement
   m_TagString: Untagged
@@ -6687,11 +6688,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1019471655}
-  m_Father: {fileID: 639131387}
+  m_Father: {fileID: 798095424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328, y: 547}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: -314, y: 579}
   m_SizeDelta: {x: 205, y: 128.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545199954
@@ -6776,6 +6777,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545199952}
   m_CullTransparentMesh: 1
+--- !u!114 &1545199957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545199952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftform: 1
 --- !u!1 &1550790604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,8 +6962,8 @@ GameObject:
   - component: {fileID: 1885177029}
   - component: {fileID: 1885177028}
   - component: {fileID: 1885177031}
-  - component: {fileID: 1885177030}
   - component: {fileID: 1885177027}
+  - component: {fileID: 1885177032}
   m_Layer: 5
   m_Name: Button_gameplay
   m_TagString: Untagged
@@ -7058,19 +7072,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885177025}
   m_CullTransparentMesh: 1
---- !u!114 &1885177030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885177025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  formLeft: 0
 --- !u!114 &1885177031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7083,6 +7084,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64205dd3ac9d48a41b7ac8b9a5ca2fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1885177032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885177025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftform: 0
 --- !u!1 &1907225275
 GameObject:
   m_ObjectHideFlags: 0
@@ -7094,10 +7108,10 @@ GameObject:
   - component: {fileID: 1907225276}
   - component: {fileID: 1907225279}
   - component: {fileID: 1907225278}
-  - component: {fileID: 1907225281}
   - component: {fileID: 1907225277}
   - component: {fileID: 1907225280}
   - component: {fileID: 1907225282}
+  - component: {fileID: 1907225283}
   m_Layer: 5
   m_Name: button_Mapscreen
   m_TagString: Untagged
@@ -7120,9 +7134,9 @@ RectTransform:
   - {fileID: 249041877}
   m_Father: {fileID: 798095424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 650, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1907225277
@@ -7222,19 +7236,6 @@ MonoBehaviour:
   nameScreen: {fileID: 249041878}
   sprite_gr: {fileID: 1907225278}
   sprite_atlas: {fileID: 100100200, guid: 7c49cf3381e9c334aa42a9250fd9806c, type: 3}
---- !u!114 &1907225281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907225275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  formLeft: 0
 --- !u!114 &1907225282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7250,6 +7251,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0.9515679, b: 1, a: 1}
   m_EffectDistance: {x: 5, y: 5}
   m_UseGraphicAlpha: 1
+--- !u!114 &1907225283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907225275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59078a4f3b72e742ae22485a9f41280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftform: 1
 --- !u!1 &2021968897
 GameObject:
   m_ObjectHideFlags: 0

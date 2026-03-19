@@ -14,6 +14,7 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_reloadTMP;
     [SerializeField] private Button button_TaskAchivement;
 
+
     public GameObject PanelUnClick;
     //public GameObject TaskAchivement;
 
@@ -52,6 +53,7 @@ public class MainEvent : MonoBehaviour
     }
     private void StartGame()
     {
+       // managerButtonOut();
         OpenPanel();
         GameObject gamestart_prefab = Resources.Load<GameObject>("GamePlay_Manager/MapScreen");
         GameObject gameplay_clone = Instantiate(gamestart_prefab);
@@ -65,6 +67,7 @@ public class MainEvent : MonoBehaviour
 
     private void OpenProfileUser()
     {
+       // managerButtonOut();
         OpenPanel();
         GameObject UserProfile_prefab = Resources.Load<GameObject>("UserProfile/PrefabUserProfile");
         GameObject UserProfile_clone = Instantiate(UserProfile_prefab);
@@ -76,6 +79,7 @@ public class MainEvent : MonoBehaviour
 
     private void OpenChooseLocation()
     {
+       // managerButtonOut();
         OpenPanel();
         GameObject prefab_chooseLocation = Resources.Load<GameObject>("GamePlay_Manager/prefab_gameplay");
         GameObject chooseLocationclone = Instantiate(prefab_chooseLocation);
@@ -86,6 +90,7 @@ public class MainEvent : MonoBehaviour
     }    
     private void OpenStickerWareHouse()
     {
+       // managerButtonOut();
         GameObject prefab_stickerWH = Resources.Load<GameObject>("GamePlay_Manager/prefabsSticker/stickerWareHouse");
         GameObject clone_stickerWH = Instantiate(prefab_stickerWH);
         clone_stickerWH.transform.SetParent(Rood, false);
@@ -96,6 +101,7 @@ public class MainEvent : MonoBehaviour
 
     private void OpenTaskAchivement()
     {
+       // managerButtonOut();
         GameObject prefab_TaskAchivement = Resources.Load<GameObject>("PrefabsAchievement/Task_Achievement");
         GameObject clone_TaskAchivement = Instantiate(prefab_TaskAchivement);
         clone_TaskAchivement.transform.SetParent(Rood, false);

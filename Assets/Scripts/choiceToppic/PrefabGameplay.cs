@@ -36,6 +36,7 @@ public class PrefabGameplay : MonoBehaviour
     public void close()
     {
         MainEvent.instance.ClosePanel();
+       // MainEvent.instance.managerButtonIn();
         gameObject.GetComponent<OpenCloseAni>().aniClose();
     }
 

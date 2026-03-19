@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20971800435588441}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -38,8 +38,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7399902, y: -33.05005}
-  m_SizeDelta: {x: 420.94, y: 553.14}
+  m_AnchoredPosition: {x: 4.5999756, y: -37.380005}
+  m_SizeDelta: {x: 1402.01, y: 2357.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8773118379553284987
 CanvasRenderer:
@@ -509,7 +509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 750, y: -1880}
+  m_AnchoredPosition: {x: 1231, y: -2780}
   m_SizeDelta: {x: 1000, y: 164.8159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6212554584228114484
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_text: Continue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -7311433130325934809, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4154490322747988510

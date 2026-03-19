@@ -76,10 +76,11 @@ public class RewardManager : MonoBehaviour
     }
     public void EvenButtonConT()
     {
-        var key = dicRew.Keys.ToList();
-        var val = dicRew.Values.ToList();
+        var key = dicRew.Keys.ToList(); // id rw
+        var val = dicRew.Values.ToList(); // obj rw
         for(int i = 0; i < key.Count; i++)
         {
+            val[i].GetComponent<ItemReward>().openLight();
             if (key[i] == "coin")
             {
                 HelperCoinAni.flyToPopupCoin(val[i]);

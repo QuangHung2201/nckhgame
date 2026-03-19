@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\choiceMap\SetDataScreenItem.cs" />
     <Compile Include="Assets\Scripts\main_gameger\SetDatamanager.cs" />
     <Compile Include="Assets\Scripts\UserProfile\RenameProfi.cs" />
+    <Compile Include="Assets\Scripts\helper\Rotate.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskTrigger.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />

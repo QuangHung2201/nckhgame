@@ -11,10 +11,15 @@ public class ItemReward : MonoBehaviour
     public Image icon;
     public TextMeshProUGUI text_reward;
     public SpriteAtlas SpriteAtlas_sticker;
+    [SerializeField] private GameObject lightObj;
     void Start()
     {
         
     }
+    public void openLight()
+    {
+        lightObj.SetActive(true);
+    }    
     public void setdata(string Idsprite, string name,int number)
     {
         text_reward.text = "Sticker " + name + " x" + number;
