@@ -20,7 +20,7 @@
   },
   {
     "id": "TL-LT3",
-    "name": "Trả lời đúng liên tiếp 3 câu",
+    "name": "Trả lời 3 lần liên tiếp đúng 3 câu",
 	"target": 3,
 	"reward": 30
   },

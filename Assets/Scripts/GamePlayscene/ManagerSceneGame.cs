@@ -107,6 +107,11 @@ public class ManagerSceneGame : MonoBehaviour
 
         if(correct == true)
         {
+            //TaskTrigger.Instance.OnCorrectAnswer(); // sự kiện trả lời đúng
+            EventAchievement.Trigger(EventType.CheckDaily3); // sự kiện tăng nhiệm vụ daily 3 ( trả lời đúng 3 câu hỏi )
+            EventAchievement.Trigger(EventType.CheckDaily4, true); // sự kiện tăng nhiệm vụ daily 4 ( trả lời đúng liên tiếp 3 câu hỏi )
+            EventAchievement.Trigger(EventType.CheckMonthly3); // sự kiện tăng nhiệm vụ monthly 3 ( trả lời đúng 150 câu hỏi )
+
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
             PrefManager.PrefSaveUserMap.SetUserQuestionLocationID( idToppic,idexquestion);  // nếu đúng sẽ tăng id câu hỏi của địa danh đó
@@ -134,6 +139,9 @@ public class ManagerSceneGame : MonoBehaviour
         }
         else
         {
+            //TaskTrigger.Instance.OnWrongAnswer(); // sự kiện trả lời sai
+            EventAchievement.Trigger(EventType.CheckDaily4, false); // sự kiện tăng nhiệm vụ daily 4 ( trả lời sai 3 câu hỏi )
+
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ
             { 

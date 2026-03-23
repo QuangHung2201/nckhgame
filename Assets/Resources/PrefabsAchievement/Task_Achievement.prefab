@@ -3779,7 +3779,6 @@ GameObject:
   - component: {fileID: 6519379151535272992}
   - component: {fileID: 8499703938150666598}
   - component: {fileID: 6411731242170326355}
-  - component: {fileID: 523350834407910591}
   m_Layer: 5
   m_Name: Task_Achievement
   m_TagString: Untagged
@@ -3825,7 +3824,6 @@ MonoBehaviour:
   buttonDaily: {fileID: 1095427765293453537}
   buttonMonthly: {fileID: 8777082546630958387}
   buttonClose: {fileID: 2570205157472667370}
-  PopupScore: {fileID: 0}
   ContentDaily: {fileID: 7419350269437296961}
   ContentMonthly: {fileID: 8047602640381636993}
   TaskDailys: []
@@ -3860,18 +3858,6 @@ MonoBehaviour:
   monthlyList:
     TaskMonthly: []
   parent: {fileID: 5241365572191575116}
---- !u!114 &523350834407910591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5075243979662343128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13228674ea314a4fbaaca71e34ee48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5085399157435834029
 GameObject:
   m_ObjectHideFlags: 0

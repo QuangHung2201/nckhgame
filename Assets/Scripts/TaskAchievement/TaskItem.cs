@@ -38,10 +38,7 @@ public class TaskItem : MonoBehaviour
 
         MainEvent.instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
 
-        // reset trạng thái nhiệm vụ
-        PlayerPrefs.SetInt(taskType.ToString(), 0);
-
-        ResetProgress();
+        //ResetProgress();
 
         DisableObject();
     }

@@ -23,7 +23,7 @@ public class ResetAchievement : MonoBehaviour
         string today = System.DateTime.Now.ToString("yyyyMMdd");
         string lastReset = PlayerPrefs.GetString("LastDailyReset", "");
 
-        Debug.Log("Today: " + today + " LastDailyReset: " + lastReset);
+        //Debug.Log("Today: " + today + " LastDailyReset: " + lastReset);
 
         // nếu ngày hôm nay khác với ngày đã lưu lần cuối reset, thì reset nhiệm vụ daily
         if (today != lastReset)
@@ -32,7 +32,8 @@ public class ResetAchievement : MonoBehaviour
 
             PlayerPrefs.SetString("LastDailyReset", today);
 
-            TaskTrigger.Instance.OnLogin(); // kích hoạt lại nhiệm vụ đăng nhập hàng ngày
+            // sự kiện làm mới giao diện nhiệm vụ daily
+            EventAchievement.Trigger(EventType.CheckDaily1);
         }
     }
 
@@ -50,7 +51,7 @@ public class ResetAchievement : MonoBehaviour
         string thisMonth = System.DateTime.Now.ToString("yyyyMM");
         string lastMonth = PlayerPrefs.GetString("LastMonthlyReset", "");
 
-        Debug.Log("ThisMonth: " + thisMonth + " LastMonthlyReset: " + lastMonth);
+        //Debug.Log("ThisMonth: " + thisMonth + " LastMonthlyReset: " + lastMonth);
 
         // nếu tháng này khác với tháng đã lưu lần cuối reset, thì reset nhiệm vụ monthly
         if (thisMonth != lastMonth)
@@ -58,6 +59,9 @@ public class ResetAchievement : MonoBehaviour
             ResetMonthlyTasks();
 
             PlayerPrefs.SetString("LastMonthlyReset", thisMonth);
+
+            // sự kiện làm mới giao diện nhiệm vụ monthly
+            EventAchievement.Trigger(EventType.CheckMonthly4);
         }
     }
 

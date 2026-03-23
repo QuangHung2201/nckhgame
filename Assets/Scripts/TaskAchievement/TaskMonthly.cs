@@ -18,6 +18,7 @@ public class TaskMonthly : MonoBehaviour
     {
         setdata();
         TaskManager.Instance.UpdateTaskMonthly();
+        TaskManager.Instance.RefreshAllTasks();
     }
 
     // load file JSON nhiệm vụ tháng

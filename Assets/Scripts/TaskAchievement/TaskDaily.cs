@@ -18,6 +18,7 @@ public class TaskDaily : MonoBehaviour
     {
         setdata();
         TaskManager.Instance.UpdateTaskDaily();
+        TaskManager.Instance.RefreshAllTasks();
     }
 
     // load file JSON nhiệm vụ daily

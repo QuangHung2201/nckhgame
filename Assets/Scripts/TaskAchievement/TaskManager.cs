@@ -24,12 +24,14 @@ public class TaskManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
-    }
-
-    void OnDestroy()
-    {
-        Instance = null;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
@@ -37,8 +39,49 @@ public class TaskManager : MonoBehaviour
         taskDaily.SetActive(true);
         taskMonthly.SetActive(false);
 
-        ResetAchievement.Instance.CheckDailyReset(); // kiểm tra reset nhiệm vụ daily
-        ResetAchievement.Instance.CheckMonthlyReset(); // kiểm tra reset nhiệm vụ monthly
+    }
+
+    public void RefreshAllTasks()
+    {
+        foreach (TaskType taskType in System.Enum.GetValues(typeof(TaskType)))
+        {
+            string key = taskType.ToString();
+            int value = PlayerPrefs.GetInt(key);
+
+            UpdateTaskProgress(taskType, value);
+        }i
+    }
+
+    // cập nhật tiến độ nhiệm vụ đã đạt mục tiêu chưa
+    void UpdateTaskProgress(TaskType taskType, int currentValue)
+    {
+        // kiểm tra nhiệm vụ daily
+        foreach (var taskItem in TaskDailys)
+        {
+            if (taskItem.taskType == taskType)
+            {
+                taskItem.UpdateProgress();
+                if (currentValue >= taskItem.target)
+                {
+                    taskItem.EnableObject(); // cho phép nhận thưởng
+                }
+                return;
+            }
+        }
+        
+        // kiểm tra nhiệm vụ monthly
+        foreach (var taskItem in TaskMonthlys)
+        {
+            if (taskItem.taskType == taskType)
+            {
+                taskItem.UpdateProgress();
+                if (currentValue >= taskItem.target)
+                {
+                    taskItem.EnableObject(); // cho phép nhận thưởng
+                }
+                return;
+            }
+        }
     }
 
     // cập nhật danh sách nhiệm vụ daily
