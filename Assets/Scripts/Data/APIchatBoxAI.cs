@@ -12,7 +12,8 @@ public class APIchatBoxAI : MonoBehaviour
     {
         
     }
-    public IEnumerator PostReQuest(string textpost)
+
+    public IEnumerator PostReQuest(string textpost, System.Action<string> onDone) // trả về text sau khi chạy xong
     {
         string url = "https://leaves-constant-months-molecular.trycloudflare.com";
         UnityWebRequest request = new UnityWebRequest(url,"POST");// tạo request
@@ -24,11 +25,12 @@ public class APIchatBoxAI : MonoBehaviour
 
         if(request.result == UnityWebRequest.Result.Success)
         {
-            textResual = request.downloadHandler.text;
             static_connect = true;
+            onDone.Invoke(request.downloadHandler.text);
         }
         else
         {
+            static_connect =false;
             Debug.Log("error connect API");
         }
 
