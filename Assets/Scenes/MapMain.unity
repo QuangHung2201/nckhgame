@@ -252,7 +252,7 @@ Transform:
   m_GameObject: {fileID: 61828742}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -892, z: 0}
+  m_LocalPosition: {x: 0, y: -950, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -279,7 +279,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fbe50477a5e1465429f0cfc7924342df, type: 2}
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -415,7 +415,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 4.11
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -468,7 +468,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 3.96
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -520,9 +520,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.16364548, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.16364548, b: 1, a: 0.6862745}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -586,7 +586,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.53
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1169,7 +1169,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 54.76
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6876,8 +6876,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1006, y: 735}
-  m_SizeDelta: {x: 218.22998, y: 208.77002}
+  m_AnchoredPosition: {x: 860, y: 883}
+  m_SizeDelta: {x: 300, y: 201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709782233
 MonoBehaviour:
@@ -6899,7 +6899,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43029e0fd35626d41b40d2cc94fd99e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1597eaab9a7be84b9064a936b5fd356, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
