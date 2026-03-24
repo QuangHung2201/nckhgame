@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class BossPopup : MonoBehaviour , IDragHandler
 {
-    private RectTransform m_RectTransform;
+    private RectTransform m_RectTransform; // script vị trí
     public Canvas Canvas;
     private float m_minX,m_maxX,m_minY,m_maxY;
     void Start()
@@ -24,10 +24,10 @@ public class BossPopup : MonoBehaviour , IDragHandler
         float hightScreen = Screen.height / Canvas.scaleFactor;
 
         m_minX = widthPopup / 2f;
-        m_maxX = widthScreen - (widthPopup / 2f);
+        m_maxX = widthScreen - (widthPopup + (widthPopup/2f));
 
         m_minY = hightPopup / 2f;
-        m_maxY = hightScreen - (hightPopup / 2f);
+        m_maxY = hightScreen - (hightPopup + (hightPopup/2f));
     }    
     public void OnDrag(PointerEventData eventData)
     {

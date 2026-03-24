@@ -60,6 +60,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.28f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\chatBoxAI\ChatBoxManager.cs" />
+    <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ItemAnswer.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerItem.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Assets\Scripts\main_gameger\PopupCoin.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\Itemplace.cs" />
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
+    <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
@@ -79,7 +82,6 @@
     <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
-    <Compile Include="Assets\Scripts\main_gameger\BossPopup.cs" />
     <Compile Include="Assets\Scripts\main_gameger\MainEvent.cs" />
     <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\Data\APIchatBoxAI.cs" />
