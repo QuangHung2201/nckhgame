@@ -31,7 +31,7 @@ public class TaskDaily : MonoBehaviour
     // tạo UI item nhiệm vụ
     private void setdata()
     {
-        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/TaskItem");
+        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/itemplace 1");
 
         if (itemPrefab == null)
         {

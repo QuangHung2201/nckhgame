@@ -1,33 +1,79 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TaskItem : MonoBehaviour
 {
     public TaskType taskType;              // loại nhiệm vụ
-    public Image imgIconTask;              // icon nhiệm vụ
     public TextMeshProUGUI txtContentTask; // nội dung nhiệm vụ
-    public TextMeshProUGUI txtReward;      // hiển thị phần thưởng
     public TextMeshProUGUI txtTarget;      // hiển thị tiến độ nhiệm vụ (ví dụ: 3/5)
     public int rewardCoin = 0;             // số coin nhận được
     public int target = 0;                 // mục tiêu hoàn thành nhiệm vụ
 
-    [SerializeField] private Button btnReceive;      // nút nhận thưởng
-    [SerializeField] private CanvasGroup canvasGroup; // điều khiển trạng thái UI
     [SerializeField] private Image progressFill;      // thanh tiến độ nhiệm vụ
+
+    public GameObject locks;
+    public GameObject ani_chest;
+    public Button button_openchest;
+
+    Animator animator;
+    Sequence seqUpDown;
+
+    void Start()
+    {
+        animator = ani_chest.GetComponent<Animator>();
+        animator.SetBool("open", false);
+    }
+
+    // hiệu ứng animation cho item nhiệm vụ (nhấp nháy khi hoàn thành)
+    public void aniUpDown(Transform transformAni)
+    {
+        seqUpDown = DOTween.Sequence();
+        seqUpDown.Append(transformAni.DOScale(1.2f, 0.25f))
+        .Append(transformAni.DOScale(1f, 0.25f))
+        .AppendInterval(3f)
+        .SetLoops(-1);
+    }
+
+    public void seqKill()
+    {
+        seqUpDown.Kill();
+    }
 
     private void OnEnable()
     {
-        btnReceive.onClick.RemoveAllListeners();
-        btnReceive.onClick.AddListener(receiveReward);
+        button_openchest.onClick.AddListener(eVenOpenReW);
     }
 
     private void OnDisable()
     {
-        btnReceive.onClick.RemoveListener(receiveReward);
+        button_openchest.onClick.RemoveAllListeners();
+    }
+
+    public void eVenOpenReW()
+    {
+        open_chestsStart();
+        StartCoroutine(delayRewardOpen());
+    }
+
+    IEnumerator delayRewardOpen()
+    {
+        yield return new WaitForSeconds(1f);
+
+        GameObject panel = TaskManager.Instance.panel_coin;
+        panel.SetActive(true);
+
+        panelCoin panelScript = panel.GetComponent<panelCoin>();
+        panelScript.SetCoin(rewardCoin); // truyền coin
+    }
+
+    public void open_chestsStart()
+    {
+        animator.SetBool("open", true);
+        seqKill();
     }
 
     // nhận thưởng nhiệm vụ
@@ -43,16 +89,15 @@ public class TaskItem : MonoBehaviour
         DisableObject();
     }
 
-    // khóa item nhiệm vụ
     public void DisableObject()
     {
-        canvasGroup.blocksRaycasts = false;
+        //canvasGroup.blocksRaycasts = false;
     }
 
     // mở khóa item nhiệm vụ
     public void EnableObject()
     {
-        canvasGroup.blocksRaycasts = true;
+        //canvasGroup.blocksRaycasts = true;
     }
 
     // gán dữ liệu cho UI nhiệm vụ
@@ -62,9 +107,6 @@ public class TaskItem : MonoBehaviour
         rewardCoin = reward;
 
         txtContentTask.text = text;
-        txtReward.text = reward.ToString();
-
-        UpdateProgress();
     }
 
     // hiển thị tiến độ nhiệm vụ lên UI
@@ -81,7 +123,12 @@ public class TaskItem : MonoBehaviour
         // kiểm tra hoàn thành nhiệm vụ
         if (currentValue >= target)
         {
-            EnableObject();
+            locks.SetActive(false);
+            aniUpDown(ani_chest.transform);
+        }
+        else
+        {
+            locks.SetActive(true);
         }
     }
 

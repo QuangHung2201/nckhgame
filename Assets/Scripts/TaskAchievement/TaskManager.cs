@@ -11,10 +11,12 @@ public class TaskManager : MonoBehaviour
     public GameObject taskAchievement; // panel tổng nhiệm vụ
     public GameObject taskDaily;       // panel nhiệm vụ daily
     public GameObject taskMonthly;     // panel nhiệm vụ monthly
-
+    
     public Button buttonDaily;   // nút chuyển sang daily
     public Button buttonMonthly; // nút chuyển sang monthly
     public Button buttonClose;   // nút đóng bảng nhiệm vụ
+
+    public GameObject panel_coin;
 
     public GameObject ContentDaily;   // parent chứa item nhiệm vụ daily
     public GameObject ContentMonthly; // parent chứa item nhiệm vụ monthly
@@ -38,7 +40,6 @@ public class TaskManager : MonoBehaviour
     {
         taskDaily.SetActive(true);
         taskMonthly.SetActive(false);
-
     }
 
     public void RefreshAllTasks()
@@ -49,7 +50,7 @@ public class TaskManager : MonoBehaviour
             int value = PlayerPrefs.GetInt(key);
 
             UpdateTaskProgress(taskType, value);
-        }i
+        }
     }
 
     // cập nhật tiến độ nhiệm vụ đã đạt mục tiêu chưa

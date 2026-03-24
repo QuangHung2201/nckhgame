@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\choiceToppic\RewardManager.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\PrefabGameplay.cs" />
     <Compile Include="Assets\Scripts\UserProfile\UserProfilePanel.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\PopUpAchievement.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpgold.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Question.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopupCoin.cs" />
@@ -79,11 +80,8 @@
     <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\Scripts\TaskAchievement\Test\TaskTrigger.cs" />
-=======
     <Compile Include="Assets\Scripts\main_gameger\BossPopup.cs" />
->>>>>>> dc473b8b6f48f3e5e70fcc113c5e5043e5a68733
     <Compile Include="Assets\Scripts\main_gameger\MainEvent.cs" />
     <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\Data\APIchatBoxAI.cs" />
@@ -96,6 +94,7 @@
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\Test\panelCoin.cs" />
     <Compile Include="Assets\Scripts\helper\HelperCoinAni.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
