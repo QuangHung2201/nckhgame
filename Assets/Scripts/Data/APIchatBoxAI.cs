@@ -6,13 +6,16 @@ using UnityEngine.Networking;
 
 public class APIchatBoxAI : MonoBehaviour
 {
-    public string textResual;
+    public static APIchatBoxAI instance;
     public bool static_connect;
     void Start()
     {
-        
+        instance = this;
     }
-
+    private void OnDestroy()
+    {
+        instance = null;
+    }
     public IEnumerator PostReQuest(string textpost, System.Action<string> onDone) // trả về text sau khi chạy xong
     {
         string url = "https://leaves-constant-months-molecular.trycloudflare.com";
@@ -33,6 +36,5 @@ public class APIchatBoxAI : MonoBehaviour
             static_connect =false;
             Debug.Log("error connect API");
         }
-
     }    
 }

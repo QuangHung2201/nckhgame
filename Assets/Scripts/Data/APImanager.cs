@@ -2,13 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class APImanager 
+public class APImanager : MonoBehaviour 
 {
-    public static string textReSual;
-  //  public static string callAPI(string textpost)
-  //  {
-  //      APIchatBoxAI aPIchatBoxAI = new APIchatBoxAI();
-  //      
-  //      
-  //  }
+    public static APImanager instance;
+
+    private void Start()
+    {
+        instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        instance = null;
+    }
+    
+    public string reQuesttxt(string txtrequest)
+    {
+        string error = "lỗi api";
+        APIchatBoxAI.instance.StartCoroutine(APIchatBoxAI.instance.PostReQuest(txtrequest, (txtRequestAPI) =>
+        error = txtRequestAPI
+        )); 
+        return error;
+    }    
 }
