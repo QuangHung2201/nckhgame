@@ -36,6 +36,6 @@ public class ChatBoxManager : MonoBehaviour
     public void OpenFeaTureChatboss()
     {
         FeaTureChatboss.SetActive(true);
-        PopupShow.SetActive(false);
+        gameObject.SetActive(false);
     }    
 }

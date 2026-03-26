@@ -16,12 +16,12 @@ public class APImanager : MonoBehaviour
         instance = null;
     }
     
-    public string reQuesttxt(string txtrequest)
+    public IEnumerator reQuesttxt(string txtrequest,System.Action<string> Ondone)
     {
-        string error = "lỗi api";
-        APIchatBoxAI.instance.StartCoroutine(APIchatBoxAI.instance.PostReQuest(txtrequest, (txtRequestAPI) =>
-        error = txtRequestAPI
-        )); 
-        return error;
+        string txtRespone = "lỗi api";
+        yield return APIchatBoxAI.instance.StartCoroutine(APIchatBoxAI.instance.PostReQuest(txtrequest, (txtRequestAPI) =>
+        txtRespone = txtRequestAPI
+        ));
+        Ondone.Invoke(txtRespone);
     }    
 }
