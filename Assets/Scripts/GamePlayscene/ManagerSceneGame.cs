@@ -17,7 +17,11 @@ public class ManagerSceneGame : MonoBehaviour
     private List<GameObject> listbuttonclone;
     private screens screenList;
 
+    public Button btn_nextQt;
+    public GameObject objBtnNextqt;
     public Button buttonsetting;
+    public GameObject objBTNsetting;
+    public GameObject bg_setting;
     public GameObject panel_setting;
     public GameObject Gbject_Question;
     public Transform content;
@@ -27,6 +31,9 @@ public class ManagerSceneGame : MonoBehaviour
     private int time_countdown; // thời gian countdown hiện tại
     public GameObject panel_answerfalse;
     public GameObject panel_fail;
+    public TextMeshProUGUI txtTitle;
+    public GameObject panel_unlick;
+
 
     DG.Tweening.Sequence seq_countdown; // quản lý tween ( chuỗi hành động theo timeline )của countdown
     
@@ -41,11 +48,12 @@ public class ManagerSceneGame : MonoBehaviour
         seq_countdown = DOTween.Sequence();
         SetdataGameplay();
         countdown(20);
-
+        txtTitle.text = "Level " + (PrefManager.PrefSaveUserMap.GetIndexToppic() + 1);
     }
     private void OnEnable()
     {
         buttonsetting.onClick.AddListener(openPanelSetting);
+        btn_nextQt.onClick.AddListener(SetdataGameplay);
     }
     private void OnDestroy()
     {
@@ -62,6 +70,8 @@ public class ManagerSceneGame : MonoBehaviour
         Gbject_Question.GetComponent<Question>().setQuestion(question);
         SetAnswers();
         countdown(20);
+        objBtnNextqt.SetActive(false);
+        panel_unlick.SetActive(false);
     }    
 
     public void SetAnswers()
@@ -104,9 +114,10 @@ public class ManagerSceneGame : MonoBehaviour
     {
         string idmapcache = PrefManager.PrefSaveUserMap.GetUserMapchoose();
         string idtoppiccache = PrefManager.PrefSaveUserMap.GetUserLocationchoose();
-
+        panel_unlick.SetActive(correct);
         if(correct == true)
         {
+            killCountDown();
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
             PrefManager.PrefSaveUserMap.SetUserQuestionLocationID( idToppic,idexquestion);  // nếu đúng sẽ tăng id câu hỏi của địa danh đó
@@ -115,6 +126,7 @@ public class ManagerSceneGame : MonoBehaviour
             idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
             if (idexquestion >= datalocation.questions.Count) // nếu đã trả lời hết thì set lại id câu hỏi của địa danh về 0
             {
+                panel_unlick.SetActive(false);
                   if(checkToppicLast(idmapcache,idtoppiccache) == 1)    // check nếu là item cuối
                  {
                     PrefManager.PrefSaveUserMap.SetStaticLocation(idmapcache, 1);
@@ -129,7 +141,7 @@ public class ManagerSceneGame : MonoBehaviour
             }
             else  // nếu còn câu hỏi mới set
             {
-                SetdataGameplay(); // và set lại câu hỏi tiếp theo
+                objBtnNextqt.SetActive(true);
             }
         }
         else
@@ -163,13 +175,30 @@ public class ManagerSceneGame : MonoBehaviour
         if(panel_setting.active == false)
         {
             pauseCountdown();
-            panel_setting.SetActive(true);
+            objBTNsetting.SetActive(false);
+            dinamicPopupSetting("0");
         }
         else
         {
             playcoutdown();
         }    
     }  
+    public void dinamicPopupSetting(string staticPopup) // co dãn bg setting
+    {
+        RectTransform rect = bg_setting.GetComponent<RectTransform>();
+        if(staticPopup == "0") //chưa dãn
+        {
+            rect.DOSizeDelta(new Vector2(rect.sizeDelta.x, rect.sizeDelta.y + 200f),0.5f)
+                .SetEase(Ease.OutCubic)
+                .OnComplete(()=> panel_setting.SetActive(true));
+        }    
+        else // nếu đã dãn
+        {
+            rect.DOSizeDelta(new Vector2(rect.sizeDelta.x, rect.sizeDelta.y - 200f), 0.5f)
+                .SetEase(Ease.OutCubic)
+                .OnComplete(()=> objBTNsetting.SetActive(true));
+        }    
+    }    
     public int checkToppicLast(string idLocation,string idToppic)
     {
         if (idLocation == "") idLocation = screenList.playscreens[0].ID;
@@ -227,6 +256,13 @@ public class ManagerSceneGame : MonoBehaviour
         seq_countdown.OnComplete(() => panel_fail.SetActive(true));
     }    
      
+    public void resetTickAllbtn()
+    {
+        for(int i = 0; i < listbuttonclone.Count; i++)
+        {
+            listbuttonclone[i].GetComponent<ItemAnswer>().resetStickandFade();
+        }    
+    }    
     private void pauseCountdown() // taạm dừng sequence
     {
         seq_countdown.Pause();
@@ -235,6 +271,7 @@ public class ManagerSceneGame : MonoBehaviour
     {
         seq_countdown.Play();
         panel_setting.SetActive(false );
+        dinamicPopupSetting("1");
     }    
     public void killCountDown() // xoá sequence
     {
@@ -243,6 +280,5 @@ public class ManagerSceneGame : MonoBehaviour
     public void backMain()
     {
         SceneManager.LoadScene(1);
-    }    
-
+    }        
 }

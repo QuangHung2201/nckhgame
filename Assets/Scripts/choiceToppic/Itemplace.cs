@@ -60,6 +60,7 @@ public class Itemplace : MonoBehaviour
     {
         open_chestsStart();
         PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
+
         StartCoroutine(delayRewardOpen());
     }    
     IEnumerator delayRewardOpen()
@@ -136,6 +137,7 @@ public class Itemplace : MonoBehaviour
     public void SceneNext()
     { 
         PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation);
+        PrefManager.PrefSaveUserMap.SetUserIndexToppic(indexlocation());
         Debug.Log(idlocation);
         SceneManager.LoadScene(2);
     }
