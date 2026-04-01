@@ -109,8 +109,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.1306152, y: -5.6722107}
-  m_SizeDelta: {x: -101.7485, y: -20.3102}
+  m_AnchoredPosition: {x: 2.3476868, y: -5.6722107}
+  m_SizeDelta: {x: -94.7918, y: -20.3102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5322692071250623902
 CanvasRenderer:
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278205789
-  m_fontColor: {r: 0.3647059, g: 0.2392157, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -167,8 +167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -232,14 +232,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3780278616363093462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3916316857726437546}
   - {fileID: 8371378767923469694}
-  m_Father: {fileID: 2718209584217429568}
+  m_Father: {fileID: 6896089538496663385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -427,7 +427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3916316857726437546
 RectTransform:
   m_ObjectHideFlags: 0
@@ -602,7 +602,6 @@ RectTransform:
   m_Children:
   - {fileID: 6750870279760806051}
   - {fileID: 4253552193346422781}
-  - {fileID: 8497308190411112567}
   m_Father: {fileID: 6896089538496663385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -680,6 +679,7 @@ RectTransform:
   m_Children:
   - {fileID: 2718209584217429568}
   - {fileID: 5196192840816335164}
+  - {fileID: 8497308190411112567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}

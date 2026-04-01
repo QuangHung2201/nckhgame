@@ -67,6 +67,7 @@ public class Itemplace : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         PrefabGameplay.instance.panel_reward.SetActive(true);
+        button_openchest.onClick.RemoveListener(eVenOpenReW);
     }    
     public int checkstatic_openChest()
     {

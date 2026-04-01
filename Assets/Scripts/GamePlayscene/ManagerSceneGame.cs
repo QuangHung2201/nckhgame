@@ -19,10 +19,12 @@ public class ManagerSceneGame : MonoBehaviour
 
     public Button btn_nextQt;
     public GameObject objBtnNextqt;
+
     public Button buttonsetting;
     public GameObject objBTNsetting;
     public GameObject bg_setting;
     public GameObject panel_setting;
+
     public GameObject Gbject_Question;
     public Transform content;
     public GameObject panelWin;
@@ -167,7 +169,7 @@ public class ManagerSceneGame : MonoBehaviour
 
     IEnumerator downPanelAnswerfalse()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         panel_answerfalse.SetActive(false);
     }
     public void openPanelSetting()  // bật tắt panel setting

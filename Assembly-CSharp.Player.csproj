@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />
     <Compile Include="Assets\Scripts\helper\SignInhelper.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
