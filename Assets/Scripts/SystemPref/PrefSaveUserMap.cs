@@ -6,6 +6,7 @@ public class PrefSaveUserMap
 {
     private const string KEY_USERMAPID = "usermapID"; // key lưu map đã chọn của player
     private const string KEY_USERLOCATIONID = "cachelocationID"; // lưu id topic vừa nhấn ( để tìm json )
+    private const string KEY_USERTOPPICINDEX = "cachetoppicIndex";
     private const string KEY_LISTSTICKER = "cacheStickerReceived"; // lưu danh sách sticker đã nhận
 
     //Question{UserLocation}    : key động lưu id câu hỏi hiện tại theo chủ đề
@@ -21,6 +22,10 @@ public class PrefSaveUserMap
     public string GetUserLocationchoose() // hàm lấy id location đã chọn ( để tìm json )
     {
         return PlayerPrefs.GetString(KEY_USERLOCATIONID, "");
+    }
+    public int GetIndexToppic()
+    {
+        return PlayerPrefs.GetInt(KEY_USERTOPPICINDEX, 0);
     }
     public int GetUserQuestionLocationID(string UserLocation)  // lấy id câu hỏi hiện tại theo chủ đề ( key động )
     {
@@ -67,6 +72,11 @@ public class PrefSaveUserMap
     public void SetUserLocationID(string userLocationid)  // hàm sửa lại id location
     {
         PlayerPrefs.SetString(KEY_USERLOCATIONID, userLocationid);
+        PlayerPrefs.Save();
+    }
+    public void SetUserIndexToppic(int  userIndex)
+    {
+        PlayerPrefs.SetInt(KEY_USERTOPPICINDEX, userIndex);
         PlayerPrefs.Save();
     }
     public void SetUserQuestionLocationID(string UserLocation, int indexQuestion)  // hàm lưu id câu hỏi hiện tại theo chủ đề ( key động )

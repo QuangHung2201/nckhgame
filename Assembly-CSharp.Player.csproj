@@ -82,9 +82,15 @@
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\ConfigAchivement.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskMonthly.cs" />
+=======
+    <Compile Include="Assets\Scripts\helper\SignInhelper.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
+>>>>>>> 32ba2456c9cc44881931b2ded44c646211f7494b
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskDaily.cs" />

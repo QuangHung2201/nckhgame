@@ -60,12 +60,14 @@ public class Itemplace : MonoBehaviour
     {
         open_chestsStart();
         PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
+
         StartCoroutine(delayRewardOpen());
     }    
     IEnumerator delayRewardOpen()
     {
         yield return new WaitForSeconds(1f);
         PrefabGameplay.instance.panel_reward.SetActive(true);
+        button_openchest.onClick.RemoveListener(eVenOpenReW);
     }    
     public int checkstatic_openChest()
     {
@@ -136,6 +138,7 @@ public class Itemplace : MonoBehaviour
     public void SceneNext()
     { 
         PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation);
+        PrefManager.PrefSaveUserMap.SetUserIndexToppic(indexlocation());
         Debug.Log(idlocation);
         SceneManager.LoadScene(2);
     }

@@ -8,6 +8,19 @@ public class APIchatBoxAI : MonoBehaviour
 {
     public static APIchatBoxAI instance;
     public bool static_connect;
+
+    [System.Serializable]
+    public class chatAPI
+    {
+        public string detail;
+    }
+
+    [System.Serializable]
+    public class ReQuestChatAPI
+    {
+        public string question;
+    }    
+    
     void Start()
     {
         instance = this;
@@ -18,23 +31,36 @@ public class APIchatBoxAI : MonoBehaviour
     }
     public IEnumerator PostReQuest(string textpost, System.Action<string> onDone) // trả về text sau khi chạy xong
     {
-        string url = "https://leaves-constant-months-molecular.trycloudflare.com";
+        string url = "https://parental-photo-mag-linda.trycloudflare.com/generative_ai";
         UnityWebRequest request = new UnityWebRequest(url,"POST");// tạo request
-        request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(textpost)); // tạo body upload
+        request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(json(textpost))); // tạo body upload
         request.downloadHandler = new DownloadHandlerBuffer(); // tạo body nhận tất cả data
-        request.SetRequestHeader("Content-Type", "text/plain"); // báo api biết là gửi text
+        request.SetRequestHeader("Content-Type", "application/json"); // báo api biết là gửi json
 
         yield return request.SendWebRequest(); // gửi request và đợi
 
         if(request.result == UnityWebRequest.Result.Success)
         {
             static_connect = true;
-            onDone.Invoke(request.downloadHandler.text);
+
+            string jsonResponse = request.downloadHandler.text;
+            chatAPI data = new chatAPI();
+            data = JsonUtility.FromJson<chatAPI>(jsonResponse);
+            onDone.Invoke(data.detail);
         }
         else
         {
             static_connect =false;
             Debug.Log("error connect API");
         }
+    }   
+    
+    public string json(string txtReQuest)
+    {
+        ReQuestChatAPI data = new ReQuestChatAPI();
+        data.question = txtReQuest;
+
+        string json = JsonUtility.ToJson(data); // convert sang json
+        return json;
     }    
 }
