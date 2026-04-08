@@ -37,6 +37,7 @@ public class ManagerSceneGame : MonoBehaviour
     public GameObject panel_unlick;
 
 
+
     DG.Tweening.Sequence seq_countdown; // quản lý tween ( chuỗi hành động theo timeline )của countdown
     
     // Start is called before the first frame update

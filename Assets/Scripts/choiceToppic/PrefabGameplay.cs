@@ -16,6 +16,7 @@ public class PrefabGameplay : MonoBehaviour
     public TextMeshProUGUI progresLoc_text;
     public GameObject sticker_complet;
     public GameObject panel_reward;
+
     void Start()
     {
         instance = this;

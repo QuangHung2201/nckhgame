@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class Itemplace : MonoBehaviour
@@ -18,6 +19,8 @@ public class Itemplace : MonoBehaviour
     public GameObject stickerComplet;
     public GameObject ani_chest;
     public Button button_openchest;
+    private SpriteAtlas atlasBG_item;
+    public Image ImageBg;
 
     Animator animator;
     Sequence seqUpDown;
@@ -29,6 +32,9 @@ public class Itemplace : MonoBehaviour
 
         Debug.Log("apoin" + indexlocations);
         openlockFirst();
+
+
+
 
         if(checkstatictoppic() == true)
         {
@@ -50,7 +56,11 @@ public class Itemplace : MonoBehaviour
         }
     
     }
-   
+    private void Awake()
+    {
+         atlasBG_item = Resources.Load<SpriteAtlas>("spritesAtlas/bgTopic");
+        if (atlasBG_item != null) Debug.Log("không tìm thấy spriteatlas");
+    }
     private void OnDestroy()
     {
         buttonPlay.onClick.RemoveAllListeners();
@@ -119,8 +129,9 @@ public class Itemplace : MonoBehaviour
     }    
     public void setdata()
     {
-        if(this.indexlocation() != -1) indexlocations = this.indexlocation(); 
-
+        if(this.indexlocation() != -1) indexlocations = this.indexlocation();
+        Sprite spriteBg = atlasBG_item.GetSprite(""+indexlocation());
+        ImageBg.sprite = spriteBg;
         string name = PrefabGameplay.instance.screenslist.playscreens[indexmap].location[indexlocations].name;
         textname.text = name;
     } 

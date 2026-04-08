@@ -9,10 +9,12 @@ public class SetDataScreenItem : MonoBehaviour
     public Transform content; 
     public screens screenlist ;
     public List<GameObject> listItem;
+    public string name_MapPresent;
 
     private void Awake()
     {
         Instance = this;
+        name_MapPresent = string.Empty;
         screenlist = ConfigManager.instance.creenslist;
         SetDatamanager.instance.RegisterdataScreen(this);
         listItem = new List<GameObject>();
@@ -60,5 +62,7 @@ public class SetDataScreenItem : MonoBehaviour
         {
             listItem[ind_tmp + 1].GetComponent<DataItemScreen>().openPanelUnlock();
         }
+            name_MapPresent = screenlist.playscreens[(ind_tmp + 1)].name;
+            Debug.Log("map hiện tại " + name_MapPresent);
     }    
 }

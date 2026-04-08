@@ -117,6 +117,7 @@
     <Compile Include="Assets\Scripts\stickerWH\StickerWH.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\ItemReward.cs" />
+    <Compile Include="Assets\Scripts\choiceMap\PanelLogCl.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\ConfigAchivement.cs" />
   </ItemGroup>
   <ItemGroup>
