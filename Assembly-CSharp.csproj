@@ -60,19 +60,22 @@
     <Analyzer Include="D:\Install\Unity\2022.3.38f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\TaskAchievement\SceneApp\ResetAchievement.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\EventAchievement.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\ChatBoxManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\panelCoin.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ItemAnswer.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerItem.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\SceneApp\TaskTrigger.cs" />
     <Compile Include="Assets\Scripts\helper\SpriteAslatHelper.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\RewardManager.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\PrefabGameplay.cs" />
     <Compile Include="Assets\Scripts\UserProfile\UserProfilePanel.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\PopUpAchievement.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpgold.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Question.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopupCoin.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\RewardAchievement.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\Itemplace.cs" />
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
@@ -80,10 +83,11 @@
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskDaily.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\ConfigAchivement.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\Test\TaskTrigger.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskDaily.cs" />
     <Compile Include="Assets\Scripts\main_gameger\MainEvent.cs" />
     <Compile Include="Assets\Scripts\helper\AniButton1.cs" />
     <Compile Include="Assets\Scripts\Data\APIchatBoxAI.cs" />
@@ -92,32 +96,29 @@
     <Compile Include="Assets\Scripts\main_gameger\SetDatamanager.cs" />
     <Compile Include="Assets\Scripts\UserProfile\RenameProfi.cs" />
     <Compile Include="Assets\Scripts\helper\Rotate.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\Test\EventAchievement.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\PopUpAchievement.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigManager.cs" />
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\Test\panelCoin.cs" />
     <Compile Include="Assets\Scripts\helper\HelperCoinAni.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinBasket.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PanelWiner.cs" />
     <Compile Include="Assets\Scripts\Data\Config.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\Test\ResetAchievement.cs" />
     <Compile Include="Assets\Scripts\Data\APImanager.cs" />
     <Compile Include="Assets\Scripts\helper\FlyInHelper.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopUpStickerWH.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerWH.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\TaskItem.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\ItemReward.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\ConfigAchivement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

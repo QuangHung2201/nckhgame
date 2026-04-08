@@ -31,7 +31,7 @@ public class TaskMonthly : MonoBehaviour
     // tạo UI item nhiệm vụ tháng
     private void setdata()
     {
-        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/itemplace 1");
+        GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/TaskItem");
 
         if (itemPrefab == null)
         {

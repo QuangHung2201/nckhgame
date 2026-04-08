@@ -63,11 +63,11 @@ public class TaskItem : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        GameObject panel = TaskManager.Instance.panel_coin;
+        GameObject panel = TaskManager.Instance.panel_reward;
         panel.SetActive(true);
 
-        panelCoin panelScript = panel.GetComponent<panelCoin>();
-        panelScript.SetCoin(rewardCoin); // truyền coin
+        RewardAchievement rewardAchievementScript = panel.GetComponent<RewardAchievement>();
+        rewardAchievementScript.SetCoin(rewardCoin);
     }
 
     public void open_chestsStart()

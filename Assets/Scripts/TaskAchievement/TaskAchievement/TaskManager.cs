@@ -16,7 +16,7 @@ public class TaskManager : MonoBehaviour
     public Button buttonMonthly; // nút chuyển sang monthly
     public Button buttonClose;   // nút đóng bảng nhiệm vụ
 
-    public GameObject panel_coin;
+    public GameObject panel_reward;
 
     public GameObject ContentDaily;   // parent chứa item nhiệm vụ daily
     public GameObject ContentMonthly; // parent chứa item nhiệm vụ monthly
