@@ -11,20 +11,6 @@ public enum TaskType
 
 public class TaskTrigger : MonoBehaviour
 {
-    //public static TaskTrigger Instance;
-
-    //void Awake()
-    //{
-    //    if (Instance == null)
-    //    {
-    //        Instance = this; 
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
-
     private void OnEnable()
     {
         EventAchievement.Subscribe(EventType.CheckDaily1, checkDaily1);

@@ -13,8 +13,12 @@ public class TaskItem : MonoBehaviour
     public int rewardCoin = 0;             // số coin nhận được
     public int target = 0;                 // mục tiêu hoàn thành nhiệm vụ
 
+    public int index;                 // vị trí trong list
+    public TaskDaily taskDailyRoot;   // reference về script cha
+
     [SerializeField] private Image progressFill;      // thanh tiến độ nhiệm vụ
 
+    public CanvasGroup canvasGroup; // để bật/tắt tương tác với item nhiệm vụ
     public GameObject locks;
     public GameObject ani_chest;
     public Button button_openchest;
@@ -56,6 +60,7 @@ public class TaskItem : MonoBehaviour
     public void eVenOpenReW()
     {
         open_chestsStart();
+
         StartCoroutine(delayRewardOpen());
     }
 
@@ -68,6 +73,9 @@ public class TaskItem : MonoBehaviour
 
         RewardAchievement rewardAchievementScript = panel.GetComponent<RewardAchievement>();
         rewardAchievementScript.SetCoin(rewardCoin);
+
+        DisableObject();
+        transform.SetSiblingIndex(transform.parent.childCount - 1);
     }
 
     public void open_chestsStart()
@@ -76,28 +84,14 @@ public class TaskItem : MonoBehaviour
         seqKill();
     }
 
-    // nhận thưởng nhiệm vụ
-    void receiveReward()
-    {
-        int currentCoin = PrefManager.PrefMoney.getNumberCoin();
-        PrefManager.PrefMoney.SetNumberCoin(currentCoin + rewardCoin);
-
-        MainEvent.instance.PopupScore.text = PrefManager.PrefMoney.getNumberCoin().ToString();
-
-        //ResetProgress();
-
-        DisableObject();
-    }
-
     public void DisableObject()
     {
-        //canvasGroup.blocksRaycasts = false;
+        canvasGroup.blocksRaycasts = false;   // chặn click
     }
 
-    // mở khóa item nhiệm vụ
     public void EnableObject()
     {
-        //canvasGroup.blocksRaycasts = true;
+        canvasGroup.blocksRaycasts = true;    // cho click
     }
 
     // gán dữ liệu cho UI nhiệm vụ

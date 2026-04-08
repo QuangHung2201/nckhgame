@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "t\xEAn \u0111\u1ECBa danh"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
-  m_sharedMaterial: {fileID: -7311433130325934809, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7521218036866097383}
   - component: {fileID: 9184072950695227844}
   - component: {fileID: 6556672749284935742}
+  - component: {fileID: 2598119226599935868}
   m_Layer: 5
   m_Name: TaskItem
   m_TagString: Untagged
@@ -233,9 +234,22 @@ MonoBehaviour:
   rewardCoin: 0
   target: 0
   progressFill: {fileID: 2880908765315511614}
+  canvasGroup: {fileID: 2598119226599935868}
   locks: {fileID: 5593580467189935460}
   ani_chest: {fileID: 8105636190804773518}
   button_openchest: {fileID: 6763726539780025050}
+--- !u!225 &2598119226599935868
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613573157776146734}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2940518685739398903
 GameObject:
   m_ObjectHideFlags: 0

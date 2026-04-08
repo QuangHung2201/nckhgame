@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+//using static UnityEditor.Progress;
 
 public class TaskDaily : MonoBehaviour
 {
@@ -24,7 +26,7 @@ public class TaskDaily : MonoBehaviour
     // load file JSON nhiệm vụ daily
     private void loaddata()
     {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/TaskDaily");
+        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/FileJSon/TaskDaily");
         dailyList = JsonUtility.FromJson<TaskDailys>(textJSon.text);
     }
 
@@ -50,6 +52,9 @@ public class TaskDaily : MonoBehaviour
                 dailyList.TaskDaily[i].reward,
                 dailyList.TaskDaily[i].target
             );
+
+            itemClone.GetComponent<TaskItem>().index = i;
+            itemClone.GetComponent<TaskItem>().taskDailyRoot = this;
 
             itemClone.GetComponent<TaskItem>().rewardCoin = dailyList.TaskDaily[i].reward;
         }

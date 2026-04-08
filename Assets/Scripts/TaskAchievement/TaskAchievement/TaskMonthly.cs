@@ -24,7 +24,7 @@ public class TaskMonthly : MonoBehaviour
     // load file JSON nhiệm vụ tháng
     private void loaddata()
     {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/TaskMonthly");
+        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/FileJSon/TaskMonthly");
         monthlyList = JsonUtility.FromJson<TaskMonthlys>(textJSon.text);
     }
 
