@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class DataScreenMap : MonoBehaviour
 {
     public static DataScreenMap Instance;
-    public TextMeshProUGUI nameScreen;
     private screens screenlist ; // lấy data json từ manager
     public Image sprite_gr;
     public SpriteAtlas sprite_atlas;
@@ -31,13 +30,11 @@ public class DataScreenMap : MonoBehaviour
     {
        int indexScreen = findpoinscreen(idscreen);
         if (indexScreen != -1)
-        {
-           nameScreen.text = screenlist.playscreens[indexScreen].name;     
+        {    
            sprite_gr.sprite = sprite_atlas.GetSprite(idscreen);
         }
         else
         {
-           nameScreen.text = screenlist.playscreens[0].name;  // nếu player chưa chọn bao giờ sẽ load từ map 0
         }
     }  
     public int findpoinscreen(string idscreen) // tìm index theo chỉ số

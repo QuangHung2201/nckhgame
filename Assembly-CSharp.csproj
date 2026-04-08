@@ -122,6 +122,11 @@
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\TaskItem.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\ItemReward.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\choiceMap\PanelLogCl.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\ConfigAchivement.cs" />
+>>>>>>> 3597143f28d6d770df28b1553c73a5e6aae864eb
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
