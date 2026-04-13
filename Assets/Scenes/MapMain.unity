@@ -8857,7 +8857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9747dcb04284f3b46bab17775e58f518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScreen: {fileID: 0}
   sprite_gr: {fileID: 1907225278}
   sprite_atlas: {fileID: 100100200, guid: 7c49cf3381e9c334aa42a9250fd9806c, type: 3}
 --- !u!114 &1907225282

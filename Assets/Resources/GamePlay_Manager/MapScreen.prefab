@@ -1574,3 +1574,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtcontent: {fileID: 8702104904395614302}
+  rect_bg: {fileID: 4029286517618597802}

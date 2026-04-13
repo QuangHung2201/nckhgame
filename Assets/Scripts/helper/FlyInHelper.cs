@@ -9,8 +9,12 @@ public class FlyInHelper : MonoBehaviour
     public bool leftform;
     private void Start()
     {
+
+    }
+    private void OnEnable()
+    {
         rectTransform = GetComponent<RectTransform>();
-        animationInFly();
+        animationInFly(); 
     }
     public void animationInFly() // di chuyển "vào" trái hoặc phải
     {

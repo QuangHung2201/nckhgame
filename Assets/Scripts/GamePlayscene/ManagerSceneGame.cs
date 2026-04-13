@@ -173,6 +173,14 @@ public class ManagerSceneGame : MonoBehaviour
         yield return new WaitForSeconds(3f);
         panel_answerfalse.SetActive(false);
     }
+
+    public void resetquestion()
+    {
+        string idlocation = PrefManager.PrefSaveUserMap.GetUserLocationchoose();
+        PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(idlocation, 0);
+        SetdataGameplay();
+        ManagerSceneGame.Instance.panel_fail.SetActive(false);
+    }
     public void openPanelSetting()  // bật tắt panel setting
     {
         if(panel_setting.active == false)

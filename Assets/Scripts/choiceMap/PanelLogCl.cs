@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PanelLogCl : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI txtcontent;
+    public RectTransform rect_bg;
     void Start()
     { 
         setdata();
