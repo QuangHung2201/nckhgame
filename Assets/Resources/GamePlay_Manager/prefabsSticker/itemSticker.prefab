@@ -86,7 +86,6 @@ GameObject:
   - component: {fileID: 8519838648479579401}
   - component: {fileID: 6176152036962509028}
   - component: {fileID: 5932545957464126972}
-  - component: {fileID: 8777929461497646853}
   m_Layer: 5
   m_Name: itemSticker
   m_TagString: Untagged
@@ -136,21 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   my_sprites: {fileID: 2719966623744444367}
---- !u!114 &8777929461497646853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4458243983583161012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0.47058824, b: 1, a: 0.5}
-  m_EffectDistance: {x: 2, y: 2}
-  m_UseGraphicAlpha: 1
 --- !u!1 &6134696679564074853
 GameObject:
   m_ObjectHideFlags: 0
