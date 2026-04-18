@@ -7,6 +7,8 @@ public class ConfigManager : MonoBehaviour
     public static ConfigManager instance;
     public screens creenslist ; // list các màn - lấy ở đây để sử dụng ( không khởi tạo vì đã gắn )
     public questionss questionslist; // list các các câu hỏi của địa danh ( khởi tạo vì không kế thừa monobihavior và không gắn )
+    public ListFigure FigureList; //list các nhân vật game
+
     public Dictionary<string, questionss> Dic_location; // dictionary : lưu các data json đã được load để sử dụng chỉ cần gọi key và không cần load lại
     private void Awake()
     {
@@ -19,6 +21,12 @@ public class ConfigManager : MonoBehaviour
     {
         instance = null;
     }
+    public void loadDatajsonFigure()
+    {
+        TextAsset figurejson = Resources.Load<TextAsset>("DataJsonGameplay/jsonFigure");
+
+        FigureList = JsonUtility.FromJson<ListFigure>(figurejson.text);
+    }    
     public void loadlocalscreenMap() // hàm load json từ đầu game
     {
         TextAsset screenjson = Resources.Load<TextAsset>("GamePlay_Manager/screens");

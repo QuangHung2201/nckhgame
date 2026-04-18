@@ -24,7 +24,8 @@ public class Loading : MonoBehaviour
     IEnumerator loading()
     {
         yield return new WaitForSeconds(0.5f); // đợi load xong ui
-        ConfigManager.instance.loadlocalscreenMap(); 
+        ConfigManager.instance.loadlocalscreenMap(); //load data từ lúc mới vào scene
+        ConfigManager.instance.loadDatajsonFigure();
         assyncMain = SceneManager.LoadSceneAsync(1);
         assyncMain.allowSceneActivation = false;
       

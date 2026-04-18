@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\chatBoxAI\ChatBoxManager.cs" />
+    <Compile Include="Assets\Scripts\Data\ConfigFigure.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\PichFigure.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ItemAnswer.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerItem.cs" />
     <Compile Include="Assets\Scripts\helper\SpriteAslatHelper.cs" />
@@ -72,10 +74,12 @@
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpgold.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Question.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopupCoin.cs" />
+    <Compile Include="Assets\Scripts\main_gameger\btnProfile\Btnprofile.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\Itemplace.cs" />
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\ItemFigure.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
@@ -113,6 +117,7 @@
     <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\ResetAchievement.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\Scrollview.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerWH.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
