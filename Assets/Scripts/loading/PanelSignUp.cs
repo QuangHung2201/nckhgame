@@ -29,9 +29,11 @@ public class PanelSignUp : MonoBehaviour
     }
     public void listeninputname()
     {
+        SoundManager.instance.playClickSound();
         string name = input_f_name.text;
         PrefManager.PrefProfiles.SetUserName(name);
         Debug.Log(PrefManager.PrefProfiles.GetUserName());
+
 
         string idfigureChoose = PichFigure.instance.idFigureChoose;
         PrefManager.PrefProfiles.SetUserIDfigure(idfigureChoose);

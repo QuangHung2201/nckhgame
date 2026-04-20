@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\PichFigure.cs" />
+    <Compile Include="Assets\Scripts\main_gameger\instruct\InstructControll.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ItemAnswer.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerItem.cs" />
     <Compile Include="Assets\Scripts\helper\SpriteAslatHelper.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
     <Compile Include="Assets\Scripts\helper\HelperCoinAni.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskData.cs" />
+    <Compile Include="Assets\Scripts\SountManager\SoundManager.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="Assets\Scripts\helper\FlyInHelper.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
+    <Compile Include="Assets\Scripts\main_gameger\PanelSetting\PanelSetting.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopUpStickerWH.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskManager.cs" />

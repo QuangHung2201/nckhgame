@@ -8,6 +8,8 @@ public  class PrefProfile  //không kế thừa mono và không static => phải
     private const string KEY_USERNAME = "username"; // key lưu tên
     private const string KEY_USERDATEOFBIRTH = "userdateofbirth"; // key lưu sinh nhật
     private const string KEY_USERIDFIGURE = "userIDfigure"; // key lưu id nhân vật
+    private const string KEY_VOLUMMUSSIC = "userValueMussic";
+    private const string KEY_VOLUMUI = "userValueUI";
 
     public string GetUserName() // hàm lấy tên
     {
@@ -25,7 +27,14 @@ public  class PrefProfile  //không kế thừa mono và không static => phải
     {
         return PlayerPrefs.GetString(KEY_USERIDFIGURE, "");
     }
-
+    public float getValueMussic()
+    {
+        return PlayerPrefs.GetFloat(KEY_VOLUMMUSSIC, 1f);
+    }
+    public float getValueUI()
+    {
+        return PlayerPrefs.GetFloat(KEY_VOLUMUI, 1f);
+    }
 
 
     public void SetUserName(string usernamenew) // hàm sửa tên
@@ -46,6 +55,17 @@ public  class PrefProfile  //không kế thừa mono và không static => phải
     public void SetUserIDfigure(string userIDfigure)
     {
         PlayerPrefs.SetString(KEY_USERIDFIGURE, userIDfigure);
+        PlayerPrefs.Save();
+    }
+
+    public void SetVolumMussic(float value)
+    {
+        PlayerPrefs.SetFloat(KEY_VOLUMMUSSIC, value);
+        PlayerPrefs.Save();
+    }
+    public void SetVolumUI(float value)
+    {
+        PlayerPrefs.SetFloat(KEY_VOLUMUI, value);
         PlayerPrefs.Save();
     }
 }

@@ -114,6 +114,7 @@ public class PichFigure : MonoBehaviour
         Debug.Log("Snap tới: " + listObj_figure[index]
             .GetComponent<ItemFigure>().names);
         scaleItem(index);
+        SoundManager.instance.playClickSound();
     }
     public void scaleItem(int idfigure)
     {

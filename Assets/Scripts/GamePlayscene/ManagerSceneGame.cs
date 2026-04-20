@@ -120,6 +120,8 @@ public class ManagerSceneGame : MonoBehaviour
         panel_unlick.SetActive(correct);
         if(correct == true)
         {
+            SoundManager.instance.stopClockSound();
+            SoundManager.instance.playCorrectSound();
             killCountDown();
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
@@ -129,6 +131,8 @@ public class ManagerSceneGame : MonoBehaviour
             idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
             if (idexquestion >= datalocation.questions.Count) // nếu đã trả lời hết thì set lại id câu hỏi của địa danh về 0
             {
+
+                SoundManager.instance.playWinSound();
                 panel_unlick.SetActive(false);
                   if(checkToppicLast(idmapcache,idtoppiccache) == 1)    // check nếu là item cuối
                  {
@@ -149,9 +153,12 @@ public class ManagerSceneGame : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.playUncorrectSound();
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ
-            { 
+            {
+                SoundManager.instance.stopClockSound();
+                SoundManager.instance.playFailSound();
                 timepresent = 0;
                 killCountDown();
                 panel_fail.SetActive(true);
@@ -249,6 +256,7 @@ public class ManagerSceneGame : MonoBehaviour
 
                 if(tmp <= 5)// hiệu ứng text khi nhỏ hơn bằng 5
                 {
+                SoundManager.instance.playClockSound();
                 text_timecdown.DOColor(Color.red, 0.3f);
                 text_timecdown.transform
                 .DOScale(1.3f,0.3f)
@@ -264,7 +272,11 @@ public class ManagerSceneGame : MonoBehaviour
             });  // thêm hành động vào timeline sequence
             seq_countdown.AppendInterval(1f); // thêm khoảng thời gian 1f vào timeline sequence
         }
-        seq_countdown.OnComplete(() => panel_fail.SetActive(true));
+
+        seq_countdown.OnComplete(() =>
+        {        
+            panel_fail.SetActive(true);
+        });
     }    
      
     public void resetTickAllbtn()
