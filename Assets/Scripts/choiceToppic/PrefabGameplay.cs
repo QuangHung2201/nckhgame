@@ -19,11 +19,19 @@ public class PrefabGameplay : MonoBehaviour
 
     void Start()
     {
-        instance = this;
         itemList = new List<GameObject>();  //list item
-        idMap = PrefManager.PrefSaveUserMap.GetUserMapchoose();  
         screenslist = ConfigManager.instance.creenslist; // lấy data từ hệ thống
         spawnItem();
+    }
+    private void Awake()
+    {
+        instance = this;
+        idMap = PrefManager.PrefSaveUserMap.GetUserMapchoose();
+        if (idMap == "")
+        {
+            string idMapFirst = ConfigManager.instance.creenslist.playscreens[0].ID;
+            PrefManager.PrefSaveUserMap.SetUserMapID(idMapFirst);
+        }
     }
     private void OnEnable()
     {
@@ -111,8 +119,7 @@ public class PrefabGameplay : MonoBehaviour
 
     public int indexMap()
     {
-        //return screenslist.playscreens.FindIndex(x => x.ID == idMap);
-        for(int i = 0; i< screenslist.playscreens.Count; i++)
+            for (int i = 0; i< screenslist.playscreens.Count; i++)
         {
             if (screenslist.playscreens[i].ID == idMap)
             {

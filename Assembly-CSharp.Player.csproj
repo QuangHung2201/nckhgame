@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\choiceToppic\Itemplace.cs" />
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
+    <Compile Include="Assets\Scripts\SountManager\TTSmanager.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\ItemFigure.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
