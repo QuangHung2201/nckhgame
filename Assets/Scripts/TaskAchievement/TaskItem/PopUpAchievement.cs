@@ -14,14 +14,13 @@ public class PopUpAchievement : MonoBehaviour
     public Transform targetCoin;
     public List<GameObject> coinflycl;
 
-    // Start is called before the first frame update
     void Start()
     {
         Instance = this;
         coinflycl = new List<GameObject>();
         LastnumbCoin = panelCoin.Instance.number;
         setTextPopupCoin();
-        StartCoroutine(delayContinue()); // sau start 4s thì hiển thị
+        StartCoroutine(delayContinue());
         flycoin();
         animation();
     }
@@ -36,11 +35,11 @@ public class PopUpAchievement : MonoBehaviour
         AnimateCoinIncrease(coinSave, sumCoin, 1.4f);
         PrefManager.PrefMoney.SetNumberCoin(sumCoin);
     }
-    void AnimateCoinIncrease(int from, int to, float duration)  // hàm hiệu ứng tăng coin
+    void AnimateCoinIncrease(int from, int to, float duration)
     {
         DOTween.To(() => from, x => {
             from = x;
-            textNumberCoin.text = from.ToString(); // đọc text lên trong từng fame
+            textNumberCoin.text = from.ToString();
         }, to, duration).SetEase(Ease.OutQuad);
     }
 

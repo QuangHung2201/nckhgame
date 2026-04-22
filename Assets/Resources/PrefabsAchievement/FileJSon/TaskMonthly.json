@@ -1,33 +1,43 @@
 {
 "TaskMonthly":[
   {
-    "id": "HT-30DD",
-    "name": "Hoàn thành 30 địa danh",
+    "id": 5,
+    "name": "Chơi 30 địa danh bất kỳ",
 	"target": 30,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   },
   {
-    "id": "HT-50Q",
+    "id": 6,
     "name": "Hoàn thành 50 quiz",
 	"target": 50,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   },
   {
-    "id": "TL-150C",
+    "id": 7,
     "name": "Trả lời đúng 150 câu hỏi",
 	"target": 150,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 50
   },
   {
-    "id": "CG-10N",
+    "id": 8,
     "name": "Chơi game trong 10 ngày khác nhau",
 	"target": 10,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 50
   },
   {
-    "id": "HT-1T",
-    "name": "Hoàn thành 1 Toppic",
-	"target": 1,
+    "id": 9,
+    "name": "Chơi game trong 30 ngày khác nhau",
+	"target": 30,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 50
   }
 ]

@@ -1,33 +1,43 @@
 {
 "TaskDaily":[
   {
-    "id": "DN-HG",
+    "id": 0,
     "name": "Đăng nhập hàng ngày",
 	"target": 1,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 20
   },
   {
-    "id": "C1-DD",
+    "id": 1,
     "name": "Chơi 1 địa danh bất kỳ",
 	"target": 1,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   },
   {
-    "id": "TL-D3",
+    "id": 2,
     "name": "Trả lời đúng 3 câu hỏi",
 	"target": 3,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   },
   {
-    "id": "TL-LT3",
+    "id": 3,
     "name": "Trả lời 3 lần liên tiếp đúng 3 câu",
 	"target": 3,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   },
   {
-    "id": "HT-Q",
+    "id": 4,
     "name": "Hoàn thành quiz không bỏ câu",
 	"target": 1,
+	"progress": 0,
+	"isClaimed": false,
 	"reward": 30
   }
 ]

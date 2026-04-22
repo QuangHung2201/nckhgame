@@ -7,18 +7,19 @@ using UnityEngine.UI;
 
 public class TaskItem : MonoBehaviour
 {
-    public TaskType taskType;              // loại nhiệm vụ
-    public TextMeshProUGUI txtContentTask; // nội dung nhiệm vụ
-    public TextMeshProUGUI txtTarget;      // hiển thị tiến độ nhiệm vụ (ví dụ: 3/5)
-    public int rewardCoin = 0;             // số coin nhận được
-    public int target = 0;                 // mục tiêu hoàn thành nhiệm vụ
+    public TaskType taskType;
+    public TextMeshProUGUI txtTarget;
+    
+    public int id;
+    public TextMeshProUGUI txtContentTask;
+    public int rewardCoin = 0;
+    public int target = 0;
+    public int progress = 0;
+    public bool isClaimed;
 
-    public int index;                 // vị trí trong list
-    public TaskDaily taskDailyRoot;   // reference về script cha
+    [SerializeField] private Image progressFill;
 
-    [SerializeField] private Image progressFill;      // thanh tiến độ nhiệm vụ
-
-    public CanvasGroup canvasGroup; // để bật/tắt tương tác với item nhiệm vụ
+    public CanvasGroup canvasGroup;
     public GameObject locks;
     public GameObject ani_chest;
     public Button button_openchest;
@@ -32,7 +33,6 @@ public class TaskItem : MonoBehaviour
         animator.SetBool("open", false);
     }
 
-    // hiệu ứng animation cho item nhiệm vụ (nhấp nháy khi hoàn thành)
     public void aniUpDown(Transform transformAni)
     {
         seqUpDown = DOTween.Sequence();
@@ -59,9 +59,16 @@ public class TaskItem : MonoBehaviour
 
     public void eVenOpenReW()
     {
+        if (this.progress < this.target || this.isClaimed)
+        {
+            return;
+        }
+
         open_chestsStart();
 
         StartCoroutine(delayRewardOpen());
+
+        TaskService.IsClaimed(this.id, this.taskType);
     }
 
     IEnumerator delayRewardOpen()
@@ -86,49 +93,48 @@ public class TaskItem : MonoBehaviour
 
     public void DisableObject()
     {
-        canvasGroup.blocksRaycasts = false;   // chặn click
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void EnableObject()
     {
-        canvasGroup.blocksRaycasts = true;    // cho click
+        canvasGroup.blocksRaycasts = true;
     }
 
-    // gán dữ liệu cho UI nhiệm vụ
-    public void SetData(string text, int reward, int target)
+    public void SetData(int id, string text, int reward, int target, int progress, bool isClaimed)
     {
+        this.id = id;
+        this.txtContentTask.text = text;
+        this.rewardCoin = reward;
         this.target = target;
-        rewardCoin = reward;
+        this.progress = progress;
+        this.isClaimed = isClaimed;
 
-        txtContentTask.text = text;
+        this.UpdateUI();
     }
 
-    // hiển thị tiến độ nhiệm vụ lên UI
-    public void UpdateProgress()
+    protected void UpdateUI()
     {
-        int currentValue = PlayerPrefs.GetInt(taskType.ToString());
-        
-        txtTarget.text = currentValue + "/" + target;
+        txtContentTask.text = this.txtContentTask.text;
+        txtTarget.text = this.progress + "/" + this.target;
+        progressFill.fillAmount = this.target > 0
+            ? (float)this.progress / this.target
+            : 0;
 
-        float progress = (float)currentValue / target;
+        this.CheckProgress();
+    }
 
-        progressFill.fillAmount = progress;
-
-        // kiểm tra hoàn thành nhiệm vụ
-        if (currentValue >= target)
+    protected void CheckProgress()
+    {
+        if (this.progress >= this.target && !this.isClaimed)
         {
             locks.SetActive(false);
+
             aniUpDown(ani_chest.transform);
         }
         else
         {
             locks.SetActive(true);
         }
-    }
-
-    public void ResetProgress()
-    {
-        PlayerPrefs.SetInt(taskType.ToString(), 0);
-        UpdateProgress();
     }
 }

@@ -75,6 +75,12 @@ public class ManagerSceneGame : MonoBehaviour
         countdown(20);
         objBtnNextqt.SetActive(false);
         panel_unlick.SetActive(false);
+
+        // Gọi sự kiện để tính nhiệm vụ tháng "Chơi 30 địa danh bất kỳ"
+        EventAchievement.Trigger(EventType.AddMonthly1);
+
+        // Gọi sự kiện để tính nhiệm vụ ngày "Chơi 1 địa danh bất kỳ"
+        EventAchievement.Trigger(EventType.AddDaily2);
     }    
 
     public void SetAnswers()
@@ -120,9 +126,12 @@ public class ManagerSceneGame : MonoBehaviour
         panel_unlick.SetActive(correct);
         if(correct == true)
         {
-            EventAchievement.Trigger(EventType.CheckDaily3); // sự kiện tăng nhiệm vụ daily 3 ( trả lời đúng 3 câu hỏi )
-            EventAchievement.Trigger(EventType.CheckDaily4, true); // sự kiện tăng nhiệm vụ daily 4 ( trả lời đúng liên tiếp 3 câu hỏi )
-            EventAchievement.Trigger(EventType.CheckMonthly3); // sự kiện tăng nhiệm vụ monthly 3 ( trả lời đúng 150 câu hỏi )
+            // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 câu hỏi"
+            EventAchievement.Trigger(EventType.AddDaily3);
+            // Gọi sự kiện để tính nhiệm vụ tháng "Trả lời đúng 150 câu hỏi"
+            EventAchievement.Trigger(EventType.AddMonthly3);
+            // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
+            EventAchievement.Trigger(EventType.AddDaily4, true);
 
             killCountDown();
             CoinBasket.Instance.upDataCoinBasket();
@@ -145,6 +154,12 @@ public class ManagerSceneGame : MonoBehaviour
                 PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(idToppic, 0);
                 panelWin.SetActive(true);
                 killCountDown();
+
+                // Gọi sự kiện để tính nhiệm vụ ngày "Hoàn thành quiz không bỏ câu"
+                EventAchievement.Trigger(EventType.AddDaily5);
+
+                // Gọi sự kiện để tính nhiệm vụ tháng "Hoàn thành 50 quiz"
+                EventAchievement.Trigger(EventType.AddMonthly2);
             }
             else  // nếu còn câu hỏi mới set
             {
@@ -153,7 +168,8 @@ public class ManagerSceneGame : MonoBehaviour
         }
         else
         {
-            EventAchievement.Trigger(EventType.CheckDaily4, false); // sự kiện tăng nhiệm vụ daily 4 ( trả lời sai 3 câu hỏi )
+            // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
+            EventAchievement.Trigger(EventType.AddDaily4, false);
 
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ

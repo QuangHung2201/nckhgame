@@ -80,13 +80,12 @@
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\RewardTriger.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />
     <Compile Include="Assets\Scripts\helper\SignInhelper.cs" />
-    <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\ConfigAchivement.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\Helper\JsonHelper.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskMonthly.cs" />
     <Compile Include="Assets\Scripts\Data\ConfigLocation.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\OuttimePanel.cs" />
@@ -106,6 +105,7 @@
     <Compile Include="Assets\Scripts\helper\HelperCoinAni.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\Helper\TaskService.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinBasket.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PanelWiner.cs" />
     <Compile Include="Assets\Scripts\Data\Config.cs" />
@@ -116,17 +116,15 @@
     <Compile Include="Assets\Scripts\main_gameger\PopUpStickerWH.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\btnReset.cs" />
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerWH.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskAchievement\TaskManager.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\TaskItem.cs" />
     <Compile Include="Assets\Scripts\choiceToppic\ItemReward.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Scripts\choiceMap\PanelLogCl.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\ConfigAchivement.cs" />
->>>>>>> 3597143f28d6d770df28b1553c73a5e6aae864eb
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

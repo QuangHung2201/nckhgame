@@ -1,76 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class ResetAchievement : MonoBehaviour
+public static class ResetAchievement
 {
-    public static ResetAchievement Instance; // singleton để truy cập từ các script khác
-
-    void Awake()
+    public static void CheckFirstTime()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        CheckDailyReset();
+        CheckMonthlyReset();
     }
 
-    public void CheckDailyReset()
+    public static void CheckDailyReset()
     {
         string today = System.DateTime.Now.ToString("yyyyMMdd");
-        string lastReset = PlayerPrefs.GetString("LastDailyReset", "");
+        string lastDay = PlayerPrefs.GetString("LastDailyReset", "");
 
-        //Debug.Log("Today: " + today + " LastDailyReset: " + lastReset);
+        Debug.Log("Today: " + today + " LastDailyReset: " + lastDay);
 
-        // nếu ngày hôm nay khác với ngày đã lưu lần cuối reset, thì reset nhiệm vụ daily
-        if (today != lastReset)
+        if (string.IsNullOrEmpty(lastDay) || today != lastDay)
         {
-            ResetDailyTasks();
+            //Debug.Log("Reset Daily Data");
+
+            JsonHelper.ResetDataDaily();
 
             PlayerPrefs.SetString("LastDailyReset", today);
-
-            // sự kiện làm mới giao diện nhiệm vụ daily
-            EventAchievement.Trigger(EventType.CheckDaily1);
+            PlayerPrefs.Save();
         }
     }
 
-    void ResetDailyTasks()
-    {
-        // reset tất cả nhiệm vụ daily về 0
-        for (int i = 1; i <= 5; i++)
-        {
-            PlayerPrefs.SetInt("Daily" + i, 0);
-        }
-    }
-
-    public void CheckMonthlyReset()
+    public static void CheckMonthlyReset()
     {
         string thisMonth = System.DateTime.Now.ToString("yyyyMM");
         string lastMonth = PlayerPrefs.GetString("LastMonthlyReset", "");
 
-        //Debug.Log("ThisMonth: " + thisMonth + " LastMonthlyReset: " + lastMonth);
+        Debug.Log("ThisMonth: " + thisMonth + " LastMonthlyReset: " + lastMonth);
 
-        // nếu tháng này khác với tháng đã lưu lần cuối reset, thì reset nhiệm vụ monthly
-        if (thisMonth != lastMonth)
+        if (string.IsNullOrEmpty(lastMonth) || thisMonth != lastMonth)
         {
-            ResetMonthlyTasks();
+            //Debug.Log("Reset Monthly Data");
+
+            JsonHelper.ResetDataMonthly();
 
             PlayerPrefs.SetString("LastMonthlyReset", thisMonth);
-
-            // sự kiện làm mới giao diện nhiệm vụ monthly
-            EventAchievement.Trigger(EventType.CheckMonthly4);
-        }
-    }
-
-    void ResetMonthlyTasks()
-    {
-        // reset tất cả nhiệm vụ monthly về 0
-        for (int i = 1; i <= 5; i++)
-        {
-            PlayerPrefs.SetInt("Monthly" + i, 0);
+            PlayerPrefs.Save();
         }
     }
 }

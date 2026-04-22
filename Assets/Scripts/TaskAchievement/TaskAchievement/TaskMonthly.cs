@@ -1,34 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Linq;
 
 public class TaskMonthly : MonoBehaviour
-{
-    public TaskMonthlys monthlyList; // danh sách nhiệm vụ tháng đọc từ JSON
-    public Transform parent;        // object chứa các item nhiệm vụ trong UI
+{ 
+    public Transform parent;
+    protected List<TaskItem> itemList = new();
 
-    // khi object được bật -> load dữ liệu JSON
     private void OnEnable()
     {
-        loaddata();
+        JsonHelper.LoadDataMonthly();
     }
 
-    // khởi tạo UI nhiệm vụ
     private void Start()
     {
         setdata();
-        TaskManager.Instance.UpdateTaskMonthly();
-        TaskManager.Instance.RefreshAllTasks();
     }
 
-    // load file JSON nhiệm vụ tháng
-    private void loaddata()
-    {
-        TextAsset textJSon = Resources.Load<TextAsset>("PrefabsAchievement/FileJSon/TaskMonthly");
-        monthlyList = JsonUtility.FromJson<TaskMonthlys>(textJSon.text);
-    }
-
-    // tạo UI item nhiệm vụ tháng
     private void setdata()
     {
         GameObject itemPrefab = Resources.Load<GameObject>("PrefabsAchievement/TaskItem");
@@ -38,20 +28,46 @@ public class TaskMonthly : MonoBehaviour
             Debug.Log("không load được prefab");
         }
 
-        // tạo item nhiệm vụ từ dữ liệu JSON
-        for (int i = 0; i < monthlyList.TaskMonthly.Count; i++)
+        for (int i = 0; i < JsonHelper.monthlyList.TaskMonthly.Count; i++)
         {
             GameObject itemClone = Instantiate(itemPrefab);
 
             itemClone.transform.SetParent(parent, false);
 
-            itemClone.GetComponent<TaskItem>().SetData(
-                monthlyList.TaskMonthly[i].name,
-                monthlyList.TaskMonthly[i].reward,
-                monthlyList.TaskMonthly[i].target
-            );
+            TaskItem taskItem = itemClone.GetComponent<TaskItem>();
+            itemList.Add(taskItem);
 
-            itemClone.GetComponent<TaskItem>().rewardCoin = monthlyList.TaskMonthly[i].reward;
+            this.UpdateData(itemClone, i);
+        }
+
+        this.SetListMonthly();
+    }
+
+    protected void UpdateData(GameObject itemClone, int index)
+    {
+        var item = itemClone.GetComponent<TaskItem>();
+        var itemIndex = JsonHelper.monthlyList.TaskMonthly[index];
+
+        item.SetData(
+            itemIndex.id,
+            itemIndex.name,
+            itemIndex.reward,
+            itemIndex.target,
+            itemIndex.progress,
+            itemIndex.isClaimed
+        );
+    }
+
+    protected void SetListMonthly()
+    {
+        itemList.Sort((a, b) =>
+        {
+            return a.isClaimed.CompareTo(b.isClaimed);
+        });
+
+        for (int i = 0; i < itemList.Count; i++)
+        {
+            itemList[i].transform.SetSiblingIndex(i);
         }
     }
 }

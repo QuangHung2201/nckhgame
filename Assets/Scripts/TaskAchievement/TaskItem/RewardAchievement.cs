@@ -18,7 +18,7 @@ public class RewardAchievement : MonoBehaviour
 
     private void OnEnable()
     {
-        CreateUI(); // chỉ tạo 1 lần
+        CreateUI();
         buttonConT.onClick.AddListener(EvenButtonConT);
     }
     private void OnDisable()

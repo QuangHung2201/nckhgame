@@ -6,60 +6,71 @@ using UnityEngine;
 // sự kiện trong game
 public enum EventType
 {
-    CheckDaily1,
-    CheckDaily3,
-    CheckDaily4,
-    CheckMonthly3,
-    CheckMonthly4
+    AddDaily1,
+    AddDaily2,
+    AddDaily3,
+    AddDaily4,
+    AddDaily5,
+    AddMonthly1,
+    AddMonthly2,
+    AddMonthly3,
+    AddMonthly4,
+    AddMonthly5
 }
 
 public static class EventAchievement
 {
-    private static Dictionary<EventType, Action> events = new Dictionary<EventType, Action>();
+    private static Dictionary<EventType, Delegate> events = new();
 
-    // event có bool
-    private static Dictionary<EventType, Action<bool>> eventsBool = new Dictionary<EventType, Action<bool>>();
-
-    // đăng ký sự kiện với hành động tương ứng
     public static void Subscribe(EventType type, Action action)
     {
-        if (!events.ContainsKey(type))
+        if (events.TryGetValue(type, out var existing))
+            events[type] = (Action)existing + action;
+        else
             events[type] = action;
-        else
-            events[type] += action;
     }
 
-    public static void Subscribe(EventType type, Action<bool> action)
+    public static void Subscribe<T>(EventType type, Action<T> action)
     {
-        if (!eventsBool.ContainsKey(type))
-            eventsBool[type] = action;
+        if (events.TryGetValue(type, out var existing))
+            events[type] = (Action<T>)existing + action;
         else
-            eventsBool[type] += action;
+            events[type] = action;
     }
 
-    // hủy đăng ký sự kiện
     public static void Unsubscribe(EventType type, Action action)
     {
-        if (events.ContainsKey(type))
-            events[type] -= action;
+        if (!events.TryGetValue(type, out var existing)) return;
+
+        var newAction = (Action)existing - action;
+
+        if (newAction == null)
+            events.Remove(type);
+        else
+            events[type] = newAction;
     }
 
-    public static void Unsubscribe(EventType type, Action<bool> action)
+    public static void Unsubscribe<T>(EventType type, Action<T> action)
     {
-        if (eventsBool.ContainsKey(type))
-            eventsBool[type] -= action;
+        if (!events.TryGetValue(type, out var existing)) return;
+
+        var newAction = (Action<T>)existing - action;
+
+        if (newAction == null)
+            events.Remove(type);
+        else
+            events[type] = newAction;
     }
 
-    // kích hoạt sự kiện
     public static void Trigger(EventType type)
     {
-        if (events.ContainsKey(type))
-            events[type]?.Invoke();
+        if (events.TryGetValue(type, out var del))
+            (del as Action)?.Invoke();
     }
 
-    public static void Trigger(EventType type, bool value)
+    public static void Trigger<T>(EventType type, T value)
     {
-        if (eventsBool.ContainsKey(type))
-            eventsBool[type]?.Invoke(value);
+        if (events.TryGetValue(type, out var del))
+            (del as Action<T>)?.Invoke(value);
     }
 }

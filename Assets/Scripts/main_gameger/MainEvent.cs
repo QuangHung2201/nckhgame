@@ -24,6 +24,16 @@ public class MainEvent : MonoBehaviour
     private void Start()
     {
         instance = this;
+        ResetAchievement.CheckFirstTime();
+
+        // Gọi sự kiện để tính nhiệm vụ ngày "Đăng nhập hàng ngày"
+        EventAchievement.Trigger(EventType.AddDaily1);
+
+        // Gọi sự kiện để tính nhiệm vụ tháng "Chơi game trong 10 ngày khác nhau"
+        EventAchievement.Trigger(EventType.AddMonthly4);
+
+        // Gọi sự kiện để tính nhiệm vụ tháng "Hoàn thành 1 Toppic"
+        EventAchievement.Trigger(EventType.AddMonthly5);
     }
     // Start is called before the first frame update
     private void Awake() // nối button với hàm sự kiện
