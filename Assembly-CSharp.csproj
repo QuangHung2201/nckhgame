@@ -63,8 +63,16 @@
     <Compile Include="Assets\Scripts\TaskAchievement\SceneApp\ResetAchievement.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\EventAchievement.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\ChatBoxManager.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\panelCoin.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
+=======
+    <Compile Include="Assets\Scripts\Data\ConfigFigure.cs" />
+    <Compile Include="Assets\Scripts\chatBoxAI\FeatureChatBox.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskItem.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\PichFigure.cs" />
+    <Compile Include="Assets\Scripts\main_gameger\instruct\InstructControll.cs" />
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     <Compile Include="Assets\Scripts\GamePlayscene\ItemAnswer.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerItem.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\SceneApp\TaskTrigger.cs" />
@@ -75,11 +83,16 @@
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpgold.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Question.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopupCoin.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\TaskAchievement\TaskItem\RewardAchievement.cs" />
+=======
+    <Compile Include="Assets\Scripts\main_gameger\btnProfile\Btnprofile.cs" />
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     <Compile Include="Assets\Scripts\choiceToppic\Itemplace.cs" />
     <Compile Include="Assets\Scripts\loading\PanelSignUp.cs" />
     <Compile Include="Assets\Scripts\chatBoxAI\BossPopup.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\ItemFigure.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
@@ -103,6 +116,12 @@
     <Compile Include="Assets\Scripts\helper\OpenCloseAni.cs" />
     <Compile Include="Assets\Scripts\loading\Loading.cs" />
     <Compile Include="Assets\Scripts\helper\HelperCoinAni.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskData.cs" />
+    <Compile Include="Assets\Scripts\SountManager\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\TaskAchievement\TaskMonthly.cs" />
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     <Compile Include="Assets\Scripts\SystemPref\PrefSaveUserMap.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\Continue.cs" />
     <Compile Include="Assets\Scripts\TaskAchievement\Helper\TaskService.cs" />
@@ -113,10 +132,16 @@
     <Compile Include="Assets\Scripts\helper\FlyInHelper.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PopUpSetting.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefProfile.cs" />
+    <Compile Include="Assets\Scripts\main_gameger\PanelSetting\PanelSetting.cs" />
     <Compile Include="Assets\Scripts\main_gameger\PopUpStickerWH.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefMoney.cs" />
     <Compile Include="Assets\Scripts\LoadGame\LoadGameManager.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\TaskAchievement\btnReset.cs" />
+=======
+    <Compile Include="Assets\Scripts\TaskAchievement\ResetAchievement.cs" />
+    <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\Scrollview.cs" />
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     <Compile Include="Assets\Scripts\main_gameger\DataScreenMap.cs" />
     <Compile Include="Assets\Scripts\stickerWH\StickerWH.cs" />
     <Compile Include="Assets\Scripts\choiceMap\ManegerChoiceMap.cs" />

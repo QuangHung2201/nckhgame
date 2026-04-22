@@ -12,7 +12,7 @@ public class APIchatBoxAI : MonoBehaviour
     [System.Serializable]
     public class chatAPI
     {
-        public string detail;
+        public string answer;
     }
 
     [System.Serializable]
@@ -31,27 +31,29 @@ public class APIchatBoxAI : MonoBehaviour
     }
     public IEnumerator PostReQuest(string textpost, System.Action<string> onDone) // trả về text sau khi chạy xong
     {
-        string url = "https://parental-photo-mag-linda.trycloudflare.com/generative_ai";
-        UnityWebRequest request = new UnityWebRequest(url,"POST");// tạo request
-        request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(json(textpost))); // tạo body upload
-        request.downloadHandler = new DownloadHandlerBuffer(); // tạo body nhận tất cả data
-        request.SetRequestHeader("Content-Type", "application/json"); // báo api biết là gửi json
+        string url = "https://cement-flexible-darwin-departmental.trycloudflare.com/generative_ai";
 
-        yield return request.SendWebRequest(); // gửi request và đợi
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
 
-        if(request.result == UnityWebRequest.Result.Success)
+        string body = json(textpost);
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(body);
+
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        Debug.Log(request.downloadHandler.text); // debug
+
+        if (request.result == UnityWebRequest.Result.Success)
         {
-            static_connect = true;
-
-            string jsonResponse = request.downloadHandler.text;
-            chatAPI data = new chatAPI();
-            data = JsonUtility.FromJson<chatAPI>(jsonResponse);
-            onDone.Invoke(data.detail);
+            chatAPI data = JsonUtility.FromJson<chatAPI>(request.downloadHandler.text);
+            onDone?.Invoke(data.answer);
         }
         else
         {
-            static_connect =false;
-            Debug.Log("error connect API");
+            Debug.LogError(request.error);
         }
     }   
     

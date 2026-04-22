@@ -11,11 +11,16 @@ public class MainEvent : MonoBehaviour
     [SerializeField] private Button button_Profile;
     [SerializeField] private Button button_chooseLocation;
     [SerializeField] private Button button_StickerWareHouse;
-    [SerializeField] private Button button_reloadTMP;
+    [SerializeField] private Button btnSetting;
     [SerializeField] private Button button_TaskAchivement;
 
 
     public GameObject PanelUnClick;
+<<<<<<< HEAD
+=======
+    public GameObject PanelSetting;
+    //public GameObject TaskAchivement;
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
 
     public  Transform Rood;
 
@@ -24,6 +29,7 @@ public class MainEvent : MonoBehaviour
     private void Start()
     {
         instance = this;
+<<<<<<< HEAD
         ResetAchievement.CheckFirstTime();
 
         // Gọi sự kiện để tính nhiệm vụ ngày "Đăng nhập hàng ngày"
@@ -34,6 +40,9 @@ public class MainEvent : MonoBehaviour
 
         // Gọi sự kiện để tính nhiệm vụ tháng "Hoàn thành 1 Toppic"
         EventAchievement.Trigger(EventType.AddMonthly5);
+=======
+        SoundManager.instance.startmussicGr();
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     }
     // Start is called before the first frame update
     private void Awake() // nối button với hàm sự kiện
@@ -42,8 +51,12 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.AddListener(OpenProfileUser);
         button_chooseLocation.onClick.AddListener(OpenChooseLocation);
         button_StickerWareHouse.onClick.AddListener(OpenStickerWareHouse);
-        button_reloadTMP.onClick.AddListener(reloadTMP);
+       
         button_TaskAchivement.onClick.AddListener(OpenTaskAchivement);
+    }
+    private void OnEnable()
+    {
+         btnSetting.onClick.AddListener(reloadTMP);
     }
     private void OnDisable() // chuyển qua scene khác sẽ ngắt lắng nghe
     {
@@ -51,18 +64,20 @@ public class MainEvent : MonoBehaviour
         button_Profile.onClick.RemoveAllListeners();
         button_chooseLocation.onClick.RemoveAllListeners();
         button_StickerWareHouse.onClick.RemoveAllListeners();
-        button_reloadTMP.onClick.RemoveAllListeners();
+        btnSetting.onClick.RemoveAllListeners();
         button_TaskAchivement.onClick.RemoveAllListeners();
         instance = null;
     }
 
     private void reloadTMP()
     {
-        PlayerPrefs.DeleteAll();
+        SoundManager.instance.playClickSound();
+        PanelSetting.SetActive(true);
     }
     private void StartGame()
     {
-       // managerButtonOut();
+        // managerButtonOut();
+        SoundManager.instance.playClickSound();
         OpenPanel();
         GameObject gamestart_prefab = Resources.Load<GameObject>("GamePlay_Manager/MapScreen");
         GameObject gameplay_clone = Instantiate(gamestart_prefab);
@@ -76,7 +91,8 @@ public class MainEvent : MonoBehaviour
 
     private void OpenProfileUser()
     {
-       // managerButtonOut();
+        // managerButtonOut();
+        SoundManager.instance.playClickSound();
         OpenPanel();
         GameObject UserProfile_prefab = Resources.Load<GameObject>("UserProfile/PrefabUserProfile");
         GameObject UserProfile_clone = Instantiate(UserProfile_prefab);
@@ -88,7 +104,8 @@ public class MainEvent : MonoBehaviour
 
     private void OpenChooseLocation()
     {
-       // managerButtonOut();
+        // managerButtonOut();
+        SoundManager.instance.playClickSound();
         OpenPanel();
         GameObject prefab_chooseLocation = Resources.Load<GameObject>("GamePlay_Manager/prefab_gameplay");
         GameObject chooseLocationclone = Instantiate(prefab_chooseLocation);
@@ -99,7 +116,8 @@ public class MainEvent : MonoBehaviour
     }    
     private void OpenStickerWareHouse()
     {
-       // managerButtonOut();
+        // managerButtonOut();
+        SoundManager.instance.playClickSound();
         GameObject prefab_stickerWH = Resources.Load<GameObject>("GamePlay_Manager/prefabsSticker/stickerWareHouse");
         GameObject clone_stickerWH = Instantiate(prefab_stickerWH);
         clone_stickerWH.transform.SetParent(Rood, false);
@@ -110,7 +128,8 @@ public class MainEvent : MonoBehaviour
 
     private void OpenTaskAchivement()
     {
-       // managerButtonOut();
+        // managerButtonOut();
+        SoundManager.instance.playClickSound();
         GameObject prefab_TaskAchivement = Resources.Load<GameObject>("PrefabsAchievement/Task_Achievement");
         GameObject clone_TaskAchivement = Instantiate(prefab_TaskAchivement);
         clone_TaskAchivement.transform.SetParent(Rood, false);

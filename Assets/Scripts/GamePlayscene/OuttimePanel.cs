@@ -15,7 +15,7 @@ public class OuttimePanel : MonoBehaviour
     {
         numb = CoinBasket.Instance.numBer_Coin;
         buttonmain.onClick.AddListener(backmain);
-        buttonreset.onClick.AddListener(resetquestion);
+        buttonreset.onClick.AddListener(resetquestions);
         setTextCoin();
     }
     private void OnDestroy()
@@ -27,11 +27,9 @@ public class OuttimePanel : MonoBehaviour
     {
         ManagerSceneGame.Instance.backMain();
     }   
-    private void resetquestion()
+    private void resetquestions()
     {
-        string idlocation =  PrefManager.PrefSaveUserMap.GetUserLocationchoose();
-        PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(idlocation, 0);
-        ManagerSceneGame.Instance.SetdataGameplay();
+        ManagerSceneGame.Instance.resetquestion();
         ManagerSceneGame.Instance.panel_fail.SetActive(false);
     }    
     public void setTextCoin()

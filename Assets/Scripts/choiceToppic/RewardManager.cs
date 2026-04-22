@@ -97,6 +97,7 @@ public class RewardManager : MonoBehaviour
     IEnumerator delay2()
     {
         yield return new WaitForSeconds(1f);
+        SoundManager.instance.playCoinSound();
         int numberBef = PrefManager.PrefMoney.getNumberCoin();
         int numberAfTer = numberBef + numbCoinReW;
         PrefManager.PrefMoney.SetNumberCoin(numberAfTer);

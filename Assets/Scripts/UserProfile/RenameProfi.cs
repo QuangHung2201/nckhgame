@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -37,8 +37,13 @@ public class RenameProfi : MonoBehaviour
     }    
     public void ReNameUser()
     {
+        string idFigure = PichFigure.instance.idFigureChoose;
         string name = TMP_InputField.text;
         PrefManager.PrefProfiles.SetUserName(name);
         UserProfilePanel.instance.setID();
+        PrefManager.PrefProfiles.SetUserIDfigure(idFigure);
+        Btnprofile.instance.setdatabtn();
+        Debug.Log("nhân vật được chọn " + idFigure);
+        close();
     }    
 }

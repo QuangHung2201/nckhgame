@@ -68,6 +68,7 @@ public class Itemplace : MonoBehaviour
     }    
     public void eVenOpenReW()
     {
+        SoundManager.instance.playOpenSound();
         open_chestsStart();
         PrefManager.PrefSaveUserMap.SetUserLocationID(idlocation); // lưu toppic hiện tại được chọn
 

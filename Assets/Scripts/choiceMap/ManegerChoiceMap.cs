@@ -11,6 +11,7 @@ public class ManegerChoiceMap : MonoBehaviour
     [SerializeField] private Button button_exit;
     [SerializeField] private Button button_choicemap; // dùng đc chọn map tỉnh
     [SerializeField] Button btnDowPanel_logUncl;
+
     public GameObject panel_logUnclick;
     public GameObject objbtnDowPanel_log;
 
@@ -62,11 +63,12 @@ public class ManegerChoiceMap : MonoBehaviour
     }    
     public void eventDowPanelLog()
     {
-        rect_panelLog.DOScale(0f, 0.35f)
+        RectTransform rectbg = panel_logUnclick.GetComponent<PanelLogCl>().rect_bg;
+        rectbg.DOScale(0f, 0.35f)
         .SetEase(Ease.InOutSine)
         .OnComplete(() =>
         {
-            rect_panelLog.localScale = new Vector3(1f,1f,1f);
+            rectbg.localScale = new Vector3(1f,1f,1f);
             panel_logUnclick.gameObject.SetActive(false);
         }        
     );

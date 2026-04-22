@@ -14,6 +14,7 @@ public class FeatureChatBox : MonoBehaviour
     [SerializeField] private TMP_InputField txtReQuest;
     void Start()
     {
+        transform.SetAsLastSibling();
         btnClose.onClick.AddListener(CloseChatbos);
         btnSentReq.onClick.AddListener(CallReQuestAPI);
     }

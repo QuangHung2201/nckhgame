@@ -19,10 +19,17 @@ public class PanelWiner : MonoBehaviour
     private void OnEnable()
     {
         button_close.onClick.AddListener(backMain);
+        button_claimx2.onClick.AddListener(resetQuet);
     }
     private void OnDestroy()
     {
         button_close.onClick.RemoveAllListeners();
+        button_claimx2.onClick.RemoveAllListeners();
+    }
+    public void resetQuet()
+    {
+        ManagerSceneGame.Instance.resetquestion();
+        ManagerSceneGame.Instance.panelWin.SetActive(false);
     }
     public void backMain()
     {

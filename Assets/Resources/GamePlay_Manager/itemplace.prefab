@@ -199,10 +199,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: "Ch\u01A1i"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
-  m_sharedMaterial: {fileID: -7311433130325934809, guid: bd08afe0d91dc9f47a9c5f0f2513505c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4bc149f527cbd904898ad710eb212a70, type: 2}
+  m_sharedMaterial: {fileID: 3820508049889118150, guid: 4bc149f527cbd904898ad710eb212a70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -483,8 +483,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: -22.8}
-  m_SizeDelta: {x: 105.8367, y: 40.3341}
+  m_AnchoredPosition: {x: 236.2029, y: -25.84}
+  m_SizeDelta: {x: 133.431, y: 46.4142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &764094384439894504
 CanvasRenderer:

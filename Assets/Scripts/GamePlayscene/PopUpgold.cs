@@ -36,6 +36,7 @@ public class PopUpgold : MonoBehaviour
     }
     void AnimateCoinIncrease(int from, int to, float duration)  // hàm hiệu ứng tăng coin
     {
+        SoundManager.instance.playCoinSound();
         DOTween.To(() => from, x => {
             from = x;
             textNumberCoin.text = from.ToString(); // đọc text lên trong từng fame

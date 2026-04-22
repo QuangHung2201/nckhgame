@@ -126,6 +126,7 @@ public class ManagerSceneGame : MonoBehaviour
         panel_unlick.SetActive(correct);
         if(correct == true)
         {
+<<<<<<< HEAD
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 câu hỏi"
             EventAchievement.Trigger(EventType.AddDaily3);
             // Gọi sự kiện để tính nhiệm vụ tháng "Trả lời đúng 150 câu hỏi"
@@ -133,6 +134,10 @@ public class ManagerSceneGame : MonoBehaviour
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
             EventAchievement.Trigger(EventType.AddDaily4, true);
 
+=======
+            SoundManager.instance.stopClockSound();
+            SoundManager.instance.playCorrectSound();
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
             killCountDown();
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
@@ -142,6 +147,8 @@ public class ManagerSceneGame : MonoBehaviour
             idexquestion = PrefManager.PrefSaveUserMap.GetUserQuestionLocationID(idToppic); // lấy id câu hỏi hiện tại theo địa danh
             if (idexquestion >= datalocation.questions.Count) // nếu đã trả lời hết thì set lại id câu hỏi của địa danh về 0
             {
+
+                SoundManager.instance.playWinSound();
                 panel_unlick.SetActive(false);
                   if(checkToppicLast(idmapcache,idtoppiccache) == 1)    // check nếu là item cuối
                  {
@@ -168,12 +175,18 @@ public class ManagerSceneGame : MonoBehaviour
         }
         else
         {
+<<<<<<< HEAD
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
             EventAchievement.Trigger(EventType.AddDaily4, false);
 
+=======
+            SoundManager.instance.playUncorrectSound();
+>>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ
-            { 
+            {
+                SoundManager.instance.stopClockSound();
+                SoundManager.instance.playFailSound();
                 timepresent = 0;
                 killCountDown();
                 panel_fail.SetActive(true);
@@ -194,6 +207,14 @@ public class ManagerSceneGame : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         panel_answerfalse.SetActive(false);
+    }
+
+    public void resetquestion()
+    {
+        string idlocation = PrefManager.PrefSaveUserMap.GetUserLocationchoose();
+        PrefManager.PrefSaveUserMap.SetUserQuestionLocationID(idlocation, 0);
+        SetdataGameplay();
+        ManagerSceneGame.Instance.panel_fail.SetActive(false);
     }
     public void openPanelSetting()  // bật tắt panel setting
     {
@@ -263,6 +284,7 @@ public class ManagerSceneGame : MonoBehaviour
 
                 if(tmp <= 5)// hiệu ứng text khi nhỏ hơn bằng 5
                 {
+                SoundManager.instance.playClockSound();
                 text_timecdown.DOColor(Color.red, 0.3f);
                 text_timecdown.transform
                 .DOScale(1.3f,0.3f)
@@ -278,7 +300,11 @@ public class ManagerSceneGame : MonoBehaviour
             });  // thêm hành động vào timeline sequence
             seq_countdown.AppendInterval(1f); // thêm khoảng thời gian 1f vào timeline sequence
         }
-        seq_countdown.OnComplete(() => panel_fail.SetActive(true));
+
+        seq_countdown.OnComplete(() =>
+        {        
+            panel_fail.SetActive(true);
+        });
     }    
      
     public void resetTickAllbtn()
