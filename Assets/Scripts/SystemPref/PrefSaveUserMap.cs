@@ -15,13 +15,7 @@ public class PrefSaveUserMap
     //SizeToppic{Userlocation}  : key lưu kích cỡ số lượng câu hỏi theo địa danh
     //$"StaticGift{UserToppic}" : key lưu trạng thái nhận quà theo toppic
 
-<<<<<<< HEAD
     public string GetUserMapchoose() // hàm lấy map đã chọn
-=======
-
-
-    public string GetUserMapchoose()
->>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     {
         return PlayerPrefs.GetString(KEY_USERMAPID, "");
     }

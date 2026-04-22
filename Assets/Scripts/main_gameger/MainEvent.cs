@@ -16,11 +16,7 @@ public class MainEvent : MonoBehaviour
 
 
     public GameObject PanelUnClick;
-<<<<<<< HEAD
-=======
     public GameObject PanelSetting;
-    //public GameObject TaskAchivement;
->>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
 
     public  Transform Rood;
 
@@ -29,7 +25,6 @@ public class MainEvent : MonoBehaviour
     private void Start()
     {
         instance = this;
-<<<<<<< HEAD
         ResetAchievement.CheckFirstTime();
 
         // Gọi sự kiện để tính nhiệm vụ ngày "Đăng nhập hàng ngày"
@@ -40,9 +35,7 @@ public class MainEvent : MonoBehaviour
 
         // Gọi sự kiện để tính nhiệm vụ tháng "Hoàn thành 1 Toppic"
         EventAchievement.Trigger(EventType.AddMonthly5);
-=======
         SoundManager.instance.startmussicGr();
->>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
     }
     // Start is called before the first frame update
     private void Awake() // nối button với hàm sự kiện

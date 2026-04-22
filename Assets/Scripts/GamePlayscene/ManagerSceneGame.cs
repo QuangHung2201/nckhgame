@@ -126,7 +126,6 @@ public class ManagerSceneGame : MonoBehaviour
         panel_unlick.SetActive(correct);
         if(correct == true)
         {
-<<<<<<< HEAD
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 câu hỏi"
             EventAchievement.Trigger(EventType.AddDaily3);
             // Gọi sự kiện để tính nhiệm vụ tháng "Trả lời đúng 150 câu hỏi"
@@ -134,10 +133,8 @@ public class ManagerSceneGame : MonoBehaviour
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
             EventAchievement.Trigger(EventType.AddDaily4, true);
 
-=======
             SoundManager.instance.stopClockSound();
             SoundManager.instance.playCorrectSound();
->>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
             killCountDown();
             CoinBasket.Instance.upDataCoinBasket();
             idexquestion++;
@@ -175,13 +172,10 @@ public class ManagerSceneGame : MonoBehaviour
         }
         else
         {
-<<<<<<< HEAD
             // Gọi sự kiện để tính nhiệm vụ ngày "Trả lời đúng 3 lần liên tiếp đúng 3 câu"
             EventAchievement.Trigger(EventType.AddDaily4, false);
 
-=======
             SoundManager.instance.playUncorrectSound();
->>>>>>> b5d68ed7916cd3bcc4dfaa0d7f7f149223ac9bc1
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ
             {
