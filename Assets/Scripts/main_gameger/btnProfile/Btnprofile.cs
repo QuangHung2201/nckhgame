@@ -12,6 +12,10 @@ public class Btnprofile : MonoBehaviour
     void Start()
     {
         instance = this;
+
+    }
+    private void Awake()
+    {
         setdatabtn();
     }
 
@@ -22,10 +26,15 @@ public class Btnprofile : MonoBehaviour
     public void setdatabtn()
     {
         string idFigure = PrefManager.PrefProfiles.getUserIDFigure();
-        if(idFigure != null )
+        if(idFigure == "" )
+        {          
+            Sprite spriteFigure = Figure_atlas.GetSprite("sp1");
+            m_img.sprite = spriteFigure;
+        }   
+        else
         {
             Sprite spriteFigrue = Figure_atlas.GetSprite(idFigure);
             m_img.sprite = spriteFigrue;
-        }   
+        }    
     }    
 }

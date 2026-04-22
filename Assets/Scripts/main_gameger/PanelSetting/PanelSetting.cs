@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PanelSetting : MonoBehaviour
@@ -47,5 +48,10 @@ public class PanelSetting : MonoBehaviour
     public void resetdata()
     {
         PlayerPrefs.DeleteAll();
+        //PrefManager.PrefSaveUserMap.ResetData();
+
+        //PrefManager.PrefSaveUserMap = new PrefSaveUserMap();
+
+        PlayerPrefs.Save();
     }    
 }

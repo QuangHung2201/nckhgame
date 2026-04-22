@@ -15,6 +15,8 @@ public class PrefSaveUserMap
     //SizeToppic{Userlocation}  : key lưu kích cỡ số lượng câu hỏi theo địa danh
     //$"StaticGift{UserToppic}" : key lưu trạng thái nhận quà theo toppic
 
+
+
     public string GetUserMapchoose()
     {
         return PlayerPrefs.GetString(KEY_USERMAPID, "");
@@ -112,5 +114,46 @@ public class PrefSaveUserMap
         PlayerPrefs.SetString(KEY_LISTSTICKER, liststring);
         PlayerPrefs.Save();
         Debug.Log("list sticker dạng chuỗi :" + PlayerPrefs.GetString(KEY_LISTSTICKER));
+    }
+    public void ResetData()
+    {
+        // ❗ Check null tránh crash
+        if (ConfigManager.instance == null)
+        {
+            Debug.LogError("ConfigManager chưa init!");
+            return;
+        }
+
+        screens scenelist = ConfigManager.instance.creenslist;
+
+        // ===== RESET KEY TĨNH =====
+        PlayerPrefs.SetString(KEY_USERMAPID, "");
+        PlayerPrefs.SetString(KEY_USERLOCATIONID, "");
+        PlayerPrefs.SetInt(KEY_USERTOPPICINDEX, 0);
+        PlayerPrefs.SetString(KEY_LISTSTICKER, "");
+
+        // ===== RESET KEY ĐỘNG =====
+        foreach (var screen in scenelist.playscreens)
+        {
+            string mapID = screen.ID;
+
+            // reset location theo map
+            PlayerPrefs.SetInt($"Location{mapID}", 0);
+
+            foreach (var loc in screen.location)
+            {
+                string topicID = loc.id;
+
+                PlayerPrefs.SetInt($"Toppic{topicID}{mapID}", 0);
+                PlayerPrefs.SetInt($"SizeToppic{topicID}", 0);       // ✅ FIX bug (trước là "")
+                PlayerPrefs.SetInt($"StaticGift{topicID}", 0);
+                PlayerPrefs.SetInt($"Question{topicID}", 0);
+            }
+        }
+
+        // ===== SAVE 1 LẦN DUY NHẤT =====
+        PlayerPrefs.Save();
+
+        Debug.Log("RESET DATA DONE 🔥");
     }
 }
