@@ -121,6 +121,7 @@ public class TaskItem : MonoBehaviour
             ? (float)this.progress / this.target
             : 0;
 
+
         this.CheckProgress();
     }
 
