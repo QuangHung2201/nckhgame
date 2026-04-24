@@ -56,7 +56,7 @@ public class TTSManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("TTS lỗi: " + www.error);
+            Debug.LogError("TTS lỗi");
         }
     }
 }

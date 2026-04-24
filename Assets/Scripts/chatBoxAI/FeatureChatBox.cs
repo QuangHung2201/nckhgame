@@ -8,6 +8,7 @@ public class FeatureChatBox : MonoBehaviour
     [SerializeField] private Button btnClose;
     [SerializeField] private GameObject bossPopupObj;
     [SerializeField] private Button btnSentReq;
+    [SerializeField] private Button btnOpenSound;
 
 
     [SerializeField] private TextMeshProUGUI txtResponse;
@@ -35,11 +36,13 @@ public class FeatureChatBox : MonoBehaviour
 
         APImanager.instance.StartCoroutine(APImanager.instance.reQuesttxt(txtReQString, (responeAPI) =>
         {
-            txtResponse.text = responeAPI.ToString();  
-            
-            TTSManager.instance.Speak(txtResponse.text);
+            txtResponse.text = responeAPI.ToString();
+            btnOpenSound.onClick.AddListener(EvenOpenSound);
         }
         ));
-
     }   
+    public void EvenOpenSound()
+    {
+         TTSManager.instance.Speak(txtResponse.text);
+    }    
    }
