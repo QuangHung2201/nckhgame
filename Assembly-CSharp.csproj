@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\GamePlayscene\CoinFly.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\PichFigure\ItemFigure.cs" />
     <Compile Include="Assets\Scripts\choiceMap\DataItemScreen.cs" />
+    <Compile Include="Assets\Scripts\stickerWH\ReWardSticker.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\ManagerSceneGame.cs" />
     <Compile Include="Assets\Scripts\GamePlayscene\titleFalse\TitleFalseManager.cs" />
     <Compile Include="Assets\Scripts\SystemPref\PrefManager.cs" />

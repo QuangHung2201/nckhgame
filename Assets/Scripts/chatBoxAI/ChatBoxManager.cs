@@ -43,7 +43,16 @@ public class ChatBoxManager : MonoBehaviour
     } 
     public void OpenFeaTureChatboss()
     {
+        int numbercoin = PrefManager.PrefMoney.getNumberCoin();
+        if(numbercoin >= 5)
+        {
         FeaTureChatboss.SetActive(true);
         gameObject.SetActive(false);
+        PrefManager.PrefMoney.SetNumberCoin(numbercoin-5);
+        if(PopupCoin.instance != null)
+            {
+        PopupCoin.instance.setTextCoin();
+            }    
+        }    
     }    
 }

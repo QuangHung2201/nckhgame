@@ -31,6 +31,7 @@ public class PichFigure : MonoBehaviour
         rect_content = contentFigure.GetComponent<RectTransform>();
         rect_croll = m_scroll.GetComponent<RectTransform>();
         initFigure();
+        //Minfigurenear();
     }
     private void Awake()
     {

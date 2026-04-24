@@ -32,12 +32,14 @@ public class FeatureChatBox : MonoBehaviour
     {
         string txtReQString = txtReQuest.text;
         txtResponse.text = "Đợi chút nha Bro...";
-        TTSManager.instance.Speak(txtResponse.text);
-        //APImanager.instance.StartCoroutine(APImanager.instance.reQuesttxt(txtReQString, (responeAPI) =>
-        //{
-        //    txtResponse.text = responeAPI.ToString();          
-        //}
-        //));
+
+        APImanager.instance.StartCoroutine(APImanager.instance.reQuesttxt(txtReQString, (responeAPI) =>
+        {
+            txtResponse.text = responeAPI.ToString();  
+            
+            TTSManager.instance.Speak(txtResponse.text);
+        }
+        ));
 
     }   
    }
