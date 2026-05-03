@@ -8,7 +8,7 @@ public class PrefMoney // không mono, không static => chỉ cần khai báo ne
 
     public int getNumberCoin()  // hàm lấy coin
     {
-       return PlayerPrefs.GetInt(KEY_SAVECOIN, 0);
+       return PlayerPrefs.GetInt(KEY_SAVECOIN, 15);
     }    
     public void SetNumberCoin(int number) // hàm sửa số lượng coin
     {
