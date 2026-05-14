@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Khi đến Lăng Chủ tịch Hồ Chí Minh, người dân thường gọi là:",
-      "answertrue": "Đi viếng Bác d",
-      "answerfalse1": "Đi tham quan Lăng Bác",
-      "answerfalse2": "Đi xem Lăng Bác",
-      "answerfalse3": "Đi dạo quanh Quảng trường Ba Đình"
+      "question": "Nghi lễ chào cờ và hạ cờ được diễn ra lúc nào?",
+      "answertrue": "6 giờ sáng (mùa nóng) và 9 giờ tối hàng ngày",
+      "answerfalse1": "6 giờ 30 phút sáng và 9 giờ30 phút tối hàng ngày",
+      "answerfalse2": "5 giờ 30 phút sáng và 9 giờ 30 phút tối hàng ngày",
+      "answerfalse3": "5 giờ 45 phút sáng và 9 giờ tối hàng ngày"
     },
     {
-      "question": "Trang phục nào không phù hợp khi vào viếng Lăng Chủ tịch Hồ Chí Minh?",
-      "answertrue": "Quần ngắn và áo ba lỗ d",
-      "answerfalse1": "Áo dài truyền thống",
-      "answerfalse2": "Áo sơ mi và quần dài",
-      "answerfalse3": "Đồng phục học sinh"
+      "question": "Hình ảnh 79 cây vạn tuế quanh Lăng mang ý nghĩa biểu tượng gì?",
+      "answertrue": "Tượng trưng cho 79 năm tuổi đời của Bác",
+      "answerfalse1": "Tượng trưng cho các dân tộc Việt Nam",
+      "answerfalse2": "Tượng trưng cho sự kiên cường của quân đội",
+      "answerfalse3": "Tượng trưng cho sự bền vững của công trình"
     },
     {
-      "question": "Trong khu vực giữ thi hài Bác Hồ, hành động nào bị nghiêm cấm?",
-      "answertrue": "Quay phim, chụp ảnh d",
-      "answerfalse1": "Đi nhẹ, nói khẽ",
-      "answerfalse2": "Giữ trật tự",
-      "answerfalse3": "Cúi đầu tưởng niệm"
+      "question": "Theo nội quy viếng Lăng, hành động nào sau đây là bắt buộc đối với du khách?",
+      "answertrue": "Bỏ mũ nón và giữ im lặng tuyệt đối",
+      "answerfalse1": "Đeo kính râm khi vào phòng thi hài",
+      "answerfalse2": "Cho tay vào túi quần để giữ tư thế nghiêm túc",
+      "answerfalse3": "Dùng điện thoại ghi âm lời hướng dẫn"
+    },
+    {
+      "question": "Hai rặng tre nằm ở phía Nam và Bắc của Lăng được coi là biểu tượng cho điều gì?",
+      "answertrue": "Biểu tượng cho đất nước và con người Việt Nam",
+      "answerfalse1": "Sự trù phú của nông nghiệp Việt Nam",
+      "answerfalse2": "Tạo bóng mát cho khách viếng",
+      "answerfalse3": "Hàng rào bảo vệ an ninh"
+    },
+    {
+      "question": "Dòng chữ 'CHỦ TỊCH HỒ-CHÍ-MINH' trên đỉnh Lăng được làm bằng loại đá quý màu gì?",
+      "answertrue": "Màu hồng mận chín",
+      "answerfalse1": "Màu trắng cẩm thạch",
+      "answerfalse2": "Màu xám granite",
+      "answerfalse3": "Màu vàng sáng"
     }
   ]
 }

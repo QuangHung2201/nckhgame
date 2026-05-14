@@ -25,6 +25,10 @@ public class FeatureChatBox : MonoBehaviour
     }
     public void CloseChatbos()
     {
+        if(ManagerSceneGame.Instance != null)
+        {
+            ManagerSceneGame.Instance.playcoutdown();
+        }    
         gameObject.SetActive(false);
         bossPopupObj.SetActive(true);   
     }    
@@ -37,7 +41,7 @@ public class FeatureChatBox : MonoBehaviour
         APImanager.instance.StartCoroutine(APImanager.instance.reQuesttxt(txtReQString, (responeAPI) =>
         {
             txtResponse.text = responeAPI.ToString();
-            btnOpenSound.onClick.AddListener(EvenOpenSound);
+            //btnOpenSound.onClick.AddListener(EvenOpenSound);
         }
         ));
     }   

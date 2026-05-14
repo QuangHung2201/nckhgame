@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Lăng Chủ tịch Hồ Chí Minh được khánh thành vào năm nào?",
-      "answertrue": "1975 d",
-      "answerfalse1": "1976",
-      "answerfalse2": "1980",
-      "answerfalse3": "1974"
+      "question": "Chiều cao tổng thể của công trình Lăng Chủ tịch Hồ Chí Minh là bao nhiêu?",
+      "answertrue": "21,6 m",
+      "answerfalse1": "15,5 m",
+      "answerfalse2": "32,0 m",
+      "answerfalse3": "41,2 m"
     },
     {
-      "question": "Lăng Chủ tịch Hồ Chí Minh được xây dựng theo phong cách kiến trúc nào?",
-      "answertrue": "Kết hợp giữa hiện đại và truyền thống Á Đông d",
-      "answerfalse1": "Hiện đại phương Tây",
-      "answerfalse2": "Cổ điển châu Âu",
-      "answerfalse3": "Kiến trúc Pháp cổ"
+      "question": "Mặt ngoài của Lăng được lát bằng loại vật liệu đá nào?",
+      "answertrue": "Đá granite xám",
+      "answerfalse1": "Đá cẩm thạch Hà Tây",
+      "answerfalse2": "Đá hồng ngọc Thanh Hóa",
+      "answerfalse3": "Đá đỏ núi Non Nước"
     },
     {
-      "question": "Chất liệu chính được dùng để xây dựng Lăng Chủ tịch Hồ Chí Minh là gì?",
-      "answertrue": "Đá granite và đá cẩm thạch d",
-      "answerfalse1": "Xi măng trắng",
-      "answerfalse2": "Gỗ lim",
-      "answerfalse3": "Gạch nung"
+      "question": "Bãi cỏ trước Lăng được chia thành bao nhiêu ô vuông cỏ xanh tươi suốt bốn mùa?",
+      "answertrue": "240 ô",
+      "answerfalse1": "79 ô",
+      "answerfalse2": "79 ô",
+      "answerfalse3": "320 ô"
+    },
+    {
+      "question": "Chữ ký của Chủ tịch Hồ Chí Minh tại tiền sảnh được dát bằng chất liệu gì?",
+      "answertrue": "Dát vàng",
+      "answerfalse1": "Gỗ Lim",
+      "answerfalse2": "Nhôm",
+      "answerfalse3": "Bạc"
+    },
+    {
+      "question": "Công trình Lăng gồm có tổng cộng bao nhiêu lớp?",
+      "answertrue": "3 lớp",
+      "answerfalse1": "1 lớp",
+      "answerfalse2": "2 lớp",
+      "answerfalse3": "4 lớp"
     }
   ]
 }

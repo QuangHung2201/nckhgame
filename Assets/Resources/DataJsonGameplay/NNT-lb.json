@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Lăng Chủ tịch Hồ Chí Minh được khởi công xây dựng vào năm nào?",
-      "answertrue": "1973 d",
-      "answerfalse1": "1975",
-      "answerfalse2": "1970",
-      "answerfalse3": "1969"
+      "question": "Ai là người dẫn đầu các cuộc mít-tinh quan trọng tại Quảng trường Ba Đình xưa?",
+      "answertrue": "Chủ tịch Hồ Chí Minh",
+      "answerfalse1": "Tổng bí thư Lê Duẩn",
+      "answerfalse2": "Thủ tướng Phạm Văn Đồng",
+      "answerfalse3": "Đại tướng Võ Nguyên Giáp"
     },
     {
-      "question": "Ai là Tổng Tư lệnh Quân đội Nhân dân Việt Nam từng nhiều lần tham dự lễ viếng Chủ tịch Hồ Chí Minh?",
-      "answertrue": "Võ Nguyên Giáp d",
+      "question": "Sau khi Bác qua đời, cơ quan nào đã bàn và quyết định giữ gìn lâu dài thi hài của Người?",
+      "answertrue": "Bộ Chính trị Trung ương Đảng",
+      "answerfalse1": "Quốc hội Việt Nam",
+      "answerfalse2": "Chính phủ Liên Xô",
+      "answerfalse3": "Đoàn kiến trúc sư Việt Nam"
+    },
+    {
+      "question": "Thủ tướng Phạm Văn Đồng đã phê duyệt nhiệm vụ thiết kế Lăng Bác vào ngày tháng năm nào?",
+      "answertrue": "19/01/1970",
+      "answerfalse1": "02/09/1969",
+      "answerfalse2": "29/08/1975",
+      "answerfalse3": "13/07/1999"
+    },
+    {
+      "question": "Đoàn chuyên gia nước nào đã sang Việt Nam để phối hợp bảo quản thi hài Bác ngay từ năm 1969?",
+      "answertrue": "Chuyên gia Liên Xô (Nga)",
+      "answerfalse1": "Chuyên gia Pháp",
+      "answerfalse2": "Chuyên gia Trung Quốc",
+      "answerfalse3": "Chuyên gia Mỹ"
+    },
+    {
+      "question": "Vị lãnh đạo nào đã khẳng định thi hài Bác phải ở lại Việt Nam khi trao đổi với phía Liên Xô?",
+      "answertrue": "Lê Duẩn",
       "answerfalse1": "Trường Chinh",
-      "answerfalse2": "Lê Duẩn",
-      "answerfalse3": "Nguyễn Chí Thanh"
-    },
-    {
-      "question": "Ai là người đọc Điếu văn trong lễ tang Chủ tịch Hồ Chí Minh năm 1969?",
-      "answertrue": "Lê Duẩn d",
-      "answerfalse1": "Phạm Văn Đồng",
-      "answerfalse2": "Trường Chinh",
-      "answerfalse3": "Võ Nguyên Giáp"
+      "answerfalse2": "Phạm Văn Đồng",
+      "answerfalse3": "Nguyễn Lương Bằng"
     }
   ]
 }

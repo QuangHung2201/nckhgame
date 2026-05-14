@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Hoạt động nào thu hút đông người nhất tại Văn Miếu vào dịp Tết Nguyên Đán?",
-      "answertrue": "Hội thơ Xuân và xin chữ đầu năm d",
-      "answerfalse1": "Triển lãm ảnh lịch sử",
-      "answerfalse2": "Lễ hội ẩm thực truyền thống",
-      "answerfalse3": "Trình diễn múa rối nước"
+      "question": "Hoạt động 'xin chữ' vào dịp Tết tại Văn Miếu mang ý nghĩa gì?",
+      "answertrue": "Mong ước an lành và đỗ đạt trong năm mới ",
+      "answerfalse1": "Để tổ chức hội thơ và khen tặng học sinh ",
+      "answerfalse2": "Để tham quan du lịch tại thủ đô Hà thành ",
+      "answerfalse3": "Để tìm về sự tĩnh lặng giữa cuộc sống hối hả "
     },
     {
-      "question": "Khu vực “Nhà Thái Học” trong Văn Miếu hiện nay được dùng cho mục đích gì?",
-      "answertrue": "Tổ chức triển lãm, hội thảo và hoạt động giáo dục d",
-      "answerfalse1": "Nơi thờ cúng tổ tiên",
-      "answerfalse2": "Văn phòng quản lý di tích",
-      "answerfalse3": "Thư viện quốc gia"
+      "question": "Tại sao hiện nay du khách được khuyên tránh chạm tay lên bia Tiến sĩ?",
+      "answertrue": "Để bảo tồn di tích ",
+      "answerfalse1": "Để thực hiện đúng các nghi lễ tâm linh ",
+      "answerfalse2": "Để tránh làm đổ hệ thống bia đá cổ ",
+      "answerfalse3": "Vì đầu rùa có chứa các hóa chất bảo quản "
     },
     {
-      "question": "Hoạt động nào giúp du khách hiện nay tìm hiểu Văn Miếu một cách sinh động và hiện đại hơn?",
-      "answertrue": "Tham quan bằng công nghệ thực tế ảo (VR/AR) d",
-      "answerfalse1": "Nghe kể chuyện dân gian",
-      "answerfalse2": "Viết thư pháp giấy dó",
-      "answerfalse3": "Nghe thuyết minh truyền thống"
+      "question": "Hoạt động nào tại Hồ Văn giúp người trẻ học cách 'tĩnh' lại?",
+      "answertrue": "Phiên chợ đồ xưa hoặc triển lãm thư pháp ",
+      "answerfalse1": "Tổ chức các giải thi đấu cờ người ",
+      "answerfalse2": "Lễ hội vinh danh các Thủ khoa xuất sắc ",
+      "answerfalse3": "Hoạt động dâng hương cầu may trước kỳ thi "
+    },
+    {
+      "question": "Sự kiện văn hóa nào diễn ra tại Văn Miếu vào rằm tháng Giêng hằng năm?",
+      "answertrue": "Ngày Thơ Việt Nam ",
+      "answerfalse1": "Lễ vinh danh thủ khoa các trường Đại học ",
+      "answerfalse2": "Hội chữ Xuân và xin chữ ông đồ ",
+      "answerfalse3": "Khai mạc các lớp học Nho học cho trẻ em "
+    },
+    {
+      "question": "Lễ vinh danh thủ khoa ngày nay được coi là gì?",
+      "answertrue": "Một nét đẹp văn hóa mới, tiếp nối truyền thống xưa ",
+      "answerfalse1": "Một nghi thức kiểm tra năng lực cuối cùng ",
+      "answerfalse2": "Một hoạt động xúc tiến du lịch thủ đô ",
+      "answerfalse3": "Một buổi lễ báo công với các bậc Tiên hiền "
     }
   ]
 }

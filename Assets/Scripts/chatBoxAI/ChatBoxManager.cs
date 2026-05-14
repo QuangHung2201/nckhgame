@@ -20,7 +20,7 @@ public class ChatBoxManager : MonoBehaviour
         btnOpenChatbos.onClick.AddListener(OpenFeaTureChatboss);
         eventtxt_popup();
     }
-
+    
     private void OnDestroy()
     {
         btnShowHello.onClick.RemoveAllListeners();
@@ -43,6 +43,10 @@ public class ChatBoxManager : MonoBehaviour
     } 
     public void OpenFeaTureChatboss()
     {
+        if(ManagerSceneGame.Instance != null)
+        {
+        ManagerSceneGame.Instance.pauseCountdown();
+        }
         int numbercoin = PrefManager.PrefMoney.getNumberCoin();
         if(numbercoin >= 5)
         {

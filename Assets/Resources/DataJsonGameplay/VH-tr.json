@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Tháp Rùa thường xuất hiện trong dịp lễ hội nào ở Hà Nội?",
-      "answertrue": "Tết Nguyên Đán d",
-      "answerfalse1": "Giỗ Tổ Hùng Vương",
-      "answerfalse2": "Lễ Vu Lan",
-      "answerfalse3": "Trung Thu"
+      "question": "Hồ Gươm thường được xem là biểu tượng cho nét đẹp nào của Hà Nội?",
+      "answertrue": "Biểu tượng trường tồn của thủ đô",
+      "answerfalse1": "Công nghiệp hiện đại",
+      "answerfalse2": "Náo nhiệt thương cảng",
+      "answerfalse3": "Mạnh mẽ miền biển"
     },
     {
-      "question": "Người dân thường làm gì quanh Tháp Rùa vào dịp đầu năm?",
-      "answertrue": "Dâng hương, cầu may mắn d",
-      "answerfalse1": "Tổ chức đua thuyền",
-      "answerfalse2": "Chơi múa lân",
-      "answerfalse3": "Làm lễ cúng rằm"
+      "question": "Hồ Gươm nằm ở phường nào của Hà Nội?",
+      "answertrue": "Hoàn Kiếm ",
+      "answerfalse1": "Ba Đình",
+      "answerfalse2": "Tây Hồ",
+      "answerfalse3": "Hai Bà Trưng"
     },
     {
-      "question": "Biểu tượng gắn liền với Tháp Rùa trong văn hóa dân gian là gì?",
-      "answertrue": "Rùa thần d",
-      "answerfalse1": "Rồng vàng",
-      "answerfalse2": "Cá chép",
-      "answerfalse3": "Thần núi"
+      "question": "Hồ Gươm còn được biết đến với tên gọi nào khác?",
+      "answertrue": "Hồ Hoàn Kiếm ",
+      "answerfalse1": "Hồ Tây",
+      "answerfalse2": "Hồ Trúc Bạch",
+      "answerfalse3": "Hồ Thiền Quang"
+    },
+    {
+      "question": "Hoạt động nào tại hồ đêm Giao thừa là 'nghi thức tinh thần' của người Việt?",
+      "answertrue": "Ngắm pháo hoa rực sáng trên hồ",
+      "answerfalse1": "Đi chùa cầu may và hái lộc",
+      "answerfalse2": "Thả đèn hoa đăng trên hồ",
+      "answerfalse3": "Ăn cơm tất niên bên bờ hồ"
+    },
+    {
+      "question": "Tại sao nước Hồ Gươm lại có màu xanh lục đặc trưng quanh năm?",
+      "answertrue": "Do loài tảo lục đặc hữu trong hồ",
+      "answerfalse1": "Do phản chiếu của hàng cây xanh",
+      "answerfalse2": "Do lớp bùn khoáng từ sông Hồng",
+      "answerfalse3": "Do hệ thống xử lý nước hiện đại"
     }
   ]
 }

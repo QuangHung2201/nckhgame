@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Hồ Gươm xưa còn gọi là gì theo truyền thuyết?",
-      "answertrue": "Hồ Hoàn Kiếm d",
-      "answerfalse1": "Hồ Tây",
-      "answerfalse2": "Hồ Trúc Bạch",
-      "answerfalse3": "Hồ Lục Thuỷ"
+      "question": "Vua nào trả gươm Thuận Thiên cho Rùa Vàng sau khi thắng quân Minh?",
+      "answertrue": "Vua Lê Lợi",
+      "answerfalse1": "Vua Lý Thái Tổ",
+      "answerfalse2": "Vua Quang Trung",
+      "answerfalse3": "Vua Trần Hưng Đạo"
     },
     {
-      "question": "Truyền thuyết Rùa thần gắn với triều đại nào?",
-      "answertrue": "Triều Lê d",
-      "answerfalse1": "Triều Lý",
-      "answerfalse2": "Triều Trần",
-      "answerfalse3": "Triều Nguyễn"
+      "question": "Thanh gươm trong truyền thuyết mang tên gì?",
+      "answertrue": "Thuận Thiên ",
+      "answerfalse1": "Long Tuyền",
+      "answerfalse2": "Thiên Mệnh",
+      "answerfalse3": "Kim Long "
     },
     {
-      "question": "Truyền thuyết Tháp Rùa – Hồ Gươm phản ánh giá trị gì?",
-      "answertrue": "Lòng yêu nước, chiến thắng giặc ngoại xâm d",
-      "answerfalse1": "Sự thịnh vượng thương mại",
-      "answerfalse2": "Văn hóa ẩm thực",
-      "answerfalse3": "Kiến trúc Pháp cổ"
+      "question": "Rùa Vàng xuất hiện để đòi lại gươm sau khi đất nước ra sao?",
+      "answertrue": "Vừa giành lại độc lập ",
+      "answerfalse1": "Bị chia cắt",
+      "answerfalse2": "Mất mùa liên tiếp",
+      "answerfalse3": "Dời đô thất bại"
+    },
+    {
+      "question": "Truyền thuyết Hồ Gươm góp phần làm nổi bật điều gì của dân tộc Việt Nam?",
+      "answertrue": "Tinh thần yêu nước và ý chí của dân tộc Việt Nam",
+      "answerfalse1": "Thói quen buôn bán",
+      "answerfalse2": "Nghề thủ công lâu đời",
+      "answerfalse3": "Văn hóa du mục "
+    },
+    {
+      "question": "Tên gọi 'Hoàn Kiếm' kết nối tâm linh thế nào với các vị thần ở đền Ngọc Sơn?",
+      "answertrue": "Kết nối tinh hoa chống ngoại xâm",
+      "answerfalse1": "Vì các thần đều dùng gươm này",
+      "answerfalse2": "Vì gươm phải thờ cạnh đền",
+      "answerfalse3": "Vì các thần là người rèn gươm"
     }
   ]
 }

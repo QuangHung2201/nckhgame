@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Người dân tin rằng việc chạm tay vào đầu rùa bia Tiến sĩ sẽ mang lại điều gì?",
-      "answertrue": "May mắn trong thi cử và học tập d",
-      "answerfalse1": "Tài lộc",
-      "answerfalse2": "Sức khỏe dồi dào",
-      "answerfalse3": "Đường công danh rộng mở"
+      "question": "Dân gian quan niệm sĩ tử xoa đầu rùa đá để cầu mong điều gì?",
+      "answertrue": "Sự thông tuệ và đỗ đạt cao",
+      "answerfalse1": "Sự giàu sang và thăng tiến",
+      "answerfalse2": "Sự bảo hộ của thần Long Đỗ",
+      "answerfalse3": "Gặp may mắn trúng đề dễ"
     },
     {
-      "question": "Theo dân gian, Khuê Văn Các được xây để tượng trưng cho ngôi sao nào trên trời?",
-      "answertrue": "Sao Khuê d",
-      "answerfalse1": "Sao Bắc Đẩu",
-      "answerfalse2": "Sao Thần Nông",
-      "answerfalse3": "Sao Thái Dương"
+      "question": "Vì sao rùa được chọn đội bia Tiến sĩ thay vì các linh vật khác?",
+      "answertrue": "Tượng trưng sự vững chãi, trường tồn",
+      "answerfalse1": "Vì rùa biết bơi ở giếng Thiên Quang",
+      "answerfalse2": "Gắn liền truyền thuyết trả gươm",
+      "answerfalse3": "Có khả năng ghi nhớ tên Tiến sĩ"
     },
     {
-      "question": "Theo truyền thuyết, khi sĩ tử đến Văn Miếu cầu học, điều gì được coi là điềm tốt trước kỳ thi?",
-      "answertrue": "Thấy rùa nổi lên trong hồ d",
-      "answerfalse1": "Thấy mưa nhẹ rơi trước cổng Văn Miếu",
-      "answerfalse2": "Thấy chim sẻ bay qua Khuê Văn Các",
-      "answerfalse3": "Nghe tiếng chuông vang trong gió"
+      "question": "Phẩm chất nổi bật nhất của thầy Chu Văn An qua sớ 'Thất trảm' là gì?",
+      "answertrue": "Sự cương trực, không sợ uy quyền",
+      "answerfalse1": "Khả năng dự đoán tương lai",
+      "answerfalse2": "Sự khéo léo khi dạy hoàng tử",
+      "answerfalse3": "Khả năng soạn thảo pháp luật"
+    },
+    {
+      "question": "Việc thờ Khổng Tử cùng các vua Việt Nam tại Văn Miếu thể hiện điều gì?",
+      "answertrue": "Tôn trọng đạo học và kế thừa tri thức",
+      "answerfalse1": "Ông là người xây dựng Văn Miếu",
+      "answerfalse2": "Yêu cầu của triều đại phương Bắc",
+      "answerfalse3": "Ông là người tìm ra đất phong thủy"
+    },
+    {
+      "question": "Ý nghĩa dân gian của 'Cửa sổ tròn' tại Khuê Văn Các là gì?",
+      "answertrue": "Sự tỏa sáng của tri thức tới muôn dân",
+      "answerfalse1": "Nơi mặt trời mọc để tính lịch thi",
+      "answerfalse2": "Đôi mắt giám sát sĩ tử dự thi",
+      "answerfalse3": "Cửa ngõ đón khí thịnh vượng"
     }
   ]
 }

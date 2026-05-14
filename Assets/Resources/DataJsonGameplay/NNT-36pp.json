@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Ai là người từng sinh sống ở phố Hàng Gai nổi tiếng với nghề thêu?",
-      "answertrue": "Hồ Xuân Hương d",
-      "answerfalse1": "Nguyễn Du",
-      "answerfalse2": "Trần Nhân Tông",
-      "answerfalse3": "Lê Quý Đôn"
+      "question": "Cư dân hình thành nên các phường nghề ở phố cổ có nguồn gốc từ đâu?",
+      "answertrue": "Thợ thủ công từ các làng nghề quanh kinh thành",
+      "answerfalse1": "Cư dân hình thành nên các phường nghề ở phố cổ có nguồn gốc từ đâu?",
+      "answerfalse2": "Binh lính giải ngũ",
+      "answerfalse3": "Người dân vùng núi"
     },
     {
-      "question": "Nhà văn nào từng gắn bó với khu phố Hàng Đào?",
-      "answertrue": "Vũ Trọng Phụng d",
-      "answerfalse1": "Ngô Tất Tố",
-      "answerfalse2": "Nam Cao",
-      "answerfalse3": "Tô Hoài"
+      "question": "Nhiều phố nghề trong khu phố cổ Hà Nội thường có công trình tín ngưỡng nào?",
+      "answertrue": "Đình, đền ",
+      "answerfalse1": "Sân vận động",
+      "answerfalse2": "Nhà ga",
+      "answerfalse3": "Hải đăng"
     },
     {
-      "question": "Nhân vật lịch sử nào thường lui tới khu vực Hàng Bông để mua vải vóc?",
-      "answertrue": "Các quan triều Lê d",
-      "answerfalse1": "Trần Hưng Đạo",
-      "answerfalse2": "Lê Lợi",
-      "answerfalse3": "Nguyễn Du"
+      "question": "Đền Bạch Mã gắn liền với sự tích vị vua nào xây dựng thành Thăng Long?",
+      "answertrue": "Vua Lý Thái Tổ",
+      "answerfalse1": "Vua Lê Lợi",
+      "answerfalse2": "Vua Gia Long",
+      "answerfalse3": "Vua Minh Mạng"
+    },
+	{
+      "question": "Vị thần nào đã phù hộ vua Lý Thái Tổ xây dựng thành Thăng Long?",
+      "answertrue": "Thần Long Đỗ",
+      "answerfalse1": "Thần Kim Quy",
+      "answerfalse2": "Thần Tản Viên",
+      "answerfalse3": "Thần Cao Biền"
+    },
+	{
+      "question": "Hoạt động nào tôn vinh các vị tổ nghề trong đời sống 36 phố phường?",
+      "answertrue": "Lập đình thờ và tổ chức lễ hội phường nghề",
+      "answerfalse1": "Đặt tên phố theo tên tổ nghề",
+      "answerfalse2": "Ghi tên vào sử sách triều đình",
+      "answerfalse3": "Đúc tượng vàng tại cổng thành"
     }
   ]
 }

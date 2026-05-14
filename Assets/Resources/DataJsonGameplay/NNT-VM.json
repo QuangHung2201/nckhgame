@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Ai được mệnh danh là “Vạn thế sư biểu” của Việt Nam?",
-      "answertrue": "Chu Văn An d",
+      "question": "Vị vua nào đã ban lệnh xây dựng Văn Miếu vào năm 1070?",
+      "answertrue": "Vua Lý Thánh Tông ",
+      "answerfalse1": "Vua Lý Thái Tổ",
+      "answerfalse2": "Vua Lý Nhân Tông",
+      "answerfalse3": "Vua Lê Thánh Tông"
+    },
+    {
+      "question": "Vị vua nào đã cho thành lập Quốc Tử Giám vào năm 1076?",
+      "answertrue": "Vua Lý Nhân Tông ",
+      "answerfalse1": "Vua Lý Thánh Tông",
+      "answerfalse2": "Vua Trần Nhân Tông",
+      "answerfalse3": "Vua Lê Thánh Tông"
+    },
+    {
+      "question": "Danh sĩ nào được nhắc đến đã từng dạy học tại Quốc Tử Giám?",
+      "answertrue": "Chu Văn An ",
       "answerfalse1": "Nguyễn Trãi",
       "answerfalse2": "Lê Quý Đôn",
-      "answerfalse3": "Phan Huy Ích"
+      "answerfalse3": "Ngô Sĩ Liên"
     },
     {
-      "question": "Ai là vị vua cho dựng 82 bia tiến sĩ tại Văn Miếu để tôn vinh hiền tài?",
-      "answertrue": "Lê Thánh Tông d",
-      "answerfalse1": "Nguyễn Huệ",
-      "answerfalse2": "Lý Nhân Tông",
-      "answerfalse3": "Trần Nhân Tông"
+      "question": "Vị vua nào đã cho dựng bia Tiến sĩ để vinh danh người đỗ đạt năm 1484?",
+      "answertrue": "Vua Lê Thánh Tông ",
+      "answerfalse1": "Vua Lý Thánh Tông",
+      "answerfalse2": "Vua Lý Nhân Tông",
+      "answerfalse3": "Vua Gia Long"
     },
     {
-      "question": "Ai là người cho xây dựng Văn Miếu – Quốc Tử Giám?",
-      "answertrue": "Lý Thánh Tông d",
-      "answerfalse1": "Trần Thái Tông",
-      "answerfalse2": "Lê Thánh Tông",
-      "answerfalse3": "Lý Nhân Tông"
+      "question": "Vị vua nào đã lập Quốc Tử Giám mới ở Huế vào năm 1802?",
+      "answertrue": "Vua Gia Long ",
+      "answerfalse1": "Vua Minh Mạng",
+      "answerfalse2": "Vua Thiệu Trị",
+      "answerfalse3": "Vua Bảo Đại"
     }
   ]
 }

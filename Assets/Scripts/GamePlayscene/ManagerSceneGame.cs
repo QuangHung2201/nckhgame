@@ -51,7 +51,7 @@ public class ManagerSceneGame : MonoBehaviour
         seq_countdown = DOTween.Sequence();
         SetdataGameplay();
         countdown(20);
-        txtTitle.text = "Level " + (PrefManager.PrefSaveUserMap.GetIndexToppic() + 1);
+        txtTitle.text = "Chủ đề " + (PrefManager.PrefSaveUserMap.GetIndexToppic() + 1);
     }
     private void OnEnable()
     {
@@ -286,15 +286,18 @@ public class ManagerSceneGame : MonoBehaviour
             listbuttonclone[i].GetComponent<ItemAnswer>().resetStickandFade();
         }    
     }    
-    private void pauseCountdown() // taạm dừng sequence
+    public void pauseCountdown() // taạm dừng sequence
     {
         seq_countdown.Pause();
     }    
     public void playcoutdown() // tiếp tục sequence
     {
         seq_countdown.Play();
-        panel_setting.SetActive(false );
+        if(panel_setting.active == true)
+        {
+        panel_setting.SetActive(false);   
         dinamicPopupSetting("1");
+        }    
     }    
     public void killCountDown() // xoá sequence
     {

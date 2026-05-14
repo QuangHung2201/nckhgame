@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Nghi lễ nào được tổ chức sau khi các sĩ tử thi đỗ Tiến sĩ?",
-      "answertrue": "Lễ xướng danh và vinh quy bái tổ d",
-      "answerfalse1": "Lễ hội chọi trâu",
-      "answerfalse2": "Lễ khai bút",
-      "answerfalse3": "Lễ nhập học"
+      "question": "Sĩ tử thường làm gì tại Văn Miếu trước kỳ thi để cầu may?",
+      "answertrue": "Dâng hương và cầu nguyện đỗ đạt ",
+      "answerfalse1": "Thả cá chép xuống hồ",
+      "answerfalse2": "Tổ chức thi đấu thể thao",
+      "answerfalse3": "Treo đèn lên Khuê Văn Các"
     },
     {
-      "question": "Lễ khai bút đầu xuân ở Văn Miếu mang ý nghĩa gì?",
-      "answertrue": "Khởi đầu cho sự học và trí tuệ trong năm mới d",
-      "answerfalse1": "Cầu tài lộc và danh tiếng",
-      "answerfalse2": "Cầu an và sức khỏe",
-      "answerfalse3": "Tưởng nhớ các vị vua Lý"
+      "question": "Hoạt động nào tại Văn Miếu thường diễn ra vào dịp Tết để cầu đỗ đạt?",
+      "answertrue": "Xin chữ đầu năm ",
+      "answerfalse1": "Tổ chức hội thi nấu ăn",
+      "answerfalse2": "Múa lân sư rồng",
+      "answerfalse3": "Diễn xướng chèo cổ"
     },
     {
-      "question": "Những tấm bia tiến sĩ tại Văn Miếu được đặt trên lưng con vật nào?",
-      "answertrue": "Rùa d",
-      "answerfalse1": "Rồng",
-      "answerfalse2": "Phượng hoàng",
-      "answerfalse3": "Sư tử"
+      "question": "Vì sao hiện nay có quy định nghiêm ngặt cấm 'xoa đầu rùa'?",
+      "answertrue": "Để tránh bào mòn đá cổ ",
+      "answerfalse1": "Vì đầu rùa chứa độc tố",
+      "answerfalse2": "Vì quy tắc Nho giáo cấm chạm",
+      "answerfalse3": "Vì đầu rùa rất linh thiêng"
+    },
+    {
+      "question": "Hình ảnh Rùa đội bia đá ở văn miếu mang ý nghĩa biểu tượng gì?",
+      "answertrue": "Sự trường tồn của tri thức ",
+      "answerfalse1": "Sự giàu sang của triều đình",
+      "answerfalse2": "Sự kiên trì của người học",
+      "answerfalse3": "Sự bảo vệ bí mật quốc gia"
+    },
+    {
+      "question": "Lễ vinh danh Thủ khoa ngày nay kế thừa tư tưởng cốt lõi nào?",
+      "answertrue": "Hiền tài là nguyên khí quốc gia ",
+      "answerfalse1": "Nghi thức kiểm tra năng lực cuối",
+      "answerfalse2": "Phong tục mở tiệc của vua",
+      "answerfalse3": "Lễ hội dân gian vùng miền"
     }
   ]
 }

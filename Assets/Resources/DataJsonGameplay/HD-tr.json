@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Du khách thường đến Tháp Rùa để làm gì vào cuối tuần?",
-      "answertrue": "Dạo phố, chụp ảnh d",
-      "answerfalse1": "Tham quan nhà thờ",
-      "answerfalse2": "Mua vàng mã",
-      "answerfalse3": "Xem múa rối nước"
+      "question": "Phố đi bộ hồ gươm bắt đầu và kết thúc lúc nào trong tuần?",
+      "answertrue": "19h00 tối Thứ 6 và kết thúc vào 24h00 Chủ Nhật",
+      "answerfalse1": "19h00 tối Thứ 7 và kết thúc vào 24h00 Chủ Nhật",
+      "answerfalse2": "19h00 tối Thứ 5 và kết thúc vào 24h00 Chủ Nhật",
+      "answerfalse3": "12h00 tối Thứ 6 và kết thúc vào 24h00 Chủ Nhật"
     },
     {
-      "question": "Sự kiện văn hóa hiện đại thường diễn ra quanh Tháp Rùa là gì?",
-      "answertrue": "Hội sách, triển lãm, lễ hội đường phố d",
-      "answerfalse1": "Hội gốm sứ truyền thống",
-      "answerfalse2": "Hội thi nấu ăn truyền thống",
-      "answerfalse3": "Lễ cúng rằm tháng Bảy"
+      "question": "Thói quen giản dị nào được coi là 'đặc sản' khi dạo bước quanh hồ?",
+      "answertrue": "Ăn kem Tràng Tiền hoặc Thủy Tạ",
+      "answerfalse1": "Chụp ảnh lưu niệm",
+      "answerfalse2": "Vẽ chân dung bên hồ",
+      "answerfalse3": "Tham gia ban nhạc đường phố"
     },
     {
-      "question": "Các quán café rooftop gần Tháp Rùa phục vụ trải nghiệm gì?",
-      "answertrue": "Thưởng cảnh hồ, chụp ảnh d",
-      "answerfalse1": "Tham gia học làm gốm",
-      "answerfalse2": "Xem biểu diễn nhạc cụ dân tộc",
-      "answerfalse3": "Tập múa lân"
+      "question": "Hình ảnh nào tại Phố đi bộ thể hiện sự giao thoa giữa xưa và nay?",
+      "answertrue": "Trò chơi dân gian cạnh nhạc đường phố",
+      "answerfalse1": "Sử dụng xe điện tham quan",
+      "answerfalse2": "Khách tây học nấu ăn",
+      "answerfalse3": "Gian hàng hiện đại bán đồ làng nghề"
+    },
+    {
+      "question": "Âm thanh rạng đông nào tạo nên không gian 'khỏe khoắn và bình yên'?",
+      "answertrue": "Tiếng tập thể dục và tiếng quạt múa kiếm",
+      "answerfalse1": "Tiếng còi xe nhộn nhịp",
+      "answerfalse2": "Tiếng nhạc điện tử sôi động",
+      "answerfalse3": "Tiếng chổi quét lá của công nhân"
+    },
+    {
+      "question": "Hồ Gươm thu hút du khách nhờ sự kết hợp của yếu tố nào?",
+      "answertrue": "Lịch sử, văn hóa và cảnh quan ",
+      "answerfalse1": "Công nghiệp nặng",
+      "answerfalse2": "Khai khoáng",
+      "answerfalse3": "Thể thao mạo hiểm"
     }
   ]
 }

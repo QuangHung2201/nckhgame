@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Ai được coi là người lập ra Hà Nội xưa?",
-      "answertrue": "Lý Thái Tổ d",
-      "answerfalse1": "Trần Hưng Đạo",
-      "answerfalse2": "Lê Lợi",
-      "answerfalse3": "Nguyễn Huệ"
+      "question": "Vị thần nào đã phù hộ vua Lý Thái Tổ xây dựng thành công thành quách?",
+      "answertrue": "Thần Long Đỗ",
+      "answerfalse1": "Thần Kim Quy",
+      "answerfalse2": "Thần Tản Viên",
+      "answerfalse3": "Thần Thổ Địa"
     },
     {
-      "question": "Hồ Gươm gắn với truyền thuyết gì?",
-      "answertrue": "Rùa vàng trao gươm d",
-      "answerfalse1": "Rùa trắng báo mộng",
-      "answerfalse2": "Rồng bay lên trời",
-      "answerfalse3": "Cá chép hóa rồng"
+      "question": "Các 'vị tổ nghề' được nhớ đến nhờ hành động cao đẹp nào đối với dân cư?",
+      "answertrue": "Truyền dạy nghề thủ công",
+      "answerfalse1": "Tìm ra kho báu quý giá",
+      "answerfalse2": "Dẫn đường cho quân trận",
+      "answerfalse3": "Xây dựng các tòa thành"
     },
     {
-      "question": "Truyền thuyết về đền Ngọc Sơn liên quan đến ai?",
-      "answertrue": "Thần Rùa d",
-      "answerfalse1": "Thánh Gióng",
-      "answerfalse2": "Trần Hưng Đạo",
-      "answerfalse3": "Nguyễn Trãi"
+      "question": "Đền Bạch Mã gắn với sự tích xây thành còn tượng trưng cho điều gì?",
+      "answertrue": "Sự bảo hộ của thần linh",
+      "answerfalse1": "Sự giàu sang của thương nhân",
+      "answerfalse2": "Sự huyền bí của sông ngòi",
+      "answerfalse3": "Sự đối đầu giữa các phường"
+    },
+    {
+      "question": "Tên phố bắt đầu bằng chữ 'Hàng' lưu giữ dấu ấn về điều gì?",
+      "answertrue": "Tên mặt hàng sản xuất, kinh doanh",
+      "answerfalse1": "Quyền sở hữu hàng hóa",
+      "answerfalse2": "Ranh giới người di cư",
+      "answerfalse3": "Chỉ đường cho thương gia"
+    },
+    {
+      "question": "Tại sao các phường nghề ở phố cổ lại gắn liền với các đình, đền thờ tổ nghề?",
+      "answertrue": "Do thợ từ các làng nghề đổ về lập nên",
+      "answerfalse1": "Do quy định của triều đình",
+      "answerfalse2": "Do các vị thần yêu cầu",
+      "answerfalse3": "Để làm nơi buôn bán hàng hóa"
     }
   ]
 }

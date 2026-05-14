@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Phố Hàng Mã nổi tiếng với hoạt động gì trước mỗi dịp Tết?",
-      "answertrue": "Buôn bán đồ giấy cúng lễ d",
-      "answerfalse1": "Làm bánh chưng",
-      "answerfalse2": "Thêu thùa",
-      "answerfalse3": "Làm nón lá"
+      "question": "Nét đặc trưng nhất trong văn hóa đặt tên các con phố ở khu vực này là gì?",
+      "answertrue": "Đặt tên theo mặt hàng sản xuất và kinh doanh",
+      "answerfalse1": "Đặt tên theo các vị anh hùng dân tộc",
+      "answerfalse2": "Đặt tên theo các loài hoa đặc trưng",
+      "answerfalse3": "Đặt tên theo các mùa trong năm"
     },
     {
-      "question": "Phố nào tổ chức lễ hội chọi gà truyền thống trong lịch sử?",
-      "answertrue": "Không thuộc 36 phố, lễ hội diễn ra ở ngoại thành d",
-      "answerfalse1": "Hàng Bông",
-      "answerfalse2": "Hàng Bè",
-      "answerfalse3": "Hàng Đường"
+      "question": "Lối sống của người dân phố cổ được miêu tả gắn liền với hoạt động nào?",
+      "answertrue": "Hoạt động giao thương và buôn bán sầm uất",
+      "answerfalse1": "Sản xuất nông nghiệp tại chỗ",
+      "answerfalse2": "Các lễ hội hóa trang hiện đại",
+      "answerfalse3": "Chăn nuôi gia súc ven sông"
     },
     {
-      "question": "Phố Hàng Gai nổi tiếng với nghề gì?",
-      "answertrue": "Thêu d",
-      "answerfalse1": "Làm giấy",
-      "answerfalse2": "Buôn vải",
-      "answerfalse3": "Làm nón"
+      "question": "Phong tục thờ cúng 'tổ nghề tại các đình, đền thể hiện đạo lý gì?",
+      "answertrue": "Đạo lý 'Uống nước nhớ nguồn' và sự gắn kết phường hội",
+      "answerfalse1": "Sự sùng bái các vị thần thiên nhiên",
+      "answerfalse2": "Khát vọng làm giàu nhanh chóng",
+      "answerfalse3": "Sự phân chia giai cấp rõ rệt"
+    },
+	{
+      "question": "Văn hóa ẩm thực của phố cổ được nhắc đến với vai trò như thế nào?",
+      "answertrue": "Là mảnh ghép không thể thiếu, tạo nên sức hút của khu phố",
+      "answerfalse1": "Là một phần bổ trợ không quá quan trọng",
+      "answerfalse2": "Chỉ dành riêng cho khách du lịch",
+      "answerfalse3": "Là hoạt động mới hình thành gần đây"
+    },
+	{
+      "question": "Điểm chung lớn nhất trong đời sống văn hóa của các phố 'Hàng' xưa kia là gì?",
+      "answertrue": "Tập trung buôn bán và sản xuất các mặt hàng chuyên môn theo từng loại nghề",
+      "answerfalse1": "Mỗi phố có một đội quân bảo vệ riêng",
+      "answerfalse2": "Người dân các phố không được phép giao lưu",
+      "answerfalse3": "Các phố sử dụng chung một loại tiền tệ riêng"
     }
   ]
 }

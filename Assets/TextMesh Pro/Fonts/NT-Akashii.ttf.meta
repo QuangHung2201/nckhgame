@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a53cb7dac335f2d49a1d4ec138343f79
+guid: 4e2a950883d4ab4438a9caf58baab510
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - VNI-HLThuphap
+  - NT Akashii
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

@@ -18,8 +18,8 @@ public class UserProfilePanel : MonoBehaviour
     }
     public void setID() // HÀM SET DATA
     {
-        textID.text = "ID: " + PrefManager.PrefProfiles.GetUserID();
-        textName.text = "Name: " + PrefManager.PrefProfiles.GetUserName();
+        textID.text = "Mã : " + PrefManager.PrefProfiles.GetUserID();
+        textName.text = "Tên : " + PrefManager.PrefProfiles.GetUserName();
     } 
     public void closepanel()
     {

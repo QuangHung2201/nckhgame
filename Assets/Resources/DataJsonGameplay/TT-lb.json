@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Vì sao người dân thường gọi Chủ tịch Hồ Chí Minh là “Bác Hồ”?",
-      "answertrue": "Vì Bác là người thân thương, gần gũi như người bác trong gia đình d",
-      "answerfalse1": "Vì là tên chính thức trong giấy tờ",
-      "answerfalse2": "Vì đó là danh hiệu Nhà nước phong tặng",
-      "answerfalse3": "Vì Bác là người cao tuổi nhất trong Chính phủ"
+      "question": "Để đối phó với tình huống có chiến tranh, Lăng được thiết kế thêm khu vực đặc biệt nào để giữ thi hài tại chỗ?",
+      "answertrue": "Buồng đặc biệt ",
+      "answerfalse1": "Hầm chống bom hạt nhân",
+      "answerfalse2": "Phòng thí nghiệm bí mật",
+      "answerfalse3": "Kho lưu trữ ngầm"
     },
     {
-      "question": "Theo lời kể dân gian, khi Lăng Bác được khởi công, hiện tượng tự nhiên nào được cho là điềm lành",
-      "answertrue": "Đàn chim bay vòng quanh Quảng trường Ba Đình d",
-      "answerfalse1": "Trời mưa lớn",
-      "answerfalse2": "Cầu vồng xuất hiện",
-      "answerfalse3": "Ánh sáng chiếu rọi xuống Lăng"
+      "question": "Theo Tổng Bí thư Lê Duẩn, giữ gìn thi thể Bác để ai thấy dung nhan Người sau chiến thắng?",
+      "answertrue": "Thế hệ trẻ sau này",
+      "answerfalse1": "Khách quốc tế",
+      "answerfalse2": "Các chuyên gia Liên Xô",
+      "answerfalse3": "Đồng bào miền Nam "
     },
     {
-      "question": "Theo truyền thuyết dân gian, sau khi Bác mất, người dân thấy điều gì đặc biệt ở ao cá Bác Hồ?",
-      "answertrue": "Một bông sen nở đúng ngày giỗ Bác d",
-      "answerfalse1": "Ao nước đổi màu vàng",
-      "answerfalse2": "Cá nổi lên rất nhiều",
-      "answerfalse3": "Có chim đậu quanh chòi viết của Bác"
+      "question": "Những loài thực vật tiêu biểu nào được trồng xung quanh Lăng Bác?",
+      "answertrue": "Vạn tuế và tre",
+      "answerfalse1": "Cỏ nhung Nhật",
+      "answerfalse2": "Cây cau",
+      "answerfalse3": "Cây dừa"
+    },
+    {
+      "question": "Nhóm chuyên gia Liên Xô sang Hà Nội năm 1969 để giúp bảo quản thi hài Bác đến từ đơn vị nào?",
+      "answertrue": "Viện Lăng Lenin",
+      "answerfalse1": "Đại học Y khoa Moscow",
+      "answerfalse2": "Hàn lâm viện khoa học Nga",
+      "answerfalse3": "Cục lưu trữ quốc gia Liên Xô"
+    },
+    {
+      "question": "Tại sao Bộ Chính trị quyết định giữ gìn thi hài Bác lâu dài thay vì hỏa táng theo di chúc?",
+      "answertrue": "Theo nguyện vọng và tình cảm của nhân dân, nhất là đồng bào miền Nam",
+      "answerfalse1": "Do yêu cầu kỹ thuật từ phía Liên Xô",
+      "answerfalse2": "Để tiết kiệm chi phí xây dựng mộ phần",
+      "answerfalse3": "Để giới thiệu công nghệ ướp xác với thế giới"
     }
   ]
 }

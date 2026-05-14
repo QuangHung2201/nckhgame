@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Ai là vị vua lập ra Thăng Long, nơi sau này có Hồ Gươm và Tháp Rùa?",
-      "answertrue": "Lý Thái Tổ d",
-      "answerfalse1": "Lê Lợi",
-      "answerfalse2": "Trần Hưng Đạo",
-      "answerfalse3": "Nguyễn Huệ"
+      "question": "Ai trả gươm cho Rùa Vàng sau khi thắng quân Minh? ",
+      "answertrue": "Vua Lê Lợi (Lê Thái Tổ) ",
+      "answerfalse1": "Vua Lý Thái Tổ",
+      "answerfalse2": "Vua Đinh Tiên Hoàng",
+      "answerfalse3": "Vua Đinh Tiên Hoàng"
     },
     {
-      "question": "Tháp Rùa được xây dựng trên hồ Gươm để tưởng nhớ ai?",
-      "answertrue": "Các vị vua triều Lê d",
-      "answerfalse1": "Nguyễn Du",
-      "answerfalse2": "Nguyễn Trãi",
-      "answerfalse3": "Lê Lợi"
+      "question": "Thời Lê Trung Hưng, ai đã cho chỉnh trang Hoàng thành và xây phủ riêng bên hồ? ",
+      "answertrue": "Các chúa Trịnh ",
+      "answerfalse1": "Các vị vua nhà Mạc",
+      "answerfalse2": "Các vị vua nhà Lý",
+      "answerfalse3": "Các chúa Nguyễn"
     },
     {
-      "question": "Ai là nhân vật truyền thuyết trả lại gươm cho Lê Lợi tại hồ Gươm?",
-      "answertrue": "Rùa thần d",
-      "answerfalse1": "Rồng vàng",
-      "answerfalse2": "Cá chép",
-      "answerfalse3": "Thần núi"
+      "question": "Ai là lực lượng từng xây phủ đệ, lầu các quanh khu vực hồ trong lịch sử?",
+      "answertrue": "Các chúa Trịnh ",
+      "answerfalse1": "Các chúa Nguyễn",
+      "answerfalse2": "Nhà Mạc",
+      "answerfalse3": "Nhà Tây Sơn "
+    },
+    {
+      "question": "Dưới thời lực lượng nào, khu vực Hồ Gươm được xây nhiều cung điện và phủ đệ?",
+      "answertrue": "Chúa Trịnh ",
+      "answerfalse1": "Chúa Nguyễn",
+      "answerfalse2": "Nhà Tây Sơn",
+      "answerfalse3": "Nhà Mạc"
+    },
+    {
+      "question": "Dưới thời vua nào, hồ Tả Vọng chính thức gọi là hồ Hoàn Kiếm? ",
+      "answertrue": "Vua Tự Đức ",
+      "answerfalse1": "Vua Gia Long",
+      "answerfalse2": "Vua Thiệu Trị",
+      "answerfalse3": "Vua Đồng Khánh"
     }
   ]
 }

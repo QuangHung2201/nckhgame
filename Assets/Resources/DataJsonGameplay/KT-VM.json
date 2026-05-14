@@ -1,25 +1,39 @@
 {
   "questions": [
     {
-      "question": "Văn Miếu – Quốc Tử Giám được xây dựng tại đâu?",
-      "answertrue": "Hà Nội d",
-      "answerfalse1": "Huế",
-      "answerfalse2": "Bắc Ninh",
-      "answerfalse3": "Ninh Bình"
+      "question": "Vật liệu chính tạo nên khung sườn các công trình như điện Đại Thành?",
+      "answertrue": "Gỗ lim quý hiếm",
+      "answerfalse1": "Cột đá xanh nguyên khối",
+      "answerfalse2": "Bê tông giả gỗ",
+      "answerfalse3": "Gạch nung không trát"
     },
     {
-      "question": "Cổng chính của Văn Miếu có tên là gì?",
-      "answertrue": "Văn Miếu Môn d",
-      "answerfalse1": "Đại Thành Môn",
-      "answerfalse2": "Khuê Văn Các",
-      "answerfalse3": "Đại Trung Môn"
+      "question": "Chi tiết nào ở Khuê Văn Các biểu tượng cho 'sao Khuê tỏa sáng'?",
+      "answertrue": "Bốn cửa sổ tròn",
+      "answerfalse1": "Tám mái chồng diêm",
+      "answerfalse2": "Các cột đá vuông",
+      "answerfalse3": "Lan can chạm khắc"
     },
     {
-      "question": "Công trình Khuê Văn Các trong Văn Miếu tượng trưng cho điều gì?",
-      "answertrue": "Sự sáng suốt, trí tuệ và văn chương d",
-      "answerfalse1": "Sức mạnh và quyền lực",
-      "answerfalse2": "Lòng trung thành",
-      "answerfalse3": "Sự giàu sang phú quý"
+      "question": "Khu nhà bia được bố trí đối xứng qua giếng Thiên Quang để làm gì?",
+      "answertrue": "Thiết lập cân bằng âm dương",
+      "answerfalse1": "Tận dụng ánh sáng",
+      "answerfalse2": "Tạo lối đi thông thoáng",
+      "answerfalse3": "Phân chia thứ hạng khoa thi"
+    },
+    {
+      "question": "Hoa văn đầu rùa đá khác nhau qua các hàng bia thể hiện điều gì?",
+      "answertrue": "Mỹ thuật qua từng triều đại",
+      "answerfalse1": "Trình độ thợ đá suy giảm",
+      "answerfalse2": "Phân biệt các ngành học",
+      "answerfalse3": "Quy định riêng về phong thủy"
+    },
+    {
+      "question": "Kỹ thuật đặc biệt nhất khi liên kết cấu kiện gỗ tại Văn Miếu là gì?",
+      "answertrue": "Dùng mộng gỗ, không dùng đinh",
+      "answerfalse1": "Sử dụng đinh đồng",
+      "answerfalse2": "Dùng vôi vữa tam hợp",
+      "answerfalse3": "Dùng dây mây buộc chặt"
     }
   ]
 }
