@@ -1,0 +1,31 @@
+# ===== Secrets =====
+.env
+.env.*
+
+# ===== Data & RAG artifacts =====
+# data_source/
+# *.pdf
+
+chroma/
+faiss_index/
+vectorstore/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ===== Docker  =====
+
+docker/
+docker-compose.yml
+.dockerignore
+
+# ===== Executables / tunnels =====
+cloudflared.exe
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
