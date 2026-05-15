@@ -157,8 +157,7 @@ public class ManagerSceneGame : MonoBehaviour
             int timepresent = time_countdown - 10; // trả lời sai bị trừ 10s
             if(timepresent < 0) //hết giờ
             {
-                SoundManager.instance.stopClockSound();
-                SoundManager.instance.playFailSound();
+                
                 timepresent = 0;
                 killCountDown();
                 panel_fail.SetActive(true);
@@ -276,6 +275,7 @@ public class ManagerSceneGame : MonoBehaviour
         seq_countdown.OnComplete(() =>
         {        
             panel_fail.SetActive(true);
+            SoundManager.instance.stopClockSound();
         });
     }    
      

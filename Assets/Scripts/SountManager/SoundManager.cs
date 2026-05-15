@@ -83,7 +83,9 @@ public class SoundManager : MonoBehaviour
     }    
     public void playClockSound()
     {
-        sfx_Source.PlayOneShot(clock_sound);
+        sfx_Source.clip = clock_sound;
+        sfx_Source.loop = false;
+        sfx_Source.Play();
     }    
     public void stopClockSound()
     {

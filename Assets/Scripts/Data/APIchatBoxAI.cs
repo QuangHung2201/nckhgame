@@ -31,7 +31,7 @@ public class APIchatBoxAI : MonoBehaviour
     }
     public IEnumerator PostReQuest(string textpost, System.Action<string> onDone) // trả về text sau khi chạy xong
     {
-        string url = "https://dialogue-slim-refrigerator-generator.trycloudflare.com/generative_ai";
+        string url = "https://italia-karaoke-victorian-databases.trycloudflare.com/generative_ai";
 
         UnityWebRequest request = new UnityWebRequest(url, "POST");
 
